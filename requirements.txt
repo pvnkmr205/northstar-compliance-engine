@@ -1,0 +1,3 @@
+# Standard library execution - zero mandatory third-party runtime dependencies
+# Optional development/testing utilities:
+pytest>=7.0.0
