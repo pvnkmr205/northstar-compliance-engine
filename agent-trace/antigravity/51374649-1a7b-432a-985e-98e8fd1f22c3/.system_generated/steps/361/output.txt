@@ -1,0 +1,5 @@
+Command exited with code 0.
+
+Command output:
+Total ANONYMIZE_RECORD: 204
+Matched within 15 min: 5

@@ -1,0 +1,8 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-277
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-277.log
+Log output:
+Metadata loaded for files: 94
+JSON log events with resource_id: 81
+
+Last progress: 0s ago

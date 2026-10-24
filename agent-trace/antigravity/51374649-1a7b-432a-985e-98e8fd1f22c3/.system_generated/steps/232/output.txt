@@ -1,0 +1,5 @@
+Command exited with code 0.
+
+Command output:
+Sample structured event: {'service': 'search_service', 'resource_id': 'search_9365', 'event': 'index_query_completed'}
+Sample structured event: {'service': 'account_service', 'resource_id': 'account_6633', 'event': 'profile_lookup_completed', 'rows': '1', 'http_status': '200'}

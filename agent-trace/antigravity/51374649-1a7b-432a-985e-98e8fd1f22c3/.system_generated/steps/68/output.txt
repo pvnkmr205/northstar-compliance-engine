@@ -1,0 +1,4 @@
+Command exited with code 0.
+
+Command output:
+C:\Users\Pavan\AppData\Local\Programs\Python\Python310\python.exe

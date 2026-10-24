@@ -1,0 +1,84 @@
+Command exited with code 0.
+
+Command output:
+
+
+    Directory: C:\Users\Pavan
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----        30-09-2024     15:20                .anaconda                                                            
+d-----        08-01-2024     01:07                .android                                                             
+d-----        09-08-2026     21:29                .aws                                                                 
+d-----        09-08-2026     21:29                .azure                                                               
+d-----        24-10-2026     18:47                .cache                                                               
+d-----        13-10-2026     23:30                .codex                                                               
+d-----        13-06-2025     22:39                .conda                                                               
+d-----        24-10-2026     18:47                .config                                                              
+d-----        21-12-2022     11:04                .continuum                                                           
+d-----        13-10-2026     23:33                .copilot                                                             
+d-----        05-10-2026     21:47                .cursor                                                              
+d-----        03-10-2026     11:29                .docker                                                              
+d-----        23-07-2025     15:05                .eclipse                                                             
+d-----        24-10-2026     19:38                .gemini                                                              
+d-----        20-12-2023     04:17                .gradle                                                              
+d-----        17-01-2026     14:14                .ipynb_checkpoints                                                   
+d-----        21-12-2022     11:07                .ipython                                                             
+d-----        01-10-2024     10:04                .jupyter                                                             
+d-----        24-10-2026     18:47                .local                                                               
+d-----        10-11-2024     21:10                .matplotlib                                                          
+d-----        10-08-2026     23:28                .OpenCluely                                                          
+d-----        28-07-2025     10:21                .p2                                                                  
+d-----        24-01-2023     10:15                .pdfstudioviewer2022                                                 
+d-----        14-12-2024     20:35                .pyforest                                                            
+d-----        16-11-2024     20:38                .redhat                                                              
+d-----        20-03-2026     23:46                .ssh                                                                 
+d-----        26-10-2024     17:11                .VirtualBox                                                          
+d-----        08-01-2026     20:48                .virtualenvs                                                         
+d-----        13-10-2026     23:32                .vscode                                                              
+d-----        01-05-2026     12:07                .vscode-shared                                                       
+d-r---        19-12-2022     16:02                3D Objects                                                           
+d-----        16-11-2024     20:23                anaconda3                                                            
+d-----        20-12-2023     04:13                AndroidStudioProjects                                                
+d-----        22-09-2026     10:55                aravali-diligence                                                    
+d-----        07-12-2025     22:16                cheating-daddy                                                       
+d-r---        30-08-2025     21:14                Contacts                                                             
+d-----        05-10-2026     10:19                decisions                                                            
+d-r---        24-10-2026     18:47                Desktop                                                              
+d-r---        24-10-2026     18:47                Documents                                                            
+d-----        24-10-2026     18:53                Downloads                                                            
+d-----        24-07-2025     11:59                eclipse-workspace                                                    
+d-r---        30-08-2025     21:14                Favorites                                                            
+d-----        12-12-2024     14:04                fitnesstracker                                                       
+d-----        09-01-2026     09:44                flask-react-assessment-pvnkmr205                                     
+d-----        01-05-2026     23:41                hackerrank-orchestrate-may26                                         
+d-----        24-10-2026     19:35                hackerrank-orchestrate-october26                                     
+d-----        12-10-2025     10:48                intellirag                                                           
+d-----        05-10-2026     10:19                labels                                                               
+d-r---        30-08-2025     21:14                Links                                                                
+d-r---        30-08-2025     21:14                Music                                                                
+d-----        06-12-2025     21:08                my-app                                                               
+d-----        14-12-2024     21:46                myenv                                                                
+dar--l        08-10-2026     12:18                OneDrive                                                             
+d-----        31-03-2025     13:28                OpenVPN                                                              
+d-----        17-06-2026     14:05                Phishnet-Ai-Based-Phishing-Website-Detection                         
+d-----        17-01-2026     01:10                PhishNet-AI-main                                                     
+d-r---        06-09-2025     14:17                Pictures                                                             
+d-----        20-10-2023     21:32                redmi files                                                          
+d-----        05-10-2026     10:19                runs                                                                 
+d-----        06-10-2026     00:11                sapiensu-director-changes                                            
+d-----        05-10-2026     10:23                sapiensu-folder                                                      
+d-r---        30-08-2025     21:14                Saved Games                                                          
+d-----        09-06-2025     09:45                scikit_learn_data                                                    
+d-r---        30-08-2025     21:14                Searches                                                             
+d-----        05-10-2026     10:19                tests                                                                
+d-----        05-10-2026     10:19                tools                                                                
+d-----        16-11-2024     20:20                Tracking barbell exercises                                           
+d-----        05-10-2026     10:19                transcripts                                                          
+d-----        06-10-2026     00:12                v                                                                    
+d-r---        07-12-2025     22:39                Videos                                                               
+d-----        26-10-2024     17:10                VirtualBox VMs                                                       
+d-----        09-05-2026     12:17                vtu-autopilot                                                        
+
+

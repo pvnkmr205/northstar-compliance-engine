@@ -1,0 +1,25 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-287
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-287.log
+Log output:
+At line:5 char:35
++ kv_re = re.compile(r'(\w+)=(?:\"([^\"]*)\"|([^\s]+))')
++                                   ~
+Missing type name after '['.
+At line:5 char:46
++ kv_re = re.compile(r'(\w+)=(?:\"([^\"]*)\"|([^\s]+))')
++                                              ~
+Missing type name after '['.
+At line:5 char:44
++ kv_re = re.compile(r'(\w+)=(?:\"([^\"]*)\"|([^\s]+))')
++                                            ~~~~~~~~
+Expressions are only allowed as the first element of a pipeline.
+At line:10 char:29
++             if 'resource_id=' in line:
++                             ~~~~~~~~~~
+The string is missing the terminator: '.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+ 
+
+Last progress: 4s ago

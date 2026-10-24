@@ -1,0 +1,38 @@
+Command exited with code 0.
+
+Command output:
+206: 
+207:             if isinstance(data, dict) and "snapshots" in data:
+208:                 for snap in data["snapshots"]:
+209:                     sys = snap.get("system_id") or snap.get("service")
+210:                     for rec in snap.get("records", []):
+211:                         res = rec.get("resource_id") or rec.get("record_id")
+212:                         if not res:
+213:                             continue
+214:                         u_id = rec.get("subject_reference") or rec.get("user_id") or rec.get("customer_reference")
+215:                         em = rec.get("email") or rec.get("requester_email")
+216:                         if em:
+217:                             em = em.lower()
+218:                         if u_id and "@" in u_id:
+219:                             em, u_id = u_id.lower(), None
+220:                         if em and not u_id:
+221:                             u_id = user_identities_map.get(em)
+222: 
+223:                         if not sys:
+224:                             sys = _infer_system(res)
+225: 
+226:                         if sys == "security_service" or res.startswith("audit_record_"):
+227:                             v_state = "PRESENT"
+228:                         elif rec.get("status_code") == 404 or rec.get("result") in ("not_found", "deleted"):
+229:                             v_state = "ABSENT"
+230:                         elif any(rec.get(k) for k in ("email", "requester_email", "phone", "full_name")):
+231:                             v_state = "PRESENT"
+232:                         else:
+233:                             v_state = "ANONYMIZED"
+234: 
+235:                         indexed[(fid, res)] = (fid, cap, sys, res, v_state, u_id, em)
+236: 
+237:             elif isinstance(data, dict) and "service_exports" in data:
+238:                 for sys_name, export_data in data["service_exports"].items():
+239:                     for list_key, items in export_data.items():
+240:                         if not isinstance(items, list):

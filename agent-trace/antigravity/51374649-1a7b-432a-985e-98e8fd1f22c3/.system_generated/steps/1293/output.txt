@@ -1,0 +1,23 @@
+Command exited with code 0.
+
+Command output:
+def _canonicalize_audit_steps(steps: List[AuditStep]) -> List[AuditStep]:
+    phase_rank = {"FINDING": 0, "REMEDIATION": 1, "VERIFICATION": 2}
+    return sorted(
+        steps,
+        key=lambda step: (
+            phase_rank[step.phase],
+            SYSTEM_ORDER.get(step.system_id, 99),
+            step.resource_id,
+        ),
+    )
+
+# Exact table order from problem_statement.md: (phase, operation) -> (op_rank, required_state)
+ALLOWED_OPERATIONS: Dict[Tuple[str, str], Tuple[int, str]] = {
+    # FINDING phase
+    ("FINDING", "REPORT_REMAINING_RECORD"): (0, "PRESENT"),
+    ("FINDING", "REPORT_EXPOSED_PII"): (1, "PRESENT"),
+    ("FINDING", "REPORT_ACTIVE_DATA_FLOW"): (2, "ACTIVE"),
+    ("FINDING", "REPORT_RESTORE_RISK"): (3, "ACTIVE"),
+    # REMEDIATION phase
+    ("REMEDIATION", "DELETE_REC

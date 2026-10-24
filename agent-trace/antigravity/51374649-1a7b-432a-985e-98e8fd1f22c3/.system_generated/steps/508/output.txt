@@ -1,0 +1,13 @@
+Command exited with code 0.
+
+Command output:
+case_01 exp=['account_001']: chosen=(106704.0, 'account_2373', datetime.datetime(2026, 8, 19, 11, 3, 36, tzinfo=datetime.timezone.utc))
+case_02 exp=['account_002']: chosen=None
+case_03 exp=['account_7566']: chosen=(3145.0, 'account_7566', datetime.datetime(2026, 9, 15, 10, 7, 35, tzinfo=datetime.timezone.utc))
+case_04 exp=['account_004']: chosen=(9696.0, 'account_2387', datetime.datetime(2026, 8, 27, 6, 12, 24, tzinfo=datetime.timezone.utc))
+case_05 exp=['account_005', 'account_005', 'account_005']: chosen=None
+case_06 exp=['account_006']: chosen=(21903.0, 'account_7012', datetime.datetime(2026, 8, 30, 11, 6, 57, tzinfo=datetime.timezone.utc))
+case_07 exp=['account_007']: chosen=(37069.0, 'account_4990', datetime.datetime(2026, 9, 1, 9, 12, 11, tzinfo=datetime.timezone.utc))
+case_08 exp=['account_008']: chosen=(95823.0, 'account_7012', datetime.datetime(2026, 8, 30, 11, 6, 57, tzinfo=datetime.timezone.utc))
+case_09 exp=['account_3960']: chosen=(2666.0, 'account_565', datetime.datetime(2026, 9, 7, 8, 15, 34, tzinfo=datetime.timezone.utc))
+case_10 exp=['account_010']: chosen=(89749.0, 'account_4990', datetime.datetime(2026, 9, 1, 9, 12, 11, tzinfo=datetime.timezone.utc))

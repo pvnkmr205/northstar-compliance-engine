@@ -1,0 +1,7 @@
+Command exited with code 0.
+
+Command output:
+analytics_9406 event_time: 2026-09-15T10:31:16Z event_type: ANONYMIZE_RECORD
+  Closest request in SDR: case_03 l.fontaine46@yahoo.com 2026-09-15T11:00:00Z diff: 0 days 00:28:44
+analytics_901 event_time: 2026-08-27T08:47:41Z event_type: ANONYMIZE_RECORD
+  Closest request in SDR: case_04 thandiwe.n@gmail.com 2026-08-27T08:54:00Z diff: 0 days 00:06:19

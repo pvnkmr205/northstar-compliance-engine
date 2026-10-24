@@ -1,0 +1,11 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-1151
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-1151.log
+Log output:
+<truncated 2 lines>
+firmed that data flow data_flow_373 remains enabled.')]
+Found in evidence_records.resource_id: [('evidence_05', '2026-09-21T10:00:00Z', 'integration_service', 'data_flow_373', 'ANONYMIZED', None, None)]
+Found in customer_data_read_replica_20260921__customer_data_primary.resource_id: [('data_flow_373', 'integration_service', 'connector_configurations', '{"resource_id":"data_flow_373","connector_name":"customer-events-to-warehouse-6","destination":"customer_analytics_warehouse","subject_selector":"elena.romero88@outlook.com","enabled":true,"mode":"continuous_sync"}', '2026-09-21T10:00:00Z')]
+Found in customer_data_read_replica_20260921__customer_data_read_replica.resource_id: [('data_flow_373', 'integration_service', 'connector_configurations', '{"resource_id":"data_flow_373","connector_name":"customer-events-to-warehouse-6","destination":"customer_analytics_warehouse","subject_selector":"elena.romero88@outlook.com","enabled":true,"mode":"continuous_sync"}', '2026-09-21T10:00:00Z')]
+
+Last progress: 2s ago

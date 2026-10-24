@@ -1,0 +1,7 @@
+Command exited with code 1.
+
+Command output:
+  File "<string>", line 21
+    print(f'Checking {cid}: {em} (uid={uid}, rep={req[" reported_status\]})')
+                                                      ^
+SyntaxError: unterminated string literal (detected at line 21)

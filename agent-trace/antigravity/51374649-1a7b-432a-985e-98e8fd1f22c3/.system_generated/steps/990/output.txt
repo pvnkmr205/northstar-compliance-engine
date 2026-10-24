@@ -1,0 +1,59 @@
+Command exited with code 0.
+
+Command output:
+
+=== case_56: elena.romero88@outlook.com (reported_status: NOT_STARTED) ===
+  [customer_data_read_replica_20260921.sql] INSERT INTO "customer_data_primary" VALUES('data_flow_373','integration_service','connector_configurations','{"resource_id":"data_flow_373",
+  [customer_data_read_replica_20260921.sql] INSERT INTO "customer_data_read_replica" VALUES('data_flow_373','integration_service','connector_configurations','{"resource_id":"data_flow_
+
+=== case_58: fournier.manon@icloud.com (reported_status: NOT_STARTED) ===
+
+=== case_59: lars-nielsen@proton.me (reported_status: COMPLETE) ===
+
+=== case_60: anowak4031@fastmail.com (reported_status: COMPLETE) ===
+
+=== case_206: ama.agyeman84@gmail.com (reported_status: COMPLETE) ===
+
+=== case_253: mathis.l2398@zoho.com (reported_status: PARTIALLY_COMPLETE) ===
+
+=== case_257: yetunde-nwosu@gmail.com (reported_status: COMPLETE) ===
+
+=== case_260: daichi.takahashi@outlook.com (reported_status: NOT_STARTED) ===
+
+=== case_304: walker.charlotte@gmail.com (reported_status: PARTIALLY_COMPLETE) ===
+
+=== case_309: t.oladipo62@yahoo.com (reported_status: PARTIALLY_COMPLETE) ===
+
+=== case_403: haruka.w248@outlook.com (reported_status: COMPLETE) ===
+
+=== case_408: abennett9843@fastmail.com (reported_status: COMPLETE) ===
+
+=== case_409: leonie.d7762@zoho.com (reported_status: COMPLETE) ===
+
+=== case_411: e.petrescu00@gmail.com (reported_status: COMPLETE) ===
+
+=== case_412: haddad.omar@gmail.com (reported_status: COMPLETE) ===
+
+=== case_503: sami-nasser@proton.me (reported_status: COMPLETE) ===
+  [customer_data_reporting_replica_20260208.sql] INSERT INTO "customer_data_primary" VALUES('support_2295','support_platform','ticket_attachments','{"resource_id":"support_2295","ticket_id"
+  [customer_data_reporting_replica_20260208.sql] INSERT INTO "customer_data_reporting_replica" VALUES('support_2295','support_platform','ticket_attachments','{"resource_id":"support_2295","
+
+=== case_506: ayanda.molefe@gmail.com (reported_status: PARTIALLY_COMPLETE) ===
+
+=== case_512: hannah.carter@outlook.com (reported_status: COMPLETE) ===
+
+=== case_517: yetunde.a3014@zoho.com (reported_status: PARTIALLY_COMPLETE) ===
+  [operations_stream_me_central_20260203.log] 2026-02-03T05:52:43Z | DEBUG | integration_service | tr-6648486 | connector_config_read_started | instance="integration-2" pod="integration-
+  [operations_stream_me_central_20260203.log] 2026-02-03T05:53:39Z | DEBUG | account_service | tr-8760426 | profile_lookup_started | instance="account-2" pod="account-f320" region="ap-so
+  [operations_stream_me_central_20260203.log] 2026-02-03T05:53:50Z | DEBUG | search_service | tr-4410322 | index_query_started | instance="search-4" pod="search-9f2e" region="us-east-2" 
+
+=== case_519: s.dlamini52@gmail.com (reported_status: PARTIALLY_COMPLETE) ===
+  [operations_stream_me_central_20260203.log] 2026-02-03T05:57:07Z | DEBUG | account_service | tr-4544239 | profile_lookup_started | instance="account-6" pod="account-e387" region="eu-ce
+  [operations_stream_me_central_20260203.log] 2026-02-03T05:58:15Z | DEBUG | backup_service | tr-8270299 | restore_policy_check_started | instance="backup-4" pod="backup-b50f" region="eu
+
+=== case_521: yuna-lee@gmail.com (reported_status: COMPLETE) ===
+  [operations_stream_me_central_20260203.log] 2026-02-03T05:54:01Z | DEBUG | account_service | tr-4982557 | profile_lookup_started | instance="account-2" pod="account-e26d" region="eu-we
+
+=== case_525: o.walker6695@yahoo.com (reported_status: COMPLETE) ===
+  [customer_data_snapshot_bundle_20260131.json] "email": "o.walker6695@yahoo.com",
+  [service_resource_export_20260129_114459.json] "email": "o.walker6695@yahoo.com",

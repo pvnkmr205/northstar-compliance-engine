@@ -1,0 +1,13 @@
+Command exited with code 0.
+
+Command output:
+--- analytics_9406
+        activity_id  ...                                      details
+3851  activity_3852  ...  Policy action completed for analytics_9406.
+
+[1 rows x 8 columns]
+--- analytics_901
+        activity_id  ...                                            details
+3462  activity_3463  ...  Deletion worker reported the requested operati...
+
+[1 rows x 8 columns]

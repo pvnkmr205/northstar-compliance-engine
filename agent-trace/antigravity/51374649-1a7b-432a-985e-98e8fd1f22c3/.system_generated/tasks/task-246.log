@@ -1,0 +1,21 @@
+Total log files: 26
+application_trace_ap_northeast_20260730.log
+   2026-07-28T05:51:16Z [DEBUG] [log_router] [collector-9] export_started: instance="collector-9" sourc
+   2026-07-28T05:51:18Z [DEBUG] [account_service] [tr-6074163] profile_lookup_started: instance="accoun
+   2026-07-28T05:51:20Z [DEBUG] [account_service] [tr-6074163] cache_lookup: instance="account-5" pod="
+application_trace_eu_north_20260302.log
+   2026-02-22T10:58:43Z [DEBUG] [log_router] [collector-3] export_started: instance="collector-3" sourc
+   2026-02-22T10:58:45Z [DEBUG] [account_service] [tr-9071194] profile_lookup_started: instance="accoun
+   2026-02-22T10:58:51Z [DEBUG] [account_service] [tr-9071194] profile_lookup_completed: instance="acco
+cloud_runtime_export_af_south_20260930.log
+   2026-09-30T11:51:01Z requestId=collector-4 level=DEBUG function=log_router message="instance=\"colle
+   2026-09-30T11:51:03Z requestId=tr-2263120 level=DEBUG function=profile_service message="instance=\"p
+   2026-09-30T11:51:06Z requestId=tr-4101190 level=DEBUG function=profile_service message="instance=\"p
+cloud_runtime_export_us_west_20260608.log
+   2026-06-08T06:52:07Z requestId=collector-1 level=DEBUG function=log_router message="instance=\"colle
+   2026-06-08T06:52:09Z requestId=tr-1108860 level=INFO function=search_service message="instance=\"sea
+   2026-06-08T07:29:24Z requestId=resolver-3 level=DEBUG function=dns_cache message="instance=\"resolve
+notification_delivery_20260315.log
+   2026-03-15T07:00:00Z INFO service=downstream_delivery_service event=record_lookup seq=1 system="acco
+   2026-03-15T07:00:00Z INFO service=downstream_delivery_service event=record_lookup seq=2 system="acco
+   2026-03-15T07:00:00Z INFO service=downstream_delivery_service event=record_lookup seq=3 system="acco

@@ -1,0 +1,16 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-136
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-136.log
+Log output:
+evidence_01 evidence/logs/service_events_ap_south_20260915.log central_observability_export
+evidence_02 evidence/records/customer_data_snapshot_bundle_20260917.json records_assurance_snapshot_bundle
+evidence_03 evidence/records/customer_account_handover_20261001.txt customer_account_service
+evidence_04 evidence/images/account_admin_console_20260926.png account_admin_portal
+evidence_05 evidence/databases/customer_data_read_replica_20260921.sql customer_data_read_replica_capture
+evidence_06 evidence/logs/structured_service_events_eu_west_20260918.log central_observability_export
+evidence_07 evidence/records/customer_data_snapshot_bundle_20260913.json records_assurance_snapshot_bundle
+evidence_08 evidence/logs/search_index_diagnostic_20260906.log search_index_service
+evidence_09 evidence/images/search_index_inspector_20260901.png search_index_admin
+evidence_10 evidence/databases/customer_data_read_replica_20260827.sql customer_data_read_replica_capture
+
+Last progress: 4s ago

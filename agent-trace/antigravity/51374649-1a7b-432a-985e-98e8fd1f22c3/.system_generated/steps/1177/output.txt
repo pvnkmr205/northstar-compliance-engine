@@ -1,0 +1,8 @@
+Command exited with code 0.
+
+Command output:
+2026-08-29T07:49:42Z account_7643 PARTIAL Deletion worker submitted primary profile account_7643 to account_service.
+2026-08-29T08:00:56Z account_1378 SUCCESS Deletion worker submitted primary profile account_1378 to account_service.
+2026-08-29T08:48:28Z account_5715 FAILED Deletion worker submitted primary profile account_5715 to account_service.
+2026-08-29T08:59:43Z account_1298 SUCCESS Deletion worker submitted primary profile account_1298 to account_service.
+2026-08-29T09:10:27Z account_9862 FAILED Deletion worker submitted primary profile account_9862 to account_service.

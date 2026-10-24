@@ -1,0 +1,5 @@
+Command exited with code 0.
+
+Command output:
+Sort A passed on sample_output: 32/32
+Sort B passed on sample_output: 29/32

@@ -1,0 +1,8 @@
+Command exited with code 0.
+
+Command output:
+evidence_records: [('evidence_05', '2026-09-21T10:00:00Z', 'integration_service', 'data_flow_373', 'ANONYMIZED', None, None)]
+Found in system_activity.resource_id: [('activity_3513', '2026-08-29T10:48:19Z', 'CHECK_DATA_FLOW', 'deletion_worker', 'integration_service', 'data_flow_373', 'SUCCESS', 'Connector status check confirmed that data flow data_flow_373 remains enabled.')]
+Found in evidence_records.resource_id: [('evidence_05', '2026-09-21T10:00:00Z', 'integration_service', 'data_flow_373', 'ANONYMIZED', None, None)]
+Found in customer_data_read_replica_20260921__customer_data_primary.resource_id: [('data_flow_373', 'integration_service', 'connector_configurations', '{"resource_id":"data_flow_373","connector_name":"customer-events-to-warehouse-6","destination":"customer_analytics_warehouse","subject_selector":"elena.romero88@outlook.com","enabled":true,"mode":"continuous_sync"}', '2026-09-21T10:00:00Z')]
+Found in customer_data_read_replica_20260921__customer_data_read_replica.resource_id: [('data_flow_373', 'integration_service', 'connector_configurations', '{"resource_id":"data_flow_373","connector_name":"customer-events-to-warehouse-6","destination":"customer_analytics_warehouse","subject_selector":"elena.romero88@outlook.com","enabled":true,"mode":"continuous_sync"}', '2026-09-21T10:00:00Z')]

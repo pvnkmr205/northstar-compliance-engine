@@ -1,0 +1,4 @@
+Command exited with code 0.
+
+Command output:
+deletion_requests in db: 518

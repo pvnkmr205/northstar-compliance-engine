@@ -1,0 +1,21 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-371
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-371.log
+Log output:
+At line:5 char:38
++ KV_REGEX = re.compile(r'(\w+)=(?:\"([^\"]*)\"|(\S+))')
++                                      ~
+Missing type name after '['.
+At line:5 char:47
++ KV_REGEX = re.compile(r'(\w+)=(?:\"([^\"]*)\"|(\S+))')
++                                               ~~~~~
+Expressions are only allowed as the first element of a pipeline.
+At line:54 char:63
++ ...  traces:', traces_found, 'Traces with identifiers:', correlated_rows)
++                                                       ~~~~~~~~~~~~~~~~~~~
+The string is missing the terminator: '.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+ 
+
+Last progress: 14s ago

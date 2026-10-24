@@ -1,0 +1,4 @@
+  File "<string>", line 10
+    print(f'   {s.get(" phase\)}
+                      ^
+SyntaxError: unterminated string literal (detected at line 10)

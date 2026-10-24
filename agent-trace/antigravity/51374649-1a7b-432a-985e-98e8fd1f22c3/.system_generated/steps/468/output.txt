@@ -1,0 +1,11 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-460
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-460.log
+Log output:
+<truncated 102 lines>
+rvice","resource_id":"tombstone_9178","operation":"VERIFY_RECORD_REDACTED","state":"REDACTED","evidence_id":""}]
+ACTUAL:   [{"step_no":1,"phase":"FINDING","system_id":"identity_service","resource_id":"tombstone_9178","operation":"REPORT_EXPOSED_PII","state":"PRESENT","evidence_id":"evidence_51"},{"step_no":2,"phase":"REMEDIATION","system_id":"identity_service","resource_id":"tombstone_9178","operation":"REDACT_RECORD","state":"REDACTED","evidence_id":""},{"step_no":3,"phase":"VERIFICATION","system_id":"account_service","resource_id":"account_542","operation":"VERIFY_RECORD_ABSENT","state":"ABSENT","evidence_id":""},{"step_no":4,"phase":"VERIFICATION","system_id":"security_service","resource_id":"audit_record_7068","operation":"VERIFY_RECORD_PRESENT","state":"PRESENT","evidence_id":""},{"step_no":5,"phase":"VERIFICATION","system_id":"identity_service","resource_id":"tombstone_9178","operation":"VERIFY_RECORD_REDACTED","state":"REDACTED","evidence_id":""}]
+
+Total mismatches: 26 / 32
+
+Last progress: 0s ago

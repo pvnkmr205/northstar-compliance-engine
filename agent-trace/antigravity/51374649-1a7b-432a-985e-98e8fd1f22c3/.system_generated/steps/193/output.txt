@@ -1,0 +1,21 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-191
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-191.log
+Log output:
+<truncated 21 lines>
+hot_tables")} if conn.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='_northstar_snapshot_tables'").fetchone() else set()
+        elif any(word in lower for word in ("profile", "search", "cache", "export", "support", "customer_data")):
+def validate_samples(conn: sqlite3.Connection, dataset_dir: Path = Path("dataset")) -> float:
+_EVIDENCE_TEXT_CACHE: Dict[str, str] = {}
+    if file_path in _EVIDENCE_TEXT_CACHE:
+        return _EVIDENCE_TEXT_CACHE[file_path]
+                    _EVIDENCE_TEXT_CACHE[file_path] = result
+                    _EVIDENCE_TEXT_CACHE[file_path] = result
+            _EVIDENCE_TEXT_CACHE[file_path] = result
+    case_row: Dict[str, Any], identity: ResolvedIdentity, conn: sqlite3.Connection
+            "SELECT table_name FROM _northstar_snapshot_tables"
+        "SELECT 1 FROM sqlite_master WHERE type='table' "
+        "AND name='_northstar_snapshot_tables'"
+            "profile", "search", "cache", "export", "support", "customer_data"
+
+Last progress: 1s ago

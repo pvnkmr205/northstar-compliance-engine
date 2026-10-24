@@ -1,0 +1,72 @@
+Command exited with code 0.
+
+Command output:
+--- find_ground_truth_links.py ---
+from pathlib import Path
+import re
+
+targets = [
+    # Missing accounts
+    "account_6440", "account_3136", "account_5684", "account_3866", "account_5482", 
+    "account_4857", "account_5521", "account_7012", "account_4163", "account_5037", "account_8858",
+    # Missing audit records
+    "audit_record_7095", "audit_record_6645", "audit_record_5569", "audit_record_4128", 
+    "audit_record_3954", "audit_record_1707", "audit_record_9528", "audit_record_3482"
+]
+
+dataset_dir = Path("dataset")
+matches = {t: [] for t in targets}
+
+for p in dataset_dir.rglob("*"):
+    if p.is_file() and p.suffix in [".json", ".log", ".txt", ".sql", ".csv"]:
+        try:
+            content = p.read_text(encoding="utf-8", errors="ignore")
+            for t in targets:
+                if t in content:
+                    # extract lines containing t
+                    for line in content.splitlines():
+                        if t in line:
+                            matches[t].append((p.relative_to(dataset_dir), line.strip()[:160]))
+                            if len(matches[t]) >= 3:
+                                break
+        except Exception:
+            pass
+
+print("=== GROUND TRUTH RESOURCE LOCATIONS ===")
+for t, hits in matches.items():
+    print(f"\n[{t}] (Found in {len(hits)} locations):")
+    for file_path, line in hits[:2]:
+        print(f"  -> {file_path}: {line}")
+
+--- probe_missing_evidence.py ---
+import sqlite3
+import csv
+from pathlib import Path
+
+# 1. Locate evidence_92, evidence_51, evidence_05 in evidence_files.csv
+print("=== Missing Evidence Files in Manifest ===")
+with open("dataset/evidence_files.csv", encoding="utf-8-sig") as f:
+    for r in csv.DictReader(f):
+        if r["file_id"] in ["evidence_92", "evidence_51", "evidence_05", "evidence_03"]:
+            print(f"[{r['file_id']}] path={r['file_path']} | captured_at={r['captured_at']}")
+
+# 2. Check where account_6440, account_5521, account_7012 live in northstar.db
+targets = ["account_6440", "account_5521", "account_7012", "account_4857"]
+conn = sqlite3.connect("cache/northstar.db")
+c = conn.cursor()
+tables = [r[0] for r in c.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'").fetchall()]
+
+print("\n=== Searching northstar.db tables for real account IDs ===")
+for t in tables:
+    try:
+        cols = [col[1] for col in c.execute(f'PRAGMA table_info("{t}")').fetchall()]
+        for col in cols:
+            matches = c.execute(f'SELECT * FROM "{t}" WHERE "{col}" IN (?, ?, ?, ?)', targets).fetchall()
+            if matches:
+                print(f"Found in table '{t}' [column: '{col}']: {matches[0]}")
+                break
+    except Exception:
+        pass
+
+conn.close()
+

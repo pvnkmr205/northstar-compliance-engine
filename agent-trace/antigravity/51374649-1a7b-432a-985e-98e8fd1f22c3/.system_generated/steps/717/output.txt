@@ -1,0 +1,23 @@
+Command exited with code 0.
+
+Command output:
+Testing primary account mapping rule:
+[case_09] Expected: account_3960 | Chosen: account_565 (candidates: ['account_294', 'account_8832', 'account_7015', 'account_6440', 'account_410', 'account_9155', 'account_4857', 'account_2381', 'account_1810', 'account_8858', 'account_3677', 'account_3960', 'account_565'])
+[case_11] Expected: account_4248 | Chosen: account_146 (candidates: ['account_7119', 'account_617', 'account_034', 'account_483', 'account_4248', 'account_146'])
+[case_13] Expected: account_9335 | Chosen: account_5823 (candidates: ['account_5521', 'account_3610', 'account_5037', 'account_9335', 'account_5193', 'account_5823'])
+[case_15] Expected: account_4745 | Chosen: account_4092 (candidates: ['account_9494', 'account_4745', 'account_4092'])
+[case_16] Expected: account_994 | Chosen: account_4990 (candidates: ['account_5482', 'account_3866', 'account_7012', 'account_6138', 'account_902', 'account_6633', 'account_994', 'account_6829', 'account_4990'])
+[case_18] Expected: account_5521 | Chosen: account_9335 (candidates: ['account_1810', 'account_8858', 'account_3677', 'account_3960', 'account_565', 'account_8931', 'account_2577', 'account_3270', 'account_7320', 'account_5521', 'account_3610', 'account_5037', 'account_9335'])
+[case_19] Expected: account_9102 | Chosen: account_2373 (candidates: ['account_3609', 'account_8754', 'account_9334', 'account_5186', 'account_4070', 'account_9102', 'account_2373'])
+[case_20] Expected: account_5037 | Chosen: account_9335 (candidates: ['account_2577', 'account_3270', 'account_7320', 'account_5521', 'account_3610', 'account_5037', 'account_9335'])
+[case_21] Expected: account_6440 | Chosen: account_9155 (candidates: ['account_294', 'account_8832', 'account_7015', 'account_6440', 'account_410', 'account_9155'])
+[case_23] Expected: account_410 | Chosen: account_9155 (candidates: ['account_4051', 'account_7219', 'account_4156', 'account_1602', 'account_5488', 'account_9079', 'account_294', 'account_8832', 'account_7015', 'account_6440', 'account_410', 'account_9155'])
+[case_24] Expected: account_5334 | Chosen: account_7225 (candidates: ['account_3136', 'account_4842', 'account_5334', 'account_5684', 'account_7225'])
+[case_25] Expected: account_3136 | Chosen: account_7225 (candidates: ['account_6138', 'account_902', 'account_6633', 'account_994', 'account_6829', 'account_4990', 'account_3136', 'account_4842', 'account_5334', 'account_5684', 'account_7225'])
+[case_26] Expected: account_5684 | Chosen: account_7225 (candidates: ['account_6138', 'account_902', 'account_6633', 'account_994', 'account_6829', 'account_4990', 'account_3136', 'account_4842', 'account_5334', 'account_5684', 'account_7225'])
+[case_27] Expected: account_3866 | Chosen: account_7012 (candidates: ['account_5482', 'account_3866', 'account_7012'])
+[case_28] Expected: account_5482 | Chosen: account_7012 (candidates: ['account_7643', 'account_1378', 'account_5715', 'account_1298', 'account_9862', 'account_5482', 'account_3866', 'account_7012'])
+[case_31] Expected: account_4857 | Chosen: account_3677 (candidates: ['account_294', 'account_8832', 'account_7015', 'account_6440', 'account_410', 'account_9155', 'account_4857', 'account_2381', 'account_1810', 'account_8858', 'account_3677'])
+[case_32] Expected: account_8858 | Chosen: account_3677 (candidates: ['account_4156', 'account_1602', 'account_5488', 'account_9079', 'account_294', 'account_8832', 'account_7015', 'account_6440', 'account_410', 'account_9155', 'account_4857', 'account_2381', 'account_1810', 'account_8858', 'account_3677'])
+
+Account Match Accuracy: 15/32

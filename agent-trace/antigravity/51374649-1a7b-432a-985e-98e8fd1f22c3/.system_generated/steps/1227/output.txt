@@ -1,0 +1,10 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-1225
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-1225.log
+Log output:
+[case_12] sample_output violates SYSTEM_ORDER: ['account_service', 'analytics_platform', 'security_service']
+[case_13] sample_output violates SYSTEM_ORDER: ['account_service', 'search_service', 'support_platform', 'security_service']
+[case_23] sample_output violates SYSTEM_ORDER: ['account_service', 'export_service', 'search_service', 'security_service']
+Total violations of SYSTEM_ORDER in sample_output.csv: 3
+
+Last progress: 1s ago

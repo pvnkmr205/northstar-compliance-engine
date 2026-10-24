@@ -1,0 +1,7 @@
+Command exited with code 0.
+
+Command output:
+Indexed handover lines: 41
+Indexed after SQL: 341
+Indexed after JSON: 1118
+Wrote all indexed records to DB.

@@ -1,0 +1,8 @@
+Command exited with code 0.
+
+Command output:
+account_001 False
+account_002 False
+account_004 False
+account_005 True
+account_006 False

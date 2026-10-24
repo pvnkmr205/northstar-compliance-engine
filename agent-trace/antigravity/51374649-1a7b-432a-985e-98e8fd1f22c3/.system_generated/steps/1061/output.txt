@@ -1,0 +1,15 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-1057
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-1057.log
+Log output:
+<truncated 84 lines>
+'), ('VERIFICATION', 'identity_service', 'tombstone_440', 'VERIFY_RECORD_REDACTED', 'REDACTED', 'evidence_51')]
+  Extra:   [('VERIFICATION', 'account_service', 'account_541', 'VERIFY_RECORD_ABSENT', 'ABSENT', 'evidence_51'), ('VERIFICATION', 'identity_service', 'tombstone_440', 'VERIFY_RECORD_REDACTED', 'ANONYMIZED', 'evidence_51')]
+
+[case_32] Status: Act=INCOMPLETE | Exp=INCOMPLETE
+  Missing: [('REMEDIATION', 'identity_service', 'tombstone_9178', 'REDACT_RECORD', 'REDACTED', ''), ('VERIFICATION', 'account_service', 'account_8858', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'identity_service', 'tombstone_9178', 'VERIFY_RECORD_REDACTED', 'REDACTED', '')]
+  Extra:   [('REMEDIATION', 'identity_service', 'tombstone_9178', 'ANONYMIZE_RECORD', 'ANONYMIZED', ''), ('VERIFICATION', 'account_service', 'account_542', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'identity_service', 'tombstone_9178', 'VERIFY_RECORD_ANONYMIZED', 'ANONYMIZED', '')]
+
+Total Passed: 9/32
+
+Last progress: 2s ago

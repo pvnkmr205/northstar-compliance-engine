@@ -1,0 +1,92 @@
+
+[case_03] Status: Act=COMPLETE | Exp=COMPLETE
+  Missing: [('VERIFICATION', 'analytics_platform', 'analytics_9406', 'VERIFY_RECORD_ANONYMIZED', 'ANONYMIZED', 'evidence_94')]
+
+[case_04] Status: Act=COMPLETE | Exp=COMPLETE
+  Missing: [('VERIFICATION', 'account_service', 'account_004', 'VERIFY_RECORD_ABSENT', 'ABSENT', 'evidence_54'), ('VERIFICATION', 'analytics_platform', 'analytics_901', 'VERIFY_RECORD_ANONYMIZED', 'ANONYMIZED', 'evidence_56')]
+  Extra:   [('VERIFICATION', 'account_service', 'account_004', 'VERIFY_RECORD_ABSENT', 'ABSENT', 'evidence_56')]
+
+[case_09] Status: Act=INCOMPLETE | Exp=INCOMPLETE
+  Missing: [('VERIFICATION', 'account_service', 'account_3960', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'security_service', 'audit_record_4902', 'VERIFY_RECORD_PRESENT', 'PRESENT', '')]
+  Extra:   [('VERIFICATION', 'account_service', 'account_061', 'VERIFY_RECORD_ABSENT', 'ABSENT', '')]
+
+[case_11] Status: Act=INCOMPLETE | Exp=INCOMPLETE
+  Missing: [('FINDING', 'search_service', 'search_052', 'REPORT_REMAINING_RECORD', 'PRESENT', 'evidence_03'), ('FINDING', 'analytics_platform', 'analytics_2034', 'REPORT_EXPOSED_PII', 'PRESENT', 'evidence_03'), ('REMEDIATION', 'integration_service', 'data_flow_9522', 'DISABLE_DATA_FLOW', 'DISABLED', ''), ('REMEDIATION', 'search_service', 'search_052', 'DELETE_RECORD', 'ABSENT', ''), ('REMEDIATION', 'support_platform', 'support_864', 'REDACT_RECORD', 'REDACTED', ''), ('REMEDIATION', 'analytics_platform', 'analytics_2034', 'ANONYMIZE_RECORD', 'ANONYMIZED', ''), ('VERIFICATION', 'search_service', 'search_052', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'support_platform', 'support_864', 'VERIFY_RECORD_REDACTED', 'REDACTED', ''), ('VERIFICATION', 'analytics_platform', 'analytics_2034', 'VERIFY_RECORD_ANONYMIZED', 'ANONYMIZED', ''), ('VERIFICATION', 'integration_service', 'data_flow_9522', 'VERIFY_DATA_FLOW_DISABLED', 'DISABLED', '')]
+  Extra:   [('REMEDIATION', 'support_platform', 'support_864', 'ANONYMIZE_RECORD', 'ANONYMIZED', ''), ('REMEDIATION', 'integration_service', 'data_flow_9522', 'DISABLE_FLOW', 'DISABLED', ''), ('VERIFICATION', 'support_platform', 'support_864', 'VERIFY_RECORD_ANONYMIZED', 'ANONYMIZED', ''), ('VERIFICATION', 'integration_service', 'data_flow_9522', 'VERIFY_FLOW_DISABLED', 'DISABLED', '')]
+
+[case_12] Status: Act=INCOMPLETE | Exp=INCOMPLETE
+  Missing: [('FINDING', 'analytics_platform', 'analytics_9914', 'REPORT_REMAINING_RECORD', 'PRESENT', 'evidence_01'), ('REMEDIATION', 'analytics_platform', 'analytics_9914', 'DELETE_RECORD', 'ABSENT', ''), ('VERIFICATION', 'analytics_platform', 'analytics_9914', 'VERIFY_RECORD_ABSENT', 'ABSENT', '')]
+  Extra:   [('FINDING', 'analytics_platform', 'analytics_9914', 'REPORT_EXPOSED_PII', 'PRESENT', 'evidence_01'), ('REMEDIATION', 'analytics_platform', 'analytics_9914', 'ANONYMIZE_RECORD', 'ANONYMIZED', ''), ('VERIFICATION', 'analytics_platform', 'analytics_9914', 'VERIFY_RECORD_ANONYMIZED', 'ANONYMIZED', '')]
+
+[case_13] Status: Act=INCOMPLETE | Exp=INCOMPLETE
+  Missing: [('FINDING', 'search_service', 'search_1308', 'REPORT_REMAINING_RECORD', 'PRESENT', 'evidence_03'), ('REMEDIATION', 'search_service', 'search_1308', 'DELETE_RECORD', 'ABSENT', ''), ('VERIFICATION', 'search_service', 'search_1308', 'VERIFY_RECORD_ABSENT', 'ABSENT', '')]
+
+[case_15] Status: Act=INCOMPLETE | Exp=INCOMPLETE
+  Missing: [('REMEDIATION', 'integration_service', 'data_flow_9846', 'DISABLE_DATA_FLOW', 'DISABLED', ''), ('VERIFICATION', 'integration_service', 'data_flow_9846', 'VERIFY_DATA_FLOW_DISABLED', 'DISABLED', '')]
+  Extra:   [('REMEDIATION', 'integration_service', 'data_flow_9846', 'DISABLE_FLOW', 'DISABLED', ''), ('VERIFICATION', 'integration_service', 'data_flow_9846', 'VERIFY_FLOW_DISABLED', 'DISABLED', '')]
+
+[case_16] Status: Act=INCOMPLETE | Exp=INCOMPLETE
+  Missing: [('FINDING', 'account_service', 'account_994', 'REPORT_REMAINING_RECORD', 'PRESENT', 'evidence_05'), ('REMEDIATION', 'account_service', 'account_994', 'DELETE_RECORD', 'ABSENT', ''), ('VERIFICATION', 'account_service', 'account_994', 'VERIFY_RECORD_ABSENT', 'ABSENT', '')]
+  Extra:   [('FINDING', 'account_service', 'account_994', 'REPORT_ACTIVE_DATA_FLOW', 'ACTIVE', 'activity_3577'), ('REMEDIATION', 'account_service', 'account_994', 'DISABLE_FLOW', 'DISABLED', ''), ('VERIFICATION', 'account_service', 'account_994', 'VERIFY_FLOW_DISABLED', 'DISABLED', '')]
+
+[case_18] Status: Act=INCOMPLETE | Exp=INCOMPLETE
+  Missing: [('REMEDIATION', 'integration_service', 'data_flow_4890', 'DISABLE_DATA_FLOW', 'DISABLED', ''), ('REMEDIATION', 'support_platform', 'support_5569', 'REDACT_RECORD', 'REDACTED', ''), ('VERIFICATION', 'account_service', 'account_5521', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'security_service', 'audit_record_6645', 'VERIFY_RECORD_PRESENT', 'PRESENT', ''), ('VERIFICATION', 'support_platform', 'support_5569', 'VERIFY_RECORD_REDACTED', 'REDACTED', ''), ('VERIFICATION', 'integration_service', 'data_flow_4890', 'VERIFY_DATA_FLOW_DISABLED', 'DISABLED', '')]
+  Extra:   [('REMEDIATION', 'support_platform', 'support_5569', 'ANONYMIZE_RECORD', 'ANONYMIZED', ''), ('REMEDIATION', 'integration_service', 'data_flow_4890', 'DISABLE_FLOW', 'DISABLED', ''), ('VERIFICATION', 'account_service', 'account_050', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'support_platform', 'support_5569', 'VERIFY_RECORD_ANONYMIZED', 'ANONYMIZED', ''), ('VERIFICATION', 'integration_service', 'data_flow_4890', 'VERIFY_FLOW_DISABLED', 'DISABLED', '')]
+
+[case_19] Status: Act=INCOMPLETE | Exp=INCOMPLETE
+  Missing: [('REMEDIATION', 'support_platform', 'support_9553', 'REDACT_RECORD', 'REDACTED', ''), ('VERIFICATION', 'support_platform', 'support_9553', 'VERIFY_RECORD_REDACTED', 'REDACTED', '')]
+  Extra:   [('REMEDIATION', 'support_platform', 'support_9553', 'ANONYMIZE_RECORD', 'ANONYMIZED', ''), ('VERIFICATION', 'support_platform', 'support_9553', 'VERIFY_RECORD_ANONYMIZED', 'ANONYMIZED', '')]
+
+[case_20] Status: Act=INCOMPLETE | Exp=INCOMPLETE
+  Missing: [('REMEDIATION', 'integration_service', 'data_flow_1770', 'DISABLE_DATA_FLOW', 'DISABLED', ''), ('VERIFICATION', 'account_service', 'account_5037', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'security_service', 'audit_record_5569', 'VERIFY_RECORD_PRESENT', 'PRESENT', ''), ('VERIFICATION', 'integration_service', 'data_flow_1770', 'VERIFY_DATA_FLOW_DISABLED', 'DISABLED', '')]
+  Extra:   [('REMEDIATION', 'integration_service', 'data_flow_1770', 'DISABLE_FLOW', 'DISABLED', ''), ('VERIFICATION', 'account_service', 'account_048', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'integration_service', 'data_flow_1770', 'VERIFY_FLOW_DISABLED', 'DISABLED', '')]
+
+[case_21] Status: Act=COMPLETE | Exp=COMPLETE
+  Missing: [('VERIFICATION', 'account_service', 'account_6440', 'VERIFY_RECORD_ABSENT', 'ABSENT', 'evidence_92'), ('VERIFICATION', 'analytics_platform', 'analytics_5335', 'VERIFY_RECORD_ANONYMIZED', 'ANONYMIZED', 'evidence_92')]
+  Extra:   [('VERIFICATION', 'account_service', 'account_021', 'VERIFY_RECORD_ABSENT', 'ABSENT', 'evidence_51')]
+
+[case_22] Status: Act=INCOMPLETE | Exp=INCOMPLETE
+  Missing: [('FINDING', 'analytics_platform', 'analytics_4440', 'REPORT_EXPOSED_PII', 'PRESENT', 'evidence_05'), ('REMEDIATION', 'analytics_platform', 'analytics_4440', 'ANONYMIZE_RECORD', 'ANONYMIZED', ''), ('VERIFICATION', 'account_service', 'account_4990', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'analytics_platform', 'analytics_4440', 'VERIFY_RECORD_ANONYMIZED', 'ANONYMIZED', '')]
+  Extra:   [('FINDING', 'analytics_platform', 'analytics_4440', 'REPORT_REMAINING_RECORD', 'PRESENT', 'evidence_05'), ('REMEDIATION', 'analytics_platform', 'analytics_4440', 'DELETE_RECORD', 'ABSENT', ''), ('VERIFICATION', 'account_service', 'account_051', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'analytics_platform', 'analytics_4440', 'VERIFY_RECORD_ABSENT', 'ABSENT', '')]
+
+[case_23] Status: Act=INCOMPLETE | Exp=INCOMPLETE
+  Missing: [('VERIFICATION', 'account_service', 'account_410', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'security_service', 'audit_record_4128', 'VERIFY_RECORD_PRESENT', 'PRESENT', '')]
+  Extra:   [('VERIFICATION', 'account_service', 'account_023', 'VERIFY_RECORD_ABSENT', 'ABSENT', '')]
+
+[case_24] Status: Act=INCOMPLETE | Exp=INCOMPLETE
+  Missing: [('FINDING', 'account_service', 'account_5334', 'REPORT_REMAINING_RECORD', 'PRESENT', 'evidence_92'), ('REMEDIATION', 'account_service', 'account_5334', 'DELETE_RECORD', 'ABSENT', ''), ('VERIFICATION', 'account_service', 'account_5334', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'security_service', 'audit_record_7095', 'VERIFY_RECORD_PRESENT', 'PRESENT', '')]
+  Extra:   [('FINDING', 'account_service', 'account_5334', 'REPORT_ACTIVE_DATA_FLOW', 'ACTIVE', 'activity_3608'), ('REMEDIATION', 'account_service', 'account_5334', 'DISABLE_FLOW', 'DISABLED', ''), ('VERIFICATION', 'account_service', 'account_5334', 'VERIFY_FLOW_DISABLED', 'DISABLED', '')]
+
+[case_25] Status: Act=COMPLETE | Exp=COMPLETE
+  Missing: [('VERIFICATION', 'account_service', 'account_3136', 'VERIFY_RECORD_ABSENT', 'ABSENT', 'evidence_92'), ('VERIFICATION', 'analytics_platform', 'analytics_1895', 'VERIFY_RECORD_ANONYMIZED', 'ANONYMIZED', 'evidence_92')]
+  Extra:   [('VERIFICATION', 'account_service', 'account_025', 'VERIFY_RECORD_ABSENT', 'ABSENT', 'evidence_51')]
+
+[case_26] Status: Act=COMPLETE | Exp=COMPLETE
+  Missing: [('VERIFICATION', 'account_service', 'account_5684', 'VERIFY_RECORD_ABSENT', 'ABSENT', 'evidence_92'), ('VERIFICATION', 'support_platform', 'support_4715', 'VERIFY_RECORD_REDACTED', 'REDACTED', 'evidence_92'), ('VERIFICATION', 'analytics_platform', 'analytics_4566', 'VERIFY_RECORD_ANONYMIZED', 'ANONYMIZED', 'evidence_92'), ('VERIFICATION', 'integration_service', 'data_flow_6244', 'VERIFY_DATA_FLOW_DISABLED', 'DISABLED', 'evidence_92'), ('VERIFICATION', 'backup_service', 'backup_3120', 'VERIFY_RESTORE_BLOCKED', 'BLOCKED', 'evidence_92')]
+  Extra:   [('VERIFICATION', 'account_service', 'account_5684', 'VERIFY_RECORD_ABSENT', 'ABSENT', 'evidence_51'), ('VERIFICATION', 'support_platform', 'support_4715', 'VERIFY_RECORD_REDACTED', 'ANONYMIZED', 'evidence_92'), ('VERIFICATION', 'integration_service', 'data_flow_6244', 'VERIFY_RECORD_REDACTED', 'ANONYMIZED', 'evidence_92'), ('VERIFICATION', 'backup_service', 'backup_3120', 'VERIFY_RECORD_REDACTED', 'ANONYMIZED', 'evidence_92')]
+
+[case_27] Status: Act=COMPLETE | Exp=COMPLETE
+  Missing: [('VERIFICATION', 'account_service', 'account_3866', 'VERIFY_RECORD_ABSENT', 'ABSENT', 'evidence_92'), ('VERIFICATION', 'support_platform', 'support_4707', 'VERIFY_RECORD_REDACTED', 'REDACTED', 'evidence_92'), ('VERIFICATION', 'analytics_platform', 'analytics_4574', 'VERIFY_RECORD_ANONYMIZED', 'ANONYMIZED', 'evidence_92'), ('VERIFICATION', 'integration_service', 'data_flow_2295', 'VERIFY_DATA_FLOW_DISABLED', 'DISABLED', 'evidence_92'), ('VERIFICATION', 'backup_service', 'backup_5970', 'VERIFY_RESTORE_BLOCKED', 'BLOCKED', 'evidence_92')]
+  Extra:   [('VERIFICATION', 'account_service', 'account_3866', 'VERIFY_RECORD_ABSENT', 'ABSENT', 'evidence_51'), ('VERIFICATION', 'support_platform', 'support_4707', 'VERIFY_RECORD_REDACTED', 'ANONYMIZED', 'evidence_92'), ('VERIFICATION', 'integration_service', 'data_flow_2295', 'VERIFY_RECORD_REDACTED', 'ANONYMIZED', 'evidence_92'), ('VERIFICATION', 'backup_service', 'backup_5970', 'VERIFY_RECORD_REDACTED', 'ANONYMIZED', 'evidence_92')]
+
+[case_28] Status: Act=COMPLETE | Exp=COMPLETE
+  Missing: [('VERIFICATION', 'account_service', 'account_5482', 'VERIFY_RECORD_ABSENT', 'ABSENT', 'evidence_92'), ('VERIFICATION', 'support_platform', 'support_2351', 'VERIFY_RECORD_REDACTED', 'REDACTED', 'evidence_92'), ('VERIFICATION', 'analytics_platform', 'analytics_6077', 'VERIFY_RECORD_ANONYMIZED', 'ANONYMIZED', 'evidence_92'), ('VERIFICATION', 'integration_service', 'data_flow_2337', 'VERIFY_DATA_FLOW_DISABLED', 'DISABLED', 'evidence_92'), ('VERIFICATION', 'backup_service', 'backup_838', 'VERIFY_RESTORE_BLOCKED', 'BLOCKED', 'evidence_92')]
+  Extra:   [('VERIFICATION', 'account_service', 'account_028', 'VERIFY_RECORD_ABSENT', 'ABSENT', 'evidence_51'), ('VERIFICATION', 'support_platform', 'support_2351', 'VERIFY_RECORD_REDACTED', 'ANONYMIZED', 'evidence_92'), ('VERIFICATION', 'integration_service', 'data_flow_2337', 'VERIFY_RECORD_REDACTED', 'ANONYMIZED', 'evidence_92'), ('VERIFICATION', 'backup_service', 'backup_838', 'VERIFY_RECORD_REDACTED', 'ANONYMIZED', 'evidence_92')]
+
+[case_29] Status: Act=INCOMPLETE | Exp=INCOMPLETE
+  Missing: [('REMEDIATION', 'integration_service', 'data_flow_3827', 'DISABLE_DATA_FLOW', 'DISABLED', ''), ('REMEDIATION', 'support_platform', 'support_5281', 'REDACT_RECORD', 'REDACTED', ''), ('VERIFICATION', 'account_service', 'account_7012', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'security_service', 'audit_record_3954', 'VERIFY_RECORD_PRESENT', 'PRESENT', ''), ('VERIFICATION', 'support_platform', 'support_5281', 'VERIFY_RECORD_REDACTED', 'REDACTED', ''), ('VERIFICATION', 'integration_service', 'data_flow_3827', 'VERIFY_DATA_FLOW_DISABLED', 'DISABLED', '')]
+  Extra:   [('REMEDIATION', 'support_platform', 'support_5281', 'ANONYMIZE_RECORD', 'ANONYMIZED', ''), ('REMEDIATION', 'integration_service', 'data_flow_3827', 'DISABLE_FLOW', 'DISABLED', ''), ('VERIFICATION', 'account_service', 'account_029', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'support_platform', 'support_5281', 'VERIFY_RECORD_ANONYMIZED', 'ANONYMIZED', ''), ('VERIFICATION', 'integration_service', 'data_flow_3827', 'VERIFY_FLOW_DISABLED', 'DISABLED', '')]
+
+[case_30] Status: Act=INCOMPLETE | Exp=INCOMPLETE
+  Missing: [('REMEDIATION', 'integration_service', 'data_flow_8524', 'DISABLE_DATA_FLOW', 'DISABLED', ''), ('REMEDIATION', 'support_platform', 'support_6477', 'REDACT_RECORD', 'REDACTED', ''), ('VERIFICATION', 'account_service', 'account_4163', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'security_service', 'audit_record_1707', 'VERIFY_RECORD_PRESENT', 'PRESENT', ''), ('VERIFICATION', 'support_platform', 'support_6477', 'VERIFY_RECORD_REDACTED', 'REDACTED', ''), ('VERIFICATION', 'integration_service', 'data_flow_8524', 'VERIFY_DATA_FLOW_DISABLED', 'DISABLED', '')]
+  Extra:   [('REMEDIATION', 'support_platform', 'support_6477', 'ANONYMIZE_RECORD', 'ANONYMIZED', ''), ('REMEDIATION', 'integration_service', 'data_flow_8524', 'DISABLE_FLOW', 'DISABLED', ''), ('VERIFICATION', 'account_service', 'account_030', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'support_platform', 'support_6477', 'VERIFY_RECORD_ANONYMIZED', 'ANONYMIZED', ''), ('VERIFICATION', 'integration_service', 'data_flow_8524', 'VERIFY_FLOW_DISABLED', 'DISABLED', '')]
+
+[case_31] Status: Act=COMPLETE | Exp=COMPLETE
+  Missing: [('VERIFICATION', 'account_service', 'account_4857', 'VERIFY_RECORD_ABSENT', 'ABSENT', 'evidence_51'), ('VERIFICATION', 'identity_service', 'tombstone_440', 'VERIFY_RECORD_REDACTED', 'REDACTED', 'evidence_51')]
+  Extra:   [('VERIFICATION', 'account_service', 'account_541', 'VERIFY_RECORD_ABSENT', 'ABSENT', 'evidence_51'), ('VERIFICATION', 'identity_service', 'tombstone_440', 'VERIFY_RECORD_REDACTED', 'ANONYMIZED', 'evidence_51')]
+
+[case_32] Status: Act=INCOMPLETE | Exp=INCOMPLETE
+  Missing: [('REMEDIATION', 'identity_service', 'tombstone_9178', 'REDACT_RECORD', 'REDACTED', ''), ('VERIFICATION', 'account_service', 'account_8858', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'identity_service', 'tombstone_9178', 'VERIFY_RECORD_REDACTED', 'REDACTED', '')]
+  Extra:   [('REMEDIATION', 'identity_service', 'tombstone_9178', 'ANONYMIZE_RECORD', 'ANONYMIZED', ''), ('VERIFICATION', 'account_service', 'account_542', 'VERIFY_RECORD_ABSENT', 'ABSENT', ''), ('VERIFICATION', 'identity_service', 'tombstone_9178', 'VERIFY_RECORD_ANONYMIZED', 'ANONYMIZED', '')]
+
+Total Passed: 9/32

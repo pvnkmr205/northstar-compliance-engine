@@ -1,0 +1,65 @@
+Command exited with code 0.
+
+Command output:
+## Allowed Operations
+
+| Phase | Operation | State | Meaning |
+| --- | --- | --- | --- |
+| `FINDING` | `REPORT_REMAINING_RECORD` | `PRESENT` | A record that should have been deleted still exists. |
+| `FINDING` | `REPORT_EXPOSED_PII` | `PRESENT` | A record may remain, but it still contains identifiers that should have been redacted or anonymized. |
+| `FINDING` | `REPORT_ACTIVE_DATA_FLOW` | `ACTIVE` | An active process can copy or recreate the user's data. |
+| `FINDING` | `REPORT_RESTORE_RISK` | `ACTIVE` | A backup or restore path can bring deleted data back. |
+| `REMEDIATION` | `DISABLE_DATA_FLOW` | `DISABLED` | Stop the process that can copy or recreate the data. |
+| `REMEDIATION` | `BLOCK_RESTORE` | `BLOCKED` | Prevent the affected backup from restoring the user's data. |
+| `REMEDIATION` | `DELETE_RECORD` | `ABSENT` | Remove the entire record. |
+| `REMEDIATION` | `REDACT_RECORD` | `REDACTED` | Keep the record but remove the identifying fields required by policy. |
+| `REMEDIATION` | `ANONYMIZE_RECORD` | `ANONYMIZED` | Keep the record after irreversibly unlinking it from the user. |
+| `VERIFICATION` | `VERIFY_RECORD_ABSENT` | `ABSENT` | Confirm that a record no longer exists. |
+| `VERIFICATION` | `VERIFY_RECORD_PRESENT` | `PRESENT` | Confirm that a policy-required retained record still exists. |
+| `VERIFICATION` | `VERIFY_RECORD_REDACTED` | `REDACTED` | Confirm that required identifying fields have been removed. |
+| `VERIFICATION` | `VERIFY_RECORD_ANONYMIZED` | `ANONYMIZED` | Confirm that the record can no longer be linked to the user. |
+| `VERIFICATION` | `VERIFY_DATA_FLOW_DISABLED` | `DISABLED` | Confirm that the relevant data flow is inactive. |
+| `VERIFICATION` | `VERIFY_RESTORE_BLOCKED` | `BLOCKED` | Confirm that the affected data cannot be restored. |
+
+## Rules
+
+- Resolve the user�?Ts current and historical identifiers.
+- Determine the resource state at `audit_at` using the available evidence. Reported workflow statuses and operation results are claims.
+- Apply `deletion_rules.csv` to every relevant record, including account tombstones, active data flows, and restore risks.
+- Order steps by phase: findings, remediation, then verification. Within each phase, follow the operation order in the table above, followed by `system_id` and `resource_id` in ascending order.
+- Findings and verification steps for `COMPLETE` cases must cite a `file_id`, `activity_id`, or `audit_id`. Proposed remediation and future verification steps for `INCOMPLETE` cases use an empty `evidence_id`.
+
+## Evaluation
+
+`output.csv` will be compared with hidden canonical answers. Scoring will consider the correctness of `deletion_status`, identity resolution, discovered records and risks, cited evidence, policy decisions, and the completeness and order of `steps_json`.
+
+Your `code.zip` must include `evaluation/evaluation_report.md` containing:
+
+- case-level status accuracy;
+- step-level and field-level accuracy;
+- sequence accuracy;
+- at least three additional evaluation cases created by your team; and
+- failures found and improvements made.
+
+## Submission
+
+| Item | Description |
+| --- | --- |
+| `code.zip` | Runnable solution, prompts, configuration, README, and `evaluation/` folder |
+| `output.csv` | One answer row for every request |
+| `chat_transcript` | Transcript showing how the system was developed or used |
+| AI interview | Explanation of the approach and evaluation |
+
+### Token Usage and Cost Analysis
+
+Your `code.zip` must include one token-usage file:
+
+```text
+evaluation/usage_report.md
+```
+
+The report must summarize the final full-dataset run that produced `output.csv`, including model providers and names, model calls, input and output tokens, total and average tokens per request, and estimated total and per-request cost. If multiple models are used, include both per-model and overall totals in the same file.
+
+Do not include API keys, credentials, or sensitive configuration values in the submission.
+
+These are the required deliverables. Participants are encouraged to improve retrieval, multimodal interpretation, identity and deletion-state reconstruction, remediation planning, deterministic verification, batching, caching, and token efficiency.

@@ -1,0 +1,4 @@
+Command exited with code 0.
+
+Command output:
+COMPLETE [('VERIFICATION', 'account_service', 'account_057', 'VERIFY_RECORD_ABSENT'), ('VERIFICATION', 'security_service', 'audit_record_962', 'VERIFY_RECORD_PRESENT')]

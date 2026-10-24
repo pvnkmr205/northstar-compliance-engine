@@ -1,0 +1,22 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-695
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-695.log
+Log output:
+<truncated 16 lines>
+imary prof
+Found in evidence\records\customer_account_handover_20261001.txt
+   - 2026-10-01T12:00:00Z | account_service | account_4248 | USER_PROFILE | NOT_FOUND | novak.tomasz@icloud.com
+
+=== SEARCHING FOR account_9797 ===
+Found in system_activity.csv
+   activity_3432,2026-08-25T11:07:59Z,DELETE_RECORD,deletion_worker,account_service,account_9797,SUCCESS,Deletion worker submitted primary prof
+Found in evidence\logs\service_events_ap_south_20260915.log
+   2026-09-15T11:56:57Z level=INFO service=account_service instance=account-2 pod=account-898d region=eu-west-1 trace_id=tr-8001359 resource_id
+
+=== SEARCHING FOR account_9335 ===
+Found in system_activity.csv
+   activity_3739,2026-09-09T10:53:28Z,DELETE_RECORD,deletion_worker,account_service,account_9335,FAILED,Deletion worker submitted primary profi
+Found in evidence\records\customer_account_handover_20261001.txt
+   - 2026-10-01T12:00:00Z | account_service | account_9335 | USER_PROFILE | NOT_FOUND | noor-khalil@proton.me
+
+Last progress: 1s ago

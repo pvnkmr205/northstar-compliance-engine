@@ -1,0 +1,62 @@
+Command exited with code 0.
+
+Command output:
+"ACTIVE", activity_id,
+            ), None))
+
+    snapshot_tables = {
+        row[0] for row in conn.execute(
+            "SELECT table_name FROM _northstar_snapshot_tables"
+        )
+    } if conn.execute(
+        "SELECT 1 FROM sqlite_master WHERE type='table' "
+        "AND name='_northstar_snapshot_tables'"
+    ).fetchone() else set()
+
+    # Keep only the newest in-cutoff capture for each logical source table.
+    snapshot_by_source: Dict[str, Tuple[str, str, str, str]] = {}
+    for table in snapshot_tables:
+        match = re.match(r"(.+?)__(.+)", table)
+        if match:
+            prefix, source_table = match.groups()
+            source_file = next(
+                (entry for entry in manifest if Path(entry[1]).stem.casefold() == prefix.casefold()),
+                None,
+            )
+        else:
+            source_table = table
+            source_file = None
+            create_pattern = re.compile(
+                rf"CREATE\s+TABLE\s+(?:IF\s+NOT\s+EXISTS\s+)?"
+                rf"(?:[\"`\[])?{re.escape(table)}(?:[\"`\]])?",
+                re.IGNORECASE,
+            )
+            for candidate in sql_manifest:
+                try:
+                    sql_path = Path(candidate[1])
+                    if not sql_path.is_file():
+                        sql_path = Path("dataset") / sql_path
+                    sql_text = sql_path.read_text(encoding="utf-8-sig")
+                except (OSError, UnicodeError):
+                    continue
+                if create_pattern.search(sql_text):
+                    source_file = candidate
+                    break
+        if not source_file:
+            continue
+        previous = snapshot_by_source.get(source_table.casefold())
+        if previous is None or (source_file[3], source_file[0]) > (previous[3], previous[0]):
+            snapshot_by_source[source_table.casefold()] = (
+                source_file[0], table, source_file[2], source_file[3]
+            )
+
+    linked_resources = {value.casefold() for value in identity.linked_resources if value}
+    for _source_name, (_file_id, table, _origin, captured_at) in sorted(snapshot_by_source.items()):
+        if captured_at > cutoff:
+            continue
+        lower_table = table.casefold().split("__", 1)[-1]
+        if "backup" in lower_table:
+            category = "backup"
+        elif any(word in lower_table for word in ("tombstone", "account")):
+            category = "tombstone"
+        elif any(word in lower_table for word in ("analytics", "telemetry"

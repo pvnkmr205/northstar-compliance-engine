@@ -1,0 +1,70 @@
+Command exited with code 0.
+
+Command output:
+)):
+            category = "analytics"
+        elif any(word in lower_table for word in (
+            "profile", "search", "cache", "export", "support", "customer_data"
+        )):
+            category = "delete"
+        else:
+            continue
+        columns = [row[1] for row in conn.execute(f'PRAGMA table_info("{table}")')]
+        escaped = table.replace('"', '""')
+        for values in conn.execute(f'SELECT * FROM "{escaped}"'):
+            row = dict(zip(columns, values))
+            if not _strict_row_matches_subject(row, identity):
+                continue
+            resource_id = str(
+                row.get("resource_id") or row.get("record_id") or row.get("id")
+                or row.get("account_id") or row.get("user_id") or table
+            )
+            system_id = infer_system(table, resource_id, row)
+            evidence_id = _file_id
+            row_text = _row_values(row)
+            direct_identifiers = (
+                set(identity.emails) | set(identity.phones) | set(identity.names)
+                | set(identity.email_hashes)
+            )
+            if category == "backup":
+                if any(
+                    str(row.get(column, "")).casefold() in {"1", "true", "yes", "active"}
+                    for column in ("restore_allowed", "eligible", "active")
+                ):
+                    findings.append((AuditStep(
+                        "FINDING", "backup_service", resource_id,
+                        "REPORT_RESTORE_RISK", "ACTIVE", evidence_id,
+                    ), None))
+            elif category == "tombstone":
+                if any(value and str(value).casefold() in row_text for value in direct_identifiers):
+                    findings.append((AuditStep(
+                        "FINDING", system_id, resource_id, "REPORT_EXPOSED_PII",
+                        "PRESENT", evidence_id,
+                    ), "REDACT"))
+            elif category == "analytics":
+                findings.append((AuditStep(
+                    "FINDING", system_id, resource_id, "REPORT_EXPOSED_PII",
+                    "PRESENT", evidence_id,
+                ), "ANONYMIZE"))
+            else:
+                findings.append((AuditStep(
+                    "FINDING", system_id, resource_id, "REPORT_REMAINING_RECORD",
+                    "PRESENT", evidence_id,
+                ), "DELETE"))
+
+    # Inspect in-cutoff text, JSON, log, and PDF evidence that is explicitly tied
+    # to a resolved subject identifier. Context is limited to the matching record.
+    subject_tokens = {
+        str(value).strip().casefold()
+        for value in (
+            set(identity.user_ids) | set(identity.emails) | set(identity.phones)
+            | set(identity.names) | set(identity.email_hashes)
+        )
+        if value
+    }
+    resource_pattern = re.compile(
+        r"\b(?:account|search|support|export|analytics|audit_record|backup|"
+        r"data_flow|tombstone)_\d+\b",
+        re.IGNORECASE,
+    )
+    observed_clean_verifications: Lis

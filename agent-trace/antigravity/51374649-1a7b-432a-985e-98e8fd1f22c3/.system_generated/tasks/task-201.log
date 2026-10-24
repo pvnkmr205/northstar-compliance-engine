@@ -1,0 +1,60 @@
+def init_database(
+    dataset_dir: Path = Path("dataset"),
+    db_path: Path = Path("cache/northstar.db"),
+) -> sqlite3.Connection:
+    """Load participant-facing CSV data and SQL evidence into a local database."""
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    conn = sqlite3.connect(db_path)
+
+    table_columns: Dict[str, Tuple[str, ...]] = {
+        "user_identities": (
+            "user_id", "name", "email", "phone", "email_hash", "updated_at",
+        ),
+        "user_audit_log": (
+            "audit_id", "user_id", "event_time", "field_name", "old_value", "new_value",
+        ),
+        "system_activity": (
+            "activity_id", "event_time", "event_type", "source_system",
+            "target_system", "resource_id", "reported_result", "details",
+        ),
+        "deletion_rules": (
+            "rule_id", "data_category", "condition", "required_action",
+        ),
+        "evidence_files": ("file_id", "file_path", "origin", "captured_at"),
+        "deletion_requests": (
+            "case_id", "email", "requested_at", "reported_status", "reported_at",
+            "audit_at", "request_text",
+        ),
+    }
+
+    try:
+        for table_name, columns in table_columns.items():
+            column_sql = ", ".join(f'"{column}" TEXT' for column in columns)
+            conn.execute(
+                f'CREATE TABLE IF NOT EXISTS "{table_name}" ({column_sql})'
+            )
+            conn.execute(f'DELETE FROM "{table_name}"')
+
+            csv_path = dataset_dir / f"{table_name}.csv"
+            with csv_path.open("r", encoding="utf-8-sig", newline="") as csv_file:
+                rows = csv.DictReader(csv_file)
+                placeholders = ", ".join("?" for _ in columns)
+                column_names = ", ".join(f'"{column}"' for column in columns)
+                insert_sql = (
+                    f'INSERT INTO "{table_name}" ({column_names}) '
+                    f"VALUES ({placeholders})"
+                )
+                conn.executemany(
+                    insert_sql,
+                    (tuple(row.get(column) for column in columns) for row in rows),
+                )
+
+        snapshot_registry = "_northstar_snapshot_tables"
+        conn.execute(
+            f'CREATE TABLE IF NOT EXISTS "{snapshot_registry}" (table_name TEXT PRIMARY KEY)'
+        )
+        for (table_name,) in conn.execute(
+            f'SELECT table_name FROM "{snapshot_registry}"'
+        ).fetchall():
+            conn.execute(f'DROP TABLE IF EXISTS "{table_name}"')
+        conn.execute(f'DELETE FROM "{snapshot_registry}"')

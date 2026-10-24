@@ -1,0 +1,4 @@
+Command exited with code 0.
+
+Command output:
+Total traces: 774 Traces with identifiers: 321

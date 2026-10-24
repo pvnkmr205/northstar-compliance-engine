@@ -1,0 +1,9 @@
+Command exited with code 0.
+
+Command output:
+[case_11] Step 2 mismatch: exp=(FINDING, analytics_platform, analytics_2034) vs sorted=(FINDING, support_platform, support_864)
+[case_18] Step 2 mismatch: exp=(FINDING, analytics_platform, analytics_037) vs sorted=(FINDING, support_platform, support_5569)
+[case_23] Step 1 mismatch: exp=(FINDING, export_service, export_7364) vs sorted=(FINDING, search_service, search_898)
+[case_29] Step 2 mismatch: exp=(FINDING, analytics_platform, analytics_5208) vs sorted=(FINDING, support_platform, support_5281)
+[case_30] Step 2 mismatch: exp=(FINDING, analytics_platform, analytics_3697) vs sorted=(FINDING, support_platform, support_6477)
+Total sort mismatches with official table ordering: 5/32

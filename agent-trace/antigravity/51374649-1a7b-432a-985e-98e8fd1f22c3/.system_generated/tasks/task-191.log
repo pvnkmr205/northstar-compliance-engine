@@ -1,0 +1,34 @@
+Northstar Shop — Ghost Data Audit Engine (pipeline.py)
+3. Zero-Token SQLite Ingestion & Identity Resolution (Transitive Closure).
+4. Cross-Case `EvidenceVault` Cache & Batched Intent Classification hooks.
+import sqlite3
+1. **Zero-Token Structured Parsing**: All CSVs (`user_identities.csv`, `user_audit_log.csv`, `system_activity.csv`, `deletion_rules.csv`, `evidence_files.csv`), JSON files, plain-text logs, and SQLite `.sql` snapshot exports were parsed deterministically in SQLite/Python without LLM calls.
+# 3. SQLITE INGESTION & ZERO-TOKEN LOCAL INDEXING
+    db_path: Path = Path("cache/northstar.db"),
+) -> sqlite3.Connection:
+    conn = sqlite3.connect(db_path)
+        snapshot_registry = "_northstar_snapshot_tables"
+            snapshot_conn = sqlite3.connect(":memory:")
+                    FROM sqlite_master
+                    WHERE type = 'table' AND name NOT LIKE 'sqlite_%'
+                        "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = ?",
+                        "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = ?",
+    conn: sqlite3.Connection,
+def _tables(conn: sqlite3.Connection) -> List[Tuple[str, List[str]]]:
+    for (name,) in conn.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name"):
+        if name == "_northstar_snapshot_tables":
+    case_row: Dict[str, Any], identity: ResolvedIdentity, conn: sqlite3.Connection
+    snapshot_registry = {row[0] for row in conn.execute("SELECT table_name FROM _northstar_snapshot_tables")} if conn.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='_northstar_snapshot_tables'").fetchone() else set()
+        elif any(word in lower for word in ("profile", "search", "cache", "export", "support", "customer_data")):
+def validate_samples(conn: sqlite3.Connection, dataset_dir: Path = Path("dataset")) -> float:
+_EVIDENCE_TEXT_CACHE: Dict[str, str] = {}
+    if file_path in _EVIDENCE_TEXT_CACHE:
+        return _EVIDENCE_TEXT_CACHE[file_path]
+                    _EVIDENCE_TEXT_CACHE[file_path] = result
+                    _EVIDENCE_TEXT_CACHE[file_path] = result
+            _EVIDENCE_TEXT_CACHE[file_path] = result
+    case_row: Dict[str, Any], identity: ResolvedIdentity, conn: sqlite3.Connection
+            "SELECT table_name FROM _northstar_snapshot_tables"
+        "SELECT 1 FROM sqlite_master WHERE type='table' "
+        "AND name='_northstar_snapshot_tables'"
+            "profile", "search", "cache", "export", "support", "customer_data"

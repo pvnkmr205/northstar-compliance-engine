@@ -1,0 +1,5 @@
+Command exited with code 0.
+
+Command output:
+INSERT INTO "customer_data_primary" VALUES('support_2295','support_platform','ticket_attachments','{"resource_id":"support_2295","ticket_id":"CS-6295","file_name":"delivery_confirmation_64.pdf","uploaded_by":"sami-nasser@proton.me","storage_class":"ticket_attachment"}','2026-02-08T07:00:00Z');
+INSERT INTO "customer_data_reporting_replica" VALUES('support_2295','support_platform','ticket_attachments','{"resource_id":"support_2295","ticket_id":"CS-6295","file_name":"delivery_confirmation_64.pdf","uploaded_by":"sami-nasser@proton.me","storage_class":"ticket_attachment"}','2026-02-08T07:00:00Z');

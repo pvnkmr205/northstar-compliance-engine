@@ -1,0 +1,5 @@
+Command exited with code 0.
+
+Command output:
+{'case_id': 'case_31', 'email': 'a.eze08@gmail.com', 'requested_at': '2026-09-04T12:00:00Z', 'reported_status': 'COMPLETE', 'reported_at': '2026-09-06T12:00:00Z', 'audit_at': '2026-09-15T12:00:00Z', 'request_text': 'I no longer need this account. Please remove my name and contact details, but keeping an internal deleted-account reference is fine if other required records still depend on it.'}
+{'case_id': 'case_32', 'email': 'addo.kofi@gmail.com', 'requested_at': '2026-09-03T12:00:00Z', 'reported_status': 'PARTIALLY_COMPLETE', 'reported_at': '2026-09-06T12:00:00Z', 'audit_at': '2026-09-15T12:00:00Z', 'request_text': 'The account itself is gone, but an internal deleted-account record still shows my personal details. Please keep only the reference needed for retained records and remove the rest.'}

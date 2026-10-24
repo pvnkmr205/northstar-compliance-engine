@@ -1,0 +1,7 @@
+Command exited with code 0.
+
+Command output:
+Output lines: 519
+Header: case_id,deletion_status,steps_json
+First data row: case_100,INCOMPLETE,"[{""step_no"":1,""phase"":""F
+Last data row: case_99,INCOMPLETE,"[{""step_no"":1,""phase"":""FI

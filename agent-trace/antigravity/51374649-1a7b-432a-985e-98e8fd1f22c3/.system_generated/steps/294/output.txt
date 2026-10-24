@@ -1,0 +1,5 @@
+Command exited with code 0.
+
+Command output:
+TXT file: C:\Users\Pavan\hackerrank-orchestrate-october26\dataset\evidence\records\customer_account_handover_20261001.txt
+  line: - 2026-10-01T12:00:00Z | account_service | account_146 | USER_PROFILE | NOT_FOUND | e.lindberg18@yahoo.com

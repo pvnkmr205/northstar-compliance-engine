@@ -1,0 +1,7 @@
+Command exited with code 1.
+
+Command output:
+  File "<string>", line 19
+    print(f'{cid}: email={req[" email\]}
+                              ^
+SyntaxError: unterminated string literal (detected at line 19)

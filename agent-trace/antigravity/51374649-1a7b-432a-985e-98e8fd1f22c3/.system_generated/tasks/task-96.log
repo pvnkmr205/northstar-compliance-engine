@@ -1,0 +1,34 @@
+pipeline.py:
+ #!/usr/bin/env python3
+"""
+Northstar Shop — Ghost Data Audit Engine (pipeline.py)
+Hybrid Neuro-Symbolic Architecture for 24-Hour Hackathon Execution.
+
+Features included:
+1. Deterministic `steps_json` Sorting & Validation Engine (15 Allowed Operations).
+2. Multi-Model Token & Cost Telemetry Wrapper (`evaluation/usage_report.md`).
+3. Zero-Token SQLite Ingestion & Identity Resolution (Transitive Closure).
+4. Cross-Case `EvidenceVault` Cache & Batched Intent Classification hooks.
+"""
+
+from __future__ import annotations
+
+import csv
+import hashlib
+import json
+import sqlite3
+from dataclasses import dataclass, field
+from pathlib import Path
+from typing import Any, Callable, Dict, List, Optional, Set, Tuple
+
+# ============================================================================
+# 1. ALLOWED OPERATIONS & DETERMINISTIC ORDERING SPEC
+# ============================================================================
+
+PHASE_ORDER: Dict[str, int] = {
+    "FINDING": 0,
+    "REMEDIATION": 1,
+    
+
+function_stubs.py:
+ 

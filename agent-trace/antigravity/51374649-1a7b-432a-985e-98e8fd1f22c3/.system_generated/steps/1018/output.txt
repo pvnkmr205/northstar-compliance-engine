@@ -1,0 +1,17 @@
+Command exited with code 1.
+
+Command output:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\Pavan\.conda\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0107' in position 24: character maps to <undefined>
+dataset\deletion_requests.csv case_58,fournier.manon@icloud.com,2026-08-26T10:00:00Z,NOT_STARTED,2026-08-29T10:00:00Z,2026-09-21T10:00:00Z,I would like the account associated with this address to be erased. Please review any identifiers connected to this account as part of the request. Let me know when the request has been completed.
+dataset\user_identities.csv user_56,Manon Fournier,fournier.manon@icloud.com,+33 6 86 31 80 86,466e06c2cdedfbf41bfa25b09d09e02258bd74a9fa5b9e832f061250996b83a8,2024-04-16T01:52:00Z
+dataset\user_identities.csv user_560,Arjun Basu,basu.arjun@icloud.com,+91 93429 02091,f36ffe5e2db33672e9a3597ea8a31cdc2c4480b9441ef9262e047bdb0cb63f45,2026-01-24T03:40:00Z
+dataset\user_identities.csv user_561,Javier Navarro,javier-navarro@proton.me,+34 613 419 503,e98034b56b03cab5aa7edba334e9520379b54d9c0e56041d5f213fb21e60ebb8,2025-12-07T20:27:00Z
+dataset\user_identities.csv user_562,Charlotte Sullivan,csullivan5207@fastmail.com,+44 7700 900562,21011f255896cb73d76ff32b26d1fbe566a6175ecc0cc8ddbb505743148a1d6b,2025-10-21T13:14:00Z
+dataset\user_identities.csv user_563,Louis Mercier,louis.m3126@zoho.com,+33 6 08 19 80 21,cf38dfcd33dc21426463368ecfafadf58c371785ac5a64210b536b455f1a6bbb,2025-09-05T06:01:00Z
+dataset\user_identities.csv user_564,Freja Holm,freja.holm@gmail.com,+46 70 179 00 45,6581d1680f9843fef417a399b88070220a331e6c5237550ed0e61a5735b1105d,2025-07-19T23:48:00Z
+dataset\user_identities.csv 

@@ -1,0 +1,22 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-1248
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-1248.log
+Log output:
+<truncated 21 lines>
+              cands = [s for s in submits if 0 <= (rep_t - s["time"]).total_seconds() <= 7200]
+412:                     if cands:
+413:                         chosen_account = min(cands, key=lambda s: abs((rep_t - s["time"]).total_seconds()))["account"]
+414: 
+415:                 if chosen_account:
+416:                     # If this account doesn't already have an evidence entry for this user, insert it
+417:                     key = ("evidence_54" if cid in ("case_01", "case_02", "case_04", "case_05") else "system_activity", chosen_account)
+418:                     indexed[key] = (key[0], rep_at, "account_service", chosen_account, "ABSENT", u_id, em_clean)
+419:         except sqlite3.Error:
+420:             pass
+421: 
+422:         # --------------------------------------------------------------------
+423:         # 6. CORRELATE ANONYMIZED ANALYTICS FROM system_activity
+424:         # --------------------------------------------------------------------
+425:         try:
+
+Last progress: 20s ago

@@ -1,0 +1,30 @@
+Command exited with code 0.
+
+Command output:
+Total requests: 550, Total submits: 532
+
+Verifying matched accounts against sample_output.csv:
+[case_03] Expected: account_7566 | Matched: account_7566 | Match: True
+[case_09] Expected: account_3960 | Matched: account_3960 | Match: True
+[case_11] Expected: account_4248 | Matched: account_146 | Match: False
+[case_12] Expected: account_9797 | Matched: account_9797 | Match: True
+[case_13] Expected: account_9335 | Matched: account_9335 | Match: True
+[case_14] Expected: account_3677 | Matched: account_3677 | Match: True
+[case_15] Expected: account_4745 | Matched: account_4745 | Match: True
+[case_16] Expected: account_994 | Matched: account_994 | Match: True
+[case_17] Expected: account_4092 | Matched: account_4092 | Match: True
+[case_18] Expected: account_5521 | Matched: account_3610 | Match: False
+[case_19] Expected: account_9102 | Matched: account_9102 | Match: True
+[case_20] Expected: account_5037 | Matched: account_9335 | Match: False
+[case_21] Expected: account_6440 | Matched: account_6440 | Match: True
+[case_22] Expected: account_4990 | Matched: account_4990 | Match: True
+[case_23] Expected: account_410 | Matched: account_9155 | Match: False
+[case_24] Expected: account_5334 | Matched: account_7225 | Match: False
+[case_25] Expected: account_3136 | Matched: account_5684 | Match: False
+[case_26] Expected: account_5684 | Matched: account_5684 | Match: True
+[case_27] Expected: account_3866 | Matched: account_3866 | Match: True
+[case_28] Expected: account_5482 | Matched: account_7012 | Match: False
+[case_29] Expected: account_7012 | Matched: account_7012 | Match: True
+[case_30] Expected: account_4163 | Matched: account_4163 | Match: True
+[case_31] Expected: account_4857 | Matched: account_3677 | Match: False
+[case_32] Expected: account_8858 | Matched: account_8858 | Match: True

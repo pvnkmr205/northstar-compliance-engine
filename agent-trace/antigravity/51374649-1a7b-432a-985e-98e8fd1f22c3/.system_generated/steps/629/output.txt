@@ -1,0 +1,32 @@
+Command exited with code 0.
+
+Command output:
+ Volume in drive C is OS
+ Volume Serial Number is AA0E-8D44
+
+ Directory of C:\Users\Pavan\hackerrank-orchestrate-october26
+
+25-10-2026  00:22             1,456 check_analytics_schema.py
+25-10-2026  00:35               938 check_case03_link.py
+25-10-2026  00:24               442 check_evidence_grouping.py
+24-10-2026  23:46               684 check_resources.py
+24-10-2026  23:48               800 check_snapshots.py
+24-10-2026  23:07             1,607 diagnose_samples.py
+25-10-2026  00:59             1,678 diff_all_cases.py
+25-10-2026  01:13             1,375 find_ground_truth_links.py
+25-10-2026  00:37             5,764 fix_analytics_correlation.py
+25-10-2026  00:57             1,710 inspect_ground_truth.py
+24-10-2026  22:45               790 inspect_samples.py
+25-10-2026  00:17             1,182 link_probe.py
+25-10-2026  00:36               716 patch_and_reindex.py
+25-10-2026  01:11             1,856 peek_evidence_details.py
+24-10-2026  23:49             1,178 peek_logs.py
+25-10-2026  00:21               705 probe_analytics_origin.py
+25-10-2026  00:18               962 probe_case03.py
+24-10-2026  23:49             1,193 probe_linkage.py
+25-10-2026  01:12             1,808 probe_links_deep.py
+25-10-2026  01:02             1,293 probe_missing_evidence.py
+24-10-2026  21:58                87 run.py
+25-10-2026  00:15               728 verify_evidence_index.py
+              22 File(s)         28,952 bytes
+               0 Dir(s)  226,012,602,368 bytes free

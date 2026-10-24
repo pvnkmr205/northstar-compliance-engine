@@ -1,0 +1,85 @@
+Command exited with code 0.
+
+Command output:
+L78: class AuditStep:
+L118: def build_steps_json(deletion_status: str, raw_steps: List[AuditStep]) -> str:
+L129: normalized: Dict[Tuple[str, str, str, str], AuditStep] = {}
+L154: clean_step = AuditStep(
+L170: sorted_steps = sorted(
+L198: findings: List[Tuple[AuditStep, Optional[str]]],
+L199: retained_verifications: Optional[List[AuditStep]] = None,
+L200: ) -> List[AuditStep]:
+L205: all_steps: List[AuditStep] = []
+L214: AuditStep(
+L223: AuditStep(
+L235: AuditStep(
+L332: for model_key in sorted(self.stats.keys()):
+L458: for sql_path in sorted(evidence_dir.rglob("*.sql")):
+L680: for identifier in sorted(value for value in identifiers if value):
+L786: ) -> Tuple[str, List[AuditStep]]:
+L792: findings: List[Tuple[AuditStep, Optional[str]]] = []
+L829: findings.append((AuditStep("FINDING", system, resource, "REPORT_ACTIVE_DATA_FLOW", "ACTIVE", event.g
+L831: findings.append((AuditStep("FINDING", system, resource, "REPORT_RESTORE_RISK", "ACTIVE", event.get("
+L931: findings.append((AuditStep("FINDING", system, resource, "REPORT_EXPOSED_PII", "PRESENT", evidence_id
+L933: findings.append((AuditStep("FINDING", system, resource, "REPORT_EXPOSED_PII", "PRESENT", evidence_id
+L935: findings.append((AuditStep("FINDING", system, resource, "REPORT_REMAINING_RECORD", "PRESENT", eviden
+L954: AuditStep(
+L969: unique: Dict[Tuple[str, str, str, str], Tuple[AuditStep, Optional[str]]] = {}
+L976: verifications: List[AuditStep] = []
+L1001: linked = sorted(identity.linked_resources)
+L1002: account_resources = sorted(
+L1006: user_id = next(iter(sorted(identity.user_ids)), "")
+L1016: AuditStep(
+L1028: AuditStep(
+L1037: AuditStep(
+L1045: return "COMPLETE", sorted(
+L1065: emails = sorted(value for value in identity.emails if value)
+L1066: user_ids = sorted(value for value in identity.user_ids if value)
+L1103: ) -> Tuple[str, List[AuditStep]]:
+L1119: email_values = sorted(value for value in identity.emails if value)
+L1120: user_values = sorted(value for value in identity.user_ids if value)
+L1171: verified.append(AuditStep(
+L1196: user_id = next(iter(sorted(identity.user_ids)), "")
+L1199: (resource for resource in sorted(identity.linked_resources)
+L1204: verifications.append(AuditStep(
+L1217: for resource in sorted(audit_resources):
+L1218: verifications.append(AuditStep(
+L1225: user_id = next(iter(sorted(identity.user_ids)), "")
+L1237: (resource for resource in sorted(identity.linked_resources)
+L1266: verifications = [AuditStep(
+L1280: for (system, resource), record in sorted(
+L1289: verifications.append(AuditStep(
+L1311: actual_steps = build_steps_json(status, steps)
+L1330: cases = sorted(csv.DictReader(source), key=lambda row: row["case_id"])
+L1339: writer.writerow({"case_id": case["case_id"], "deletion_status": status, "steps_json": build_steps_js
+L1528: ) -> Tuple[str, List[AuditStep]]:
+L1628: findings: List[Tuple[AuditStep, Optional[str]]] = []
+L1645: findings.append((AuditStep(
+L1650: findings.append((AuditStep(
+L1702: for _source_name, (_file_id, table, _origin, captured_at) in sorted(snapshot_by_source.items()):
+L1740: findings.append((AuditStep(
+L1746: findings.append((AuditStep(
+L1751: findings.append((AuditStep(
+L1756: findings.append((AuditStep(
+L1776: observed_clean_verifications: List[AuditStep] = []
+L1845: resource_ids = sorted(set(resource_pattern.findall(context)))
+L1862: observed_clean_verifications.append(AuditStep(
+L1868: observed_clean_verifications.append(AuditStep(
+L1879: observed_clean_verifications.append(AuditStep(
+L1884: step = AuditStep(
+L1899: observed_clean_verifications.append(AuditStep(
+L1904: step = AuditStep(
+L1924: observed_clean_verifications.append(AuditStep(
+L1930: observed_clean_verifications.append(AuditStep(
+L1936: observed_clean_verifications.append(AuditStep(
+L1978: findings.append((AuditStep(
+L1993: unique: Dict[Tuple[str, str, str, str], Tuple[AuditStep, Optional[str]]] = {}
+L1998: step = AuditStep(
+L2011: primary_user = next(iter(sorted(identity.user_ids)), "")
+L2033: retained_verifications.append(AuditStep(
+L2041: verifications: List[AuditStep] = list(clean_verifications.values())
+L2042: primary_user = next(iter(sorted(identity.user_ids)), "")
+L2060: verifications.append(AuditStep(
+L2064: for resource_id in sorted(identity.linked_resources):
+L2078: verifications.append(AuditStep(
+L2083: return "COMPLETE", sorted(

@@ -1,0 +1,6 @@
+Command exited with code 0.
+
+Command output:
+All keys in SQL payloads: ['account_status', 'actor_type', 'archive_path', 'channel', 'connector_name', 'created_at', 'customer_reference', 'destination', 'document', 'download_available', 'email', 'email_hash', 'enabled', 'encryption', 'event_name', 'expires_at', 'file_name', 'full_name', 'included_sections', 'index_name', 'integrity_seal', 'message_text', 'metrics', 'mode', 'name', 'order_reference', 'owner_email', 'phone', 'recent_activity', 'reporting_window', 'resource_id', 'restore_allowed', 'retained_until', 'retention_reason', 'signup_channel', 'storage_class', 'subject_reference', 'subject_selector', 'ticket_id', 'uploaded_by', 'user_id']
+Data flow keys: ['connector_name', 'destination', 'enabled', 'mode', 'resource_id', 'subject_selector']
+Backup keys: ['archive_path', 'encryption', 'resource_id', 'restore_allowed', 'subject_reference']

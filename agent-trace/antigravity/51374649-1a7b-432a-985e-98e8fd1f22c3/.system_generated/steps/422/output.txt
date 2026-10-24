@@ -1,0 +1,43 @@
+Command exited with code 0.
+
+Command output:
+1096:         identity.evidence_resources.append(record)
+1097:         identity.linked_resources.add(resource_id)
+1098:     return identity
+1099: 
+1100: 
+1101: def audit_case(
+1102:     case_row: Dict[str, Any], identity: ResolvedIdentity, conn: sqlite3.Connection
+1103: ) -> Tuple[str, List[AuditStep]]:
+1104:     """Audit using the temporal evaluator, preferring direct evidence records."""
+1105:     if not is_deletion_request(str(case_row.get("request_text", ""))):
+1106:         return "NOT_APPLICABLE", []
+1107: 
+1108:     status, steps = _audit_case_without_evidence_records(case_row, identity, conn)
+1109:     cutoff = _time_key(case_row.get("audit_at"))
+1110:     evidence_rows = list(getattr(identity, "evidence_resources", []))
+1111:     if not evidence_rows:
+1112:         table = conn.execute(
+1113:             "SELECT 1 FROM sqlite_master WHERE type='table' AND name='evidence_records'"
+1114:         ).fetchone()
+1115:         if table:
+1116:             cols = {row[1].casefold() for row in conn.execute('PRAGMA table_info("evidence_records")')}
+1117:             required = {"file_id", "captured_at", "system_id", "resource_id", "verified_state", "email", "user_id"}
+1118:             if required.issubset(cols):
+1119:                 email_values = sorted(value for value in identity.emails if value)
+1120:                 user_values = sorted(value for value in identity.user_ids if value)
+1121:                 clauses: List[str] = []
+1122:                 params: List[str] = []
+1123:                 if email_values:
+1124:                     clauses.append("LOWER(email) IN (" + ",".join("?" for _ in email_values) + ")")
+1125:                     params.extend(value.casefold() for value in email_values)
+1126:                 if user_values:
+1127:                     clauses.append("user_id IN (" + ",".join("?" for _ in user_values) + ")")
+1128:                     params.extend(user_values)
+1129:                 if clauses:
+1130:                     evidence_rows = [
+1131:                         {"file_id": str(fid or ""), "captured_at": str(captured or ""),
+1132:                          "system_id": str(system or ""), "resource_id": str(resource or ""),
+1133:                          "state": str(state or "").strip().upper()}
+1134:                         for fid, captured, system, resource, state in conn.execute(
+1135:                             "SELECT file_id,captured_at,system_id,resource_id,verified_state "

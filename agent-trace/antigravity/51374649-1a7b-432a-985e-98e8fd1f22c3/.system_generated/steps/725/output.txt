@@ -1,0 +1,97 @@
+Command exited with code 0.
+
+Command output:
+
+=== case_18: req=2026-09-06T11:00:00Z rep=2026-09-09T11:00:00Z ===
+  2026-09-06T11:00:18Z | account_1810 | SUCCESS | Deletion worker submitted primary profile account_1810 to account_service.
+  2026-09-06T11:05:15Z | account_8858 | PARTIAL | Deletion worker submitted primary profile account_8858 to account_service.
+  2026-09-06T11:11:02Z | account_3677 | SUCCESS | Deletion worker submitted primary profile account_3677 to account_service.
+  2026-09-07T07:55:18Z | account_3960 | FAILED | Deletion worker submitted primary profile account_3960 to account_service.
+  2026-09-07T08:15:34Z | account_565 | PARTIAL | Deletion worker submitted primary profile account_565 to account_service.
+  2026-09-08T10:54:31Z | account_8931 | SUCCESS | Deletion worker submitted primary profile account_8931 to account_service.
+  2026-09-08T11:03:04Z | account_2577 | PARTIAL | Deletion worker submitted primary profile account_2577 to account_service.
+  2026-09-08T11:12:08Z | account_3270 | FAILED | Deletion worker submitted primary profile account_3270 to account_service.
+  2026-09-08T11:14:47Z | account_7320 | SUCCESS | Deletion worker submitted primary profile account_7320 to account_service.
+  2026-09-09T09:52:26Z | account_5521 | SUCCESS | Deletion worker submitted primary profile account_5521 to account_service.
+  2026-09-09T10:03:41Z | account_3610 | SUCCESS | Deletion worker submitted primary profile account_3610 to account_service.
+  2026-09-09T10:14:55Z | account_5037 | FAILED | Deletion worker submitted primary profile account_5037 to account_service.
+  2026-09-09T10:53:28Z | account_9335 | FAILED | Deletion worker submitted primary profile account_9335 to account_service.
+
+=== case_20: req=2026-09-08T11:00:00Z rep=2026-09-09T11:00:00Z ===
+  2026-09-08T11:03:04Z | account_2577 | PARTIAL | Deletion worker submitted primary profile account_2577 to account_service.
+  2026-09-08T11:12:08Z | account_3270 | FAILED | Deletion worker submitted primary profile account_3270 to account_service.
+  2026-09-08T11:14:47Z | account_7320 | SUCCESS | Deletion worker submitted primary profile account_7320 to account_service.
+  2026-09-09T09:52:26Z | account_5521 | SUCCESS | Deletion worker submitted primary profile account_5521 to account_service.
+  2026-09-09T10:03:41Z | account_3610 | SUCCESS | Deletion worker submitted primary profile account_3610 to account_service.
+  2026-09-09T10:14:55Z | account_5037 | FAILED | Deletion worker submitted primary profile account_5037 to account_service.
+  2026-09-09T10:53:28Z | account_9335 | FAILED | Deletion worker submitted primary profile account_9335 to account_service.
+
+=== case_22: req=2026-08-31T10:00:00Z rep=2026-09-01T10:00:00Z ===
+  2026-09-01T07:51:23Z | account_6138 | SUCCESS | Deletion worker submitted primary profile account_6138 to account_service.
+  2026-09-01T08:02:37Z | account_902 | FAILED | Deletion worker submitted primary profile account_902 to account_service.
+  2026-09-01T08:11:10Z | account_6633 | SUCCESS | Deletion worker submitted primary profile account_6633 to account_service.
+  2026-09-01T08:50:41Z | account_994 | FAILED | Deletion worker submitted primary profile account_994 to account_service.
+  2026-09-01T09:01:56Z | account_6829 | PARTIAL | Deletion worker submitted primary profile account_6829 to account_service.
+  2026-09-01T09:12:11Z | account_4990 | SUCCESS | Deletion worker submitted primary profile account_4990 to account_service.
+
+=== case_23: req=2026-09-02T12:00:00Z rep=2026-09-05T12:00:00Z ===
+  2026-09-03T10:49:04Z | account_4051 | PARTIAL | Deletion worker submitted primary profile account_4051 to account_service.
+  2026-09-03T11:13:32Z | account_7219 | SUCCESS | Deletion worker submitted primary profile account_7219 to account_service.
+  2026-09-04T07:03:52Z | account_4156 | SUCCESS | Deletion worker submitted primary profile account_4156 to account_service.
+  2026-09-04T07:53:05Z | account_1602 | FAILED | Deletion worker submitted primary profile account_1602 to account_service.
+  2026-09-04T08:04:19Z | account_5488 | PARTIAL | Deletion worker submitted primary profile account_5488 to account_service.
+  2026-09-04T08:13:21Z | account_9079 | SUCCESS | Deletion worker submitted primary profile account_9079 to account_service.
+  2026-09-05T10:50:10Z | account_294 | PARTIAL | Deletion worker submitted primary profile account_294 to account_service.
+  2026-09-05T10:52:20Z | account_8832 | PARTIAL | Deletion worker submitted primary profile account_8832 to account_service.
+  2026-09-05T11:01:52Z | account_7015 | FAILED | Deletion worker submitted primary profile account_7015 to account_service.
+  2026-09-05T11:01:53Z | account_6440 | SUCCESS | Deletion worker submitted primary profile account_6440 to account_service.
+  2026-09-05T11:10:55Z | account_410 | FAILED | Deletion worker submitted primary profile account_410 to account_service.
+  2026-09-05T11:12:36Z | account_9155 | FAILED | Deletion worker submitted primary profile account_9155 to account_service.
+
+=== case_29: req=2026-08-27T12:00:00Z rep=2026-08-30T12:00:00Z ===
+  2026-08-28T10:47:43Z | account_5762 | FAILED | Deletion worker submitted primary profile account_5762 to account_service.
+  2026-08-28T11:09:11Z | account_9255 | SUCCESS | Deletion worker submitted primary profile account_9255 to account_service.
+  2026-08-29T07:49:42Z | account_7643 | PARTIAL | Deletion worker submitted primary profile account_7643 to account_service.
+  2026-08-29T08:00:56Z | account_1378 | SUCCESS | Deletion worker submitted primary profile account_1378 to account_service.
+  2026-08-29T08:48:28Z | account_5715 | FAILED | Deletion worker submitted primary profile account_5715 to account_service.
+  2026-08-29T08:59:43Z | account_1298 | SUCCESS | Deletion worker submitted primary profile account_1298 to account_service.
+  2026-08-29T09:10:27Z | account_9862 | FAILED | Deletion worker submitted primary profile account_9862 to account_service.
+  2026-08-30T10:46:13Z | account_5482 | FAILED | Deletion worker submitted primary profile account_5482 to account_service.
+  2026-08-30T10:57:28Z | account_3866 | SUCCESS | Deletion worker submitted primary profile account_3866 to account_service.
+  2026-08-30T11:06:57Z | account_7012 | FAILED | Deletion worker submitted primary profile account_7012 to account_service.
+
+=== case_30: req=2026-08-26T12:00:00Z rep=2026-08-27T12:00:00Z ===
+  2026-08-27T05:52:37Z | account_2449 | PARTIAL | Deletion worker submitted primary profile account_2449 to account_service.
+  2026-08-27T06:01:11Z | account_4911 | PARTIAL | Deletion worker submitted primary profile account_4911 to account_service.
+  2026-08-27T06:12:24Z | account_2387 | FAILED | Deletion worker submitted primary profile account_2387 to account_service.
+  2026-08-27T10:55:42Z | account_4163 | SUCCESS | Deletion worker submitted primary profile account_4163 to account_service.
+
+=== case_31: req=2026-09-04T12:00:00Z rep=2026-09-06T12:00:00Z ===
+  2026-09-05T10:50:10Z | account_294 | PARTIAL | Deletion worker submitted primary profile account_294 to account_service.
+  2026-09-05T10:52:20Z | account_8832 | PARTIAL | Deletion worker submitted primary profile account_8832 to account_service.
+  2026-09-05T11:01:52Z | account_7015 | FAILED | Deletion worker submitted primary profile account_7015 to account_service.
+  2026-09-05T11:01:53Z | account_6440 | SUCCESS | Deletion worker submitted primary profile account_6440 to account_service.
+  2026-09-05T11:10:55Z | account_410 | FAILED | Deletion worker submitted primary profile account_410 to account_service.
+  2026-09-05T11:12:36Z | account_9155 | FAILED | Deletion worker submitted primary profile account_9155 to account_service.
+  2026-09-06T10:45:58Z | account_4857 | SUCCESS | Deletion worker submitted primary profile account_4857 to account_service.
+  2026-09-06T10:51:45Z | account_2381 | PARTIAL | Deletion worker submitted primary profile account_2381 to account_service.
+  2026-09-06T11:00:18Z | account_1810 | SUCCESS | Deletion worker submitted primary profile account_1810 to account_service.
+  2026-09-06T11:05:15Z | account_8858 | PARTIAL | Deletion worker submitted primary profile account_8858 to account_service.
+  2026-09-06T11:11:02Z | account_3677 | SUCCESS | Deletion worker submitted primary profile account_3677 to account_service.
+
+=== case_32: req=2026-09-03T12:00:00Z rep=2026-09-06T12:00:00Z ===
+  2026-09-04T07:03:52Z | account_4156 | SUCCESS | Deletion worker submitted primary profile account_4156 to account_service.
+  2026-09-04T07:53:05Z | account_1602 | FAILED | Deletion worker submitted primary profile account_1602 to account_service.
+  2026-09-04T08:04:19Z | account_5488 | PARTIAL | Deletion worker submitted primary profile account_5488 to account_service.
+  2026-09-04T08:13:21Z | account_9079 | SUCCESS | Deletion worker submitted primary profile account_9079 to account_service.
+  2026-09-05T10:50:10Z | account_294 | PARTIAL | Deletion worker submitted primary profile account_294 to account_service.
+  2026-09-05T10:52:20Z | account_8832 | PARTIAL | Deletion worker submitted primary profile account_8832 to account_service.
+  2026-09-05T11:01:52Z | account_7015 | FAILED | Deletion worker submitted primary profile account_7015 to account_service.
+  2026-09-05T11:01:53Z | account_6440 | SUCCESS | Deletion worker submitted primary profile account_6440 to account_service.
+  2026-09-05T11:10:55Z | account_410 | FAILED | Deletion worker submitted primary profile account_410 to account_service.
+  2026-09-05T11:12:36Z | account_9155 | FAILED | Deletion worker submitted primary profile account_9155 to account_service.
+  2026-09-06T10:45:58Z | account_4857 | SUCCESS | Deletion worker submitted primary profile account_4857 to account_service.
+  2026-09-06T10:51:45Z | account_2381 | PARTIAL | Deletion worker submitted primary profile account_2381 to account_service.
+  2026-09-06T11:00:18Z | account_1810 | SUCCESS | Deletion worker submitted primary profile account_1810 to account_service.
+  2026-09-06T11:05:15Z | account_8858 | PARTIAL | Deletion worker submitted primary profile account_8858 to account_service.
+  2026-09-06T11:11:02Z | account_3677 | SUCCESS | Deletion worker submitted primary profile account_3677 to account_service.

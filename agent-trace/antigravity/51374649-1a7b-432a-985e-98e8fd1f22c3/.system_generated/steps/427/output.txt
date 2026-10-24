@@ -1,0 +1,69 @@
+Command exited with code 0.
+
+Command output:
+1135:                             "SELECT file_id,captured_at,system_id,resource_id,verified_state "
+1136:                             "FROM evidence_records WHERE " + " OR ".join(clauses), params
+1137:                         )
+1138:                     ]
+1139: 
+1140:     state_map = {
+1141:         "ABSENT": ("VERIFY_RECORD_ABSENT", "ABSENT"),
+1142:         "PRESENT": ("VERIFY_RECORD_PRESENT", "PRESENT"),
+1143:         "ANONYMIZED": ("VERIFY_RECORD_ANONYMIZED", "ANONYMIZED"),
+1144:         "REDACTED": ("VERIFY_RECORD_REDACTED", "REDACTED"),
+1145:     }
+1146:     eligible: Dict[Tuple[str, str], Dict[str, str]] = {}
+1147:     for record in evidence_rows:
+1148:         if _time_key(record.get("captured_at")) > cutoff:
+1149:             continue
+1150:         resource = str(record.get("resource_id") or "").strip()
+1151:         file_id = str(record.get("file_id") or "").strip()
+1152:         system = str(record.get("system_id") or "").strip()
+1153:         state = str(record.get("state") or "").strip().upper()
+1154:         if resource and file_id and system and state in state_map:
+1155:             eligible[(system, resource)] = {
+1156:                 "file_id": file_id,
+1157:                 "state": state,
+1158:             }
+1159: 
+1160:     if status == "COMPLETE" and eligible:
+1161:         valid_files = {
+1162:             str(row[0]) for row in conn.execute(
+1163:                 "SELECT file_id FROM evidence_files WHERE file_id IS NOT NULL"
+1164:             )
+1165:         }
+1166:         verified = []
+1167:         for (system, resource), record in eligible.items():
+1168:             if record["file_id"] not in valid_files:
+1169:                 continue
+1170:             operation, state = state_map[record["state"]]
+1171:             verified.append(AuditStep(
+1172:                 "VERIFICATION", system, resource, operation, state, record["file_id"]
+1173:             ))
+1174: 
+1175:     if status == "INCOMPLETE":
+1176:         forbidden_audit_findings = {
+1177:             (step.system_id, step.resource_id)
+1178:             for step in steps
+1179:             if step.phase == "FINDING"
+1180:             and step.system_id == "security_service"
+1181:             and step.resource_id.startswith("audit_record_")
+1182:         }
+1183:         steps = [
+1184:             step for step in steps
+1185:             if (step.system_id, step.resource_id) not in forbidden_audit_findings
+1186:         ]
+1187:         findings = [step for step in steps if step.phase == "FINDING"]
+1188:         remediations = [step for step in steps if step.phase == "REMEDIATION"]
+1189:         finding_resources = {(step.system_id, step.resource_id) for step in findings}
+1190:         verifications = [
+1191:             step for step in steps
+1192:             if step.phase == "VERIFICATION"
+1193:             and (step.system_id, step.resource_id) in finding_resources
+1194:         ]
+1195: 
+1196:         user_id = next(iter(sorted(identity.user_ids)), "")
+1197:         suffix = user_id.removeprefix("user_")
+1198:         primary_account = next(
+1199:             (resource for resource in sorted(identity.linked_resources)
+1200:              if resource.casefold().startswith("account_")),

@@ -1,0 +1,50 @@
+
+        csv_table_names = set(table_columns)
+        evidence_dir = dataset_dir / "evidence"
+        for sql_path in sorted(evidence_dir.rglob("*.sql")):
+            snapshot_conn = sqlite3.connect(":memory:")
+            try:
+                snapshot_conn.executescript(
+                    sql_path.read_text(encoding="utf-8-sig")
+                )
+                snapshot_tables = snapshot_conn.execute(
+                    """
+                    SELECT name
+                    FROM sqlite_master
+                    WHERE type = 'table' AND name NOT LIKE 'sqlite_%'
+                    ORDER BY name
+                    """
+                ).fetchall()
+                for (source_table,) in snapshot_tables:
+                    table_name = source_table
+                    if table_name in csv_table_names or conn.execute(
+                        "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = ?",
+                        (table_name,),
+                    ).fetchone():
+                        table_name = f"{sql_path.stem}__{source_table}"
+                    suffix = 2
+                    base_table_name = table_name
+                    while conn.execute(
+                        "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = ?",
+                        (table_name,),
+                    ).fetchone():
+                        table_name = f"{base_table_name}_{suffix}"
+                        suffix += 1
+
+                    column_info = snapshot_conn.execute(
+                        f'PRAGMA table_info("{source_table}")'
+                    ).fetchall()
+                    column_names = [column[1] for column in column_info]
+                    column_definitions = ", ".join(
+                        f'"{column[1]}" {column[2] or "TEXT"}'
+                        for column in column_info
+                    )
+                    conn.execute(
+                        f'CREATE TABLE "{table_name}" ({column_definitions})'
+                    )
+
+                    values = snapshot_conn.execute(
+                        f'SELECT * FROM "{source_table}"'
+                    ).fetchall()
+                    if values:
+                        column_sql = ", ".join(

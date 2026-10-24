@@ -1,0 +1,23 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-339
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-339.log
+Log output:
+ANONYMIZE_RECORD count: 204
+      activity_id  ...                                            details
+18    activity_19  ...        Policy action completed for analytics_7277.
+79    activity_80  ...        Policy action completed for analytics_4804.
+91    activity_92  ...        Policy action completed for analytics_3744.
+92    activity_93  ...         Policy action completed for analytics_893.
+129  activity_130  ...  Deletion worker received the final result for ...
+
+[5 rows x 8 columns]
+
+sample_deletion_requests:
+   case_id                    email           reported_at
+0  case_01  amina.elmasri@gmail.com  2026-08-20T16:42:00Z
+1  case_02   mateo.rios@outlook.com  2026-08-22T07:25:00Z
+2  case_03   l.fontaine46@yahoo.com  2026-09-15T11:00:00Z
+3  case_04     thandiwe.n@gmail.com  2026-08-27T08:54:00Z
+4  case_05   leila.haddad@yahoo.com  2026-08-28T09:03:00Z
+
+Last progress: 4s ago

@@ -1,0 +1,136 @@
+Command exited with code 0.
+
+Command output:
+
+=== case_11 (novak.tomasz@icloud.com) -> INCOMPLETE ===
+  1. [FINDING] search_service | search_052 | REPORT_REMAINING_RECORD | PRESENT | ev=evidence_03
+  2. [FINDING] analytics_platform | analytics_2034 | REPORT_EXPOSED_PII | PRESENT | ev=evidence_03
+  3. [FINDING] support_platform | support_864 | REPORT_EXPOSED_PII | PRESENT | ev=evidence_03
+  4. [FINDING] integration_service | data_flow_9522 | REPORT_ACTIVE_DATA_FLOW | ACTIVE | ev=evidence_03
+  5. [REMEDIATION] integration_service | data_flow_9522 | DISABLE_DATA_FLOW | DISABLED | ev=
+  6. [REMEDIATION] search_service | search_052 | DELETE_RECORD | ABSENT | ev=
+  7. [REMEDIATION] support_platform | support_864 | REDACT_RECORD | REDACTED | ev=
+  8. [REMEDIATION] analytics_platform | analytics_2034 | ANONYMIZE_RECORD | ANONYMIZED | ev=
+  9. [VERIFICATION] account_service | account_4248 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  10. [VERIFICATION] search_service | search_052 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  11. [VERIFICATION] security_service | audit_record_9394 | VERIFY_RECORD_PRESENT | PRESENT | ev=
+  12. [VERIFICATION] support_platform | support_864 | VERIFY_RECORD_REDACTED | REDACTED | ev=
+  13. [VERIFICATION] analytics_platform | analytics_2034 | VERIFY_RECORD_ANONYMIZED | ANONYMIZED | ev=
+  14. [VERIFICATION] integration_service | data_flow_9522 | VERIFY_DATA_FLOW_DISABLED | DISABLED | ev=
+
+=== case_12 (minjun.kim@gmail.com) -> INCOMPLETE ===
+  1. [FINDING] analytics_platform | analytics_9914 | REPORT_REMAINING_RECORD | PRESENT | ev=evidence_01
+  2. [REMEDIATION] analytics_platform | analytics_9914 | DELETE_RECORD | ABSENT | ev=
+  3. [VERIFICATION] account_service | account_9797 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  4. [VERIFICATION] analytics_platform | analytics_9914 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  5. [VERIFICATION] security_service | audit_record_2945 | VERIFY_RECORD_PRESENT | PRESENT | ev=
+
+=== case_13 (noor-khalil@proton.me) -> INCOMPLETE ===
+  1. [FINDING] search_service | search_1308 | REPORT_REMAINING_RECORD | PRESENT | ev=evidence_03
+  2. [FINDING] support_platform | support_4218 | REPORT_REMAINING_RECORD | PRESENT | ev=evidence_03
+  3. [REMEDIATION] search_service | search_1308 | DELETE_RECORD | ABSENT | ev=
+  4. [REMEDIATION] support_platform | support_4218 | DELETE_RECORD | ABSENT | ev=
+  5. [VERIFICATION] account_service | account_9335 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  6. [VERIFICATION] search_service | search_1308 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  7. [VERIFICATION] support_platform | support_4218 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  8. [VERIFICATION] security_service | audit_record_4816 | VERIFY_RECORD_PRESENT | PRESENT | ev=
+
+=== case_14 (y.tanaka32@gmail.com) -> INCOMPLETE ===
+  1. [FINDING] backup_service | backup_3870 | REPORT_RESTORE_RISK | ACTIVE | ev=evidence_03
+  2. [REMEDIATION] backup_service | backup_3870 | BLOCK_RESTORE | BLOCKED | ev=
+  3. [VERIFICATION] account_service | account_3677 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  4. [VERIFICATION] security_service | audit_record_987 | VERIFY_RECORD_PRESENT | PRESENT | ev=
+  5. [VERIFICATION] backup_service | backup_3870 | VERIFY_RESTORE_BLOCKED | BLOCKED | ev=
+
+=== case_15 (lucia-torres@gmail.com) -> INCOMPLETE ===
+  1. [FINDING] integration_service | data_flow_9846 | REPORT_ACTIVE_DATA_FLOW | ACTIVE | ev=evidence_01
+  2. [REMEDIATION] integration_service | data_flow_9846 | DISABLE_DATA_FLOW | DISABLED | ev=
+  3. [VERIFICATION] account_service | account_4745 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  4. [VERIFICATION] security_service | audit_record_1596 | VERIFY_RECORD_PRESENT | PRESENT | ev=
+  5. [VERIFICATION] integration_service | data_flow_9846 | VERIFY_DATA_FLOW_DISABLED | DISABLED | ev=
+
+=== case_16 (diya.k4436@outlook.com) -> INCOMPLETE ===
+  1. [FINDING] account_service | account_994 | REPORT_REMAINING_RECORD | PRESENT | ev=evidence_05
+  2. [FINDING] search_service | search_1007 | REPORT_REMAINING_RECORD | PRESENT | ev=evidence_05
+  3. [REMEDIATION] account_service | account_994 | DELETE_RECORD | ABSENT | ev=
+  4. [REMEDIATION] search_service | search_1007 | DELETE_RECORD | ABSENT | ev=
+  5. [VERIFICATION] account_service | account_994 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  6. [VERIFICATION] search_service | search_1007 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  7. [VERIFICATION] security_service | audit_record_9528 | VERIFY_RECORD_PRESENT | PRESENT | ev=
+
+=== case_17 (leonie.g9352@outlook.com) -> INCOMPLETE ===
+  1. [FINDING] backup_service | backup_3245 | REPORT_RESTORE_RISK | ACTIVE | ev=evidence_01
+  2. [REMEDIATION] backup_service | backup_3245 | BLOCK_RESTORE | BLOCKED | ev=
+  3. [VERIFICATION] account_service | account_4092 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  4. [VERIFICATION] security_service | audit_record_1797 | VERIFY_RECORD_PRESENT | PRESENT | ev=
+  5. [VERIFICATION] backup_service | backup_3245 | VERIFY_RESTORE_BLOCKED | BLOCKED | ev=
+
+=== case_18 (mori.ren@gmail.com) -> INCOMPLETE ===
+  1. [FINDING] search_service | search_4013 | REPORT_REMAINING_RECORD | PRESENT | ev=evidence_94
+  2. [FINDING] analytics_platform | analytics_037 | REPORT_EXPOSED_PII | PRESENT | ev=evidence_94
+  3. [FINDING] support_platform | support_5569 | REPORT_EXPOSED_PII | PRESENT | ev=evidence_94
+  4. [FINDING] integration_service | data_flow_4890 | REPORT_ACTIVE_DATA_FLOW | ACTIVE | ev=evidence_94
+  5. [REMEDIATION] integration_service | data_flow_4890 | DISABLE_DATA_FLOW | DISABLED | ev=
+  6. [REMEDIATION] search_service | search_4013 | DELETE_RECORD | ABSENT | ev=
+  7. [REMEDIATION] support_platform | support_5569 | REDACT_RECORD | REDACTED | ev=
+  8. [REMEDIATION] analytics_platform | analytics_037 | ANONYMIZE_RECORD | ANONYMIZED | ev=
+  9. [VERIFICATION] account_service | account_5521 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  10. [VERIFICATION] search_service | search_4013 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  11. [VERIFICATION] security_service | audit_record_6645 | VERIFY_RECORD_PRESENT | PRESENT | ev=
+  12. [VERIFICATION] support_platform | support_5569 | VERIFY_RECORD_REDACTED | REDACTED | ev=
+  13. [VERIFICATION] analytics_platform | analytics_037 | VERIFY_RECORD_ANONYMIZED | ANONYMIZED | ev=
+  14. [VERIFICATION] integration_service | data_flow_4890 | VERIFY_DATA_FLOW_DISABLED | DISABLED | ev=
+
+=== case_19 (e.varga90@yahoo.com) -> INCOMPLETE ===
+  1. [FINDING] search_service | search_6083 | REPORT_REMAINING_RECORD | PRESENT | ev=evidence_01
+  2. [FINDING] support_platform | support_9553 | REPORT_EXPOSED_PII | PRESENT | ev=evidence_01
+  3. [REMEDIATION] search_service | search_6083 | DELETE_RECORD | ABSENT | ev=
+  4. [REMEDIATION] support_platform | support_9553 | REDACT_RECORD | REDACTED | ev=
+  5. [VERIFICATION] account_service | account_9102 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  6. [VERIFICATION] search_service | search_6083 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  7. [VERIFICATION] security_service | audit_record_6793 | VERIFY_RECORD_PRESENT | PRESENT | ev=
+  8. [VERIFICATION] support_platform | support_9553 | VERIFY_RECORD_REDACTED | REDACTED | ev=
+
+=== case_20 (akosua.gyasi@gmail.com) -> INCOMPLETE ===
+  1. [FINDING] search_service | search_4262 | REPORT_REMAINING_RECORD | PRESENT | ev=evidence_94
+  2. [FINDING] integration_service | data_flow_1770 | REPORT_ACTIVE_DATA_FLOW | ACTIVE | ev=evidence_94
+  3. [REMEDIATION] integration_service | data_flow_1770 | DISABLE_DATA_FLOW | DISABLED | ev=
+  4. [REMEDIATION] search_service | search_4262 | DELETE_RECORD | ABSENT | ev=
+  5. [VERIFICATION] account_service | account_5037 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  6. [VERIFICATION] search_service | search_4262 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  7. [VERIFICATION] security_service | audit_record_5569 | VERIFY_RECORD_PRESENT | PRESENT | ev=
+  8. [VERIFICATION] integration_service | data_flow_1770 | VERIFY_DATA_FLOW_DISABLED | DISABLED | ev=
+
+=== case_21 (amara-okeke@proton.me) -> COMPLETE ===
+  1. [VERIFICATION] account_service | account_6440 | VERIFY_RECORD_ABSENT | ABSENT | ev=evidence_92
+  2. [VERIFICATION] security_service | audit_record_3737 | VERIFY_RECORD_PRESENT | PRESENT | ev=evidence_92
+  3. [VERIFICATION] analytics_platform | analytics_5335 | VERIFY_RECORD_ANONYMIZED | ANONYMIZED | ev=evidence_92
+
+=== case_22 (seoyeon-han@gmail.com) -> INCOMPLETE ===
+  1. [FINDING] search_service | search_8911 | REPORT_REMAINING_RECORD | PRESENT | ev=evidence_05
+  2. [FINDING] analytics_platform | analytics_4440 | REPORT_EXPOSED_PII | PRESENT | ev=evidence_05
+  3. [REMEDIATION] search_service | search_8911 | DELETE_RECORD | ABSENT | ev=
+  4. [REMEDIATION] analytics_platform | analytics_4440 | ANONYMIZE_RECORD | ANONYMIZED | ev=
+  5. [VERIFICATION] account_service | account_4990 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  6. [VERIFICATION] search_service | search_8911 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  7. [VERIFICATION] security_service | audit_record_3482 | VERIFY_RECORD_PRESENT | PRESENT | ev=
+  8. [VERIFICATION] analytics_platform | analytics_4440 | VERIFY_RECORD_ANONYMIZED | ANONYMIZED | ev=
+
+=== case_23 (thandiwe.m6866@zoho.com) -> INCOMPLETE ===
+  1. [FINDING] export_service | export_7364 | REPORT_REMAINING_RECORD | PRESENT | ev=evidence_92
+  2. [FINDING] search_service | search_898 | REPORT_REMAINING_RECORD | PRESENT | ev=evidence_92
+  3. [REMEDIATION] export_service | export_7364 | DELETE_RECORD | ABSENT | ev=
+  4. [REMEDIATION] search_service | search_898 | DELETE_RECORD | ABSENT | ev=
+  5. [VERIFICATION] account_service | account_410 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  6. [VERIFICATION] export_service | export_7364 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  7. [VERIFICATION] search_service | search_898 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  8. [VERIFICATION] security_service | audit_record_4128 | VERIFY_RECORD_PRESENT | PRESENT | ev=
+
+=== case_24 (keiko.nakamura@gmail.com) -> INCOMPLETE ===
+  1. [FINDING] account_service | account_5334 | REPORT_REMAINING_RECORD | PRESENT | ev=evidence_92
+  2. [FINDING] search_service | search_5577 | REPORT_REMAINING_RECORD | PRESENT | ev=evidence_92
+  3. [REMEDIATION] account_service | account_5334 | DELETE_RECORD | ABSENT | ev=
+  4. [REMEDIATION] search_service | search_5577 | DELETE_RECORD | ABSENT | ev=
+  5. [VERIFICATION] account_service | account_5334 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  6. [VERIFICATION] search_service | search_5577 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  7. [VERIFICATION] security_service | audit_record_7095 | VERIFY_RECORD_PRESENT | PRESENT | ev=

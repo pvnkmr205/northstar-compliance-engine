@@ -1,0 +1,22 @@
+Command exited with code 0.
+
+Command output:
+
+
+    Directory: C:\Users\Pavan\hackerrank-orchestrate-october26\dataset
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----        24-10-2026     19:14                evidence                                                             
+-a----        24-10-2026     19:14         164183 deletion_requests.csv                                                
+-a----        24-10-2026     19:14           1055 deletion_rules.csv                                                   
+-a----        24-10-2026     19:14          11184 evidence_files.csv                                                   
+-a----        24-10-2026     19:14             36 output.csv                                                           
+-a----        24-10-2026     19:14           9043 sample_deletion_requests.csv                                         
+-a----        24-10-2026     19:14          38681 sample_output.csv                                                    
+-a----        24-10-2026     19:14         661372 system_activity.csv                                                  
+-a----        24-10-2026     19:14          37016 user_audit_log.csv                                                   
+-a----        24-10-2026     19:14         127262 user_identities.csv                                                  
+
+

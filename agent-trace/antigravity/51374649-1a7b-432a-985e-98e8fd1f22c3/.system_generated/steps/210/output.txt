@@ -1,0 +1,30 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-208
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-208.log
+Log output:
+<truncated 27 lines>
+type = 'table' AND name = ?",
+                        (table_name,),
+                    ).fetchone():
+                        table_name = f"{base_table_name}_{suffix}"
+                        suffix += 1
+
+                    column_info = snapshot_conn.execute(
+                        f'PRAGMA table_info("{source_table}")'
+                    ).fetchall()
+                    column_names = [column[1] for column in column_info]
+                    column_definitions = ", ".join(
+                        f'"{column[1]}" {column[2] or "TEXT"}'
+                        for column in column_info
+                    )
+                    conn.execute(
+                        f'CREATE TABLE "{table_name}" ({column_definitions})'
+                    )
+
+                    values = snapshot_conn.execute(
+                        f'SELECT * FROM "{source_table}"'
+                    ).fetchall()
+                    if values:
+                        column_sql = ", ".join(
+
+Last progress: 0s ago

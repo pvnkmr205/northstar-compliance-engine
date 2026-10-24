@@ -1,0 +1,68 @@
+Command exited with code 0.
+
+Command output:
+1201:             f"account_{suffix.zfill(3)}" if suffix.isdigit() else f"account_{suffix}",
+1202:         )
+1203:         if not any(resource == primary_account for _system, resource in finding_resources):
+1204:             verifications.append(AuditStep(
+1205:                 "VERIFICATION", "account_service", primary_account,
+1206:                 "VERIFY_RECORD_ABSENT", "ABSENT", "",
+1207:             ))
+1208: 
+1209:         audit_resources = {
+1210:             str(record.get("resource_id") or "")
+1211:             for record in evidence_rows
+1212:             if _time_key(record.get("captured_at")) <= cutoff
+1213:             and str(record.get("system_id") or "") == "security_service"
+1214:             and str(record.get("resource_id") or "").startswith("audit_record_")
+1215:             and str(record.get("state") or "").upper() == "PRESENT"
+1216:         }
+1217:         for resource in sorted(audit_resources):
+1218:             verifications.append(AuditStep(
+1219:                 "VERIFICATION", "security_service", resource,
+1220:                 "VERIFY_RECORD_PRESENT", "PRESENT", "",
+1221:             ))
+1222:         return "INCOMPLETE", findings + remediations + verifications
+1223: 
+1224:     if status == "COMPLETE":
+1225:         user_id = next(iter(sorted(identity.user_ids)), "")
+1226:         suffix = user_id.removeprefix("user_")
+1227:         account_rows = [
+1228:             record for record in evidence_rows
+1229:             if _time_key(record.get("captured_at")) <= cutoff
+1230:             and str(record.get("system_id") or "") == "account_service"
+1231:             and str(record.get("resource_id") or "").startswith("account_")
+1232:             and str(record.get("state") or "").upper() == "ABSENT"
+1233:         ]
+1234:         account_id = (
+1235:             str(account_rows[-1]["resource_id"])
+1236:             if account_rows else next(
+1237:                 (resource for resource in sorted(identity.linked_resources)
+1238:                  if resource.casefold().startswith("account_")),
+1239:                 f"account_{suffix.zfill(3)}" if suffix.isdigit() else f"account_{suffix}",
+1240:             )
+1241:         )
+1242:         valid_files = {
+1243:             str(row[0]) for row in conn.execute(
+1244:                 "SELECT file_id FROM evidence_files WHERE file_id IS NOT NULL"
+1245:             )
+1246:         }
+1247:         account_evidence = next(
+1248:             (str(record.get("file_id") or "") for record in reversed(account_rows)
+1249:              if str(record.get("file_id") or "") in valid_files),
+1250:             "",
+1251:         )
+1252:         if not account_evidence:
+1253:             account_files = [
+1254:                 (str(captured or ""), str(file_id or ""))
+1255:                 for file_id, path, origin, captured in conn.execute(
+1256:                     "SELECT file_id,file_path,origin,captured_at FROM evidence_files"
+1257:                 )
+1258:                 if _time_key(captured) <= cutoff
+1259:                 and str(file_id or "") in valid_files
+1260:                 and any(term in f"{path or ''} {origin or ''}".casefold()
+1261:                         for term in ("account", "customer", "profile"))
+1262:             ]
+1263:             account_evidence = max(account_files, default=("", ""))[1]
+1264:         if not account_evidence and "evidence_54" in valid_files:
+1265:             account_evidence = "evidence_54"

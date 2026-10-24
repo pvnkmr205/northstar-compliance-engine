@@ -1,0 +1,21 @@
+Command exited with code 0.
+
+Command output:
+import csv
+import json
+from src.pipeline import init_database, resolve_identity, audit_case, build_steps_json
+
+conn = init_database()
+with open("dataset/sample_deletion_requests.csv", encoding="utf-8-sig") as f:
+    samples = list(csv.DictReader(f))
+with open("dataset/sample_output.csv", encoding="utf-8-sig") as f:
+    expected = {r["case_id"]: r for r in csv.DictReader(f)}
+
+status_fails = []
+step_fails = []
+passes = []
+
+for c in samples:
+    cid = c["case_id"]
+    exp = expected[cid]
+    identi

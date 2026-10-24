@@ -1,0 +1,83 @@
+Command exited with code 0.
+
+Command output:
+166:         raise ValueError(f"Invalid deletion_status: {deletion_status}")
+167: 
+168:     normalized: Dict[Tuple[str, str, str, str], AuditStep] = {}
+169:     for step in raw_steps:
+170:         expected_state = step.validated_state()
+171: 
+172:         if deletion_status == "COMPLETE":
+173:             if step.phase != "VERIFICATION":
+174:                 raise ValueError("COMPLETE cases may only contain VERIFICATION steps.")
+175:             if not step.evidence_id:
+176:                 raise ValueError(
+177:                     f"COMPLETE verification step on {step.system_id}/{step.resource_id} "
+178:                     "must cite a file_id, activity_id, or audit_id."
+179:                 )
+180:             ev_id = step.evidence_id
+181:         else:  # INCOMPLETE
+182:             if step.phase == "FINDING":
+183:                 if not step.evidence_id:
+184:                     raise ValueError(
+185:                         f"INCOMPLETE finding step on {step.system_id}/{step.resource_id} "
+186:                         "must cite a file_id, activity_id, or audit_id."
+187:                     )
+188:                 ev_id = step.evidence_id
+189:             else:
+190:                 # Proposed remediation & future verification steps use empty evidence_id
+191:                 ev_id = ""
+192: 
+193:         clean_step = AuditStep(
+194:             phase=step.phase,
+195:             system_id=step.system_id,
+196:             resource_id=step.resource_id,
+197:             operation=step.operation,
+198:             state=expected_state,
+199:             evidence_id=ev_id,
+200:         )
+201:         dedup_key = (
+202:             clean_step.phase,
+203:             clean_step.operation,
+204:             clean_step.system_id,
+205:             clean_step.resource_id,
+206:         )
+207:         normalized[dedup_key] = clean_step
+208: 
+209:     OP_ORDER = {
+210:         # FINDING
+211:         "REPORT_REMAINING_RECORD": 0,
+212:         "REPORT_EXPOSED_PII": 1,
+213:         "REPORT_ACTIVE_DATA_FLOW": 2,
+214:         "REPORT_RESTORE_RISK": 3,
+215:         # REMEDIATION
+216:         "DELETE_RECORD": 0,
+217:         "ANONYMIZE_RECORD": 1,
+218:         "DISABLE_FLOW": 2,
+219:         "BLOCK_RESTORE": 3,
+220:         # VERIFICATION
+221:         "VERIFY_RECORD_ABSENT": 0,
+222:         "VERIFY_RECORD_PRESENT": 1,
+223:         "VERIFY_RECORD_ANONYMIZED": 2,
+224:         "VERIFY_RECORD_REDACTED": 3,
+225:         "VERIFY_FLOW_DISABLED": 4,
+226:         "VERIFY_RESTORE_BLOCKED": 5,
+227:         "VERIFY_TOMBSTONE_CREATED": 6,
+228:     }
+229: 
+230:     sorted_steps = _canonicalize_audit_steps(list(normalized.values()))
+231: 
+232:     payload = [
+233:         {
+234:             "step_no": idx,
+235:             "phase": s.phase,
+236:             "system_id": s.system_id,
+237:             "resource_id": s.resource_id,
+238:             "operation": s.operation,
+239:             "state": s.state,
+240:             "evidence_id": s.evidence_id,
+241:         }
+242:         for idx, s in enumerate(sorted_steps, start=1)
+243:     ]
+244:     return json.dumps(payload, separators=(",", ":"))
+245: 

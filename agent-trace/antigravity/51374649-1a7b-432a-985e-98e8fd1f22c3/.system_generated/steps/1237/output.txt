@@ -1,0 +1,73 @@
+Command exited with code 0.
+
+Command output:
+1216: 
+1217:     if status == "COMPLETE" and eligible:
+1218:         valid_files = {
+1219:             str(row[0]) for row in conn.execute(
+1220:                 "SELECT file_id FROM evidence_files WHERE file_id IS NOT NULL"
+1221:             )
+1222:         }
+1223:         verified = []
+1224:         for (system, resource), record in eligible.items():
+1225:             if record["file_id"] not in valid_files:
+1226:                 continue
+1227:             operation, state = state_map[record["state"]]
+1228:             verified.append(AuditStep(
+1229:                 "VERIFICATION", system, resource, operation, state, record["file_id"]
+1230:             ))
+1231: 
+1232:     if status == "INCOMPLETE":
+1233:         forbidden_audit_findings = {
+1234:             (step.system_id, step.resource_id)
+1235:             for step in steps
+1236:             if step.phase == "FINDING"
+1237:             and step.system_id == "security_service"
+1238:             and step.resource_id.startswith("audit_record_")
+1239:         }
+1240:         steps = [
+1241:             step for step in steps
+1242:             if (step.system_id, step.resource_id) not in forbidden_audit_findings
+1243:         ]
+1244:         findings = [step for step in steps if step.phase == "FINDING"]
+1245:         remediations = [step for step in steps if step.phase == "REMEDIATION"]
+1246:         finding_resources = {(step.system_id, step.resource_id) for step in findings}
+1247:         verifications = [
+1248:             step for step in steps
+1249:             if step.phase == "VERIFICATION"
+1250:             and (step.system_id, step.resource_id) in finding_resources
+1251:         ]
+1252: 
+1253:         user_id = next(iter(sorted(identity.user_ids)), "")
+1254:         suffix = user_id.removeprefix("user_")
+1255:         primary_account = next(
+1256:             (resource for resource in sorted(identity.linked_resources)
+1257:              if resource.casefold().startswith("account_")),
+1258:             f"account_{suffix.zfill(3)}" if suffix.isdigit() else f"account_{suffix}",
+1259:         )
+1260:         if not any(resource == primary_account for _system, resource in finding_resources):
+1261:             verifications.append(AuditStep(
+1262:                 "VERIFICATION", "account_service", primary_account,
+1263:                 "VERIFY_RECORD_ABSENT", "ABSENT", "",
+1264:             ))
+1265: 
+1266:         audit_resources = {
+1267:             str(record.get("resource_id") or "")
+1268:             for record in evidence_rows
+1269:             if _time_key(record.get("captured_at")) <= cutoff
+1270:             and str(record.get("system_id") or "") == "security_service"
+1271:             and str(record.get("resource_id") or "").startswith("audit_record_")
+1272:             and str(record.get("state") or "").upper() == "PRESENT"
+1273:         }
+1274:         for resource in sorted(audit_resources):
+1275:             verifications.append(AuditStep(
+1276:                 "VERIFICATION", "security_service", resource,
+1277:                 "VERIFY_RECORD_PRESENT", "PRESENT", "",
+1278:             ))
+1279:         return "INCOMPLETE", _canonicalize_audit_steps(
+1280:             findings + remediations + verifications
+1281:         )
+1282: 
+1283:     if status == "COMPLETE":
+1284:         user_id = next(iter(sorted(identity.user_ids)), "")
+1285:         suffix = user_id.removeprefix("user_")

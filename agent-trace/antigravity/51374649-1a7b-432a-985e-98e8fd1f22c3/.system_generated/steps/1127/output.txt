@@ -1,0 +1,51 @@
+Command exited with code 0.
+
+Command output:
+ "audit_record_" in value or "security_" in value:
+            return "security_service"
+        if "backup_" in value:
+            return "backup_service"
+        if "data_flow_" in value:
+            return "integration_service"
+        return "account_service"
+
+    def evidence_for(resource_id: str, system_id: str, table_name: str = "") -> str:
+        resource_key = resource_id.casefold()
+        system_key = system_id.casefold()
+        system_terms = {
+            "account_service": ("customer_accounts", "customer_profiles", "account_service"),
+            "analytics_platform": ("analytics", "telemetry"),
+            "search_service": ("search", "index"),
+            "support_platform": ("support",),
+            "security_service": ("security", "audit"),
+            "backup_service": ("backup",),
+            "data_sync_service": ("sync", "data_flow"),
+        }.get(system_key, (system_key,))
+        exact_resource = [
+            (captured, fid)
+            for fid, path, origin, captured in manifest
+            if resource_key in f"{path} {origin}".casefold()
+        ]
+        if exact_resource:
+            return max(exact_resource)[1]
+        table_matches = [
+            (captured, fid)
+            for fid, path, origin, captured in sql_manifest
+            if table_name
+            and Path(path).stem.casefold().split("__", 1)[-1] in table_name.casefold()
+        ]
+        if table_matches:
+            return max(table_matches)[1]
+        system_matches = [
+            (captured, fid)
+            for fid, path, origin, captured in manifest
+            if any(term in f"{path} {origin}".casefold() for term in system_terms)
+        ]
+        if system_matches:
+            return max(system_matches)[1]
+        return latest_sql[0] if latest_sql else ""
+
+    activity_rows = conn.execute(
+        "SELECT activity_id,event_time,event_type,source_system,target_system,"
+        "resource_id,reported_result,details FROM system_activity "
+        "WHERE event_time <

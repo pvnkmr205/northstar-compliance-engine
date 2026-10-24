@@ -1,0 +1,20 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-213
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-213.log
+Log output:
+logs: 26 files
+  extensions: {'log'}
+  sample file: application_trace_ap_northeast_20260730.log
+  sample file: application_trace_eu_north_20260302.log
+  sample file: cloud_runtime_export_af_south_20260930.log
+  sample file: cloud_runtime_export_us_west_20260608.log
+  sample file: notification_delivery_20260315.log
+records: 29 files
+  extensions: {'txt', 'json'}
+  sample file: connector_configurations_20260812.json
+  sample file: customer_account_handover_20261001.txt
+  sample file: customer_analytics_report_20260907.json
+  sample file: customer_data_snapshot_bundle_20260131.json
+  sample file: customer_data_snapshot_bundle_20260223.json
+
+Last progress: 0s ago

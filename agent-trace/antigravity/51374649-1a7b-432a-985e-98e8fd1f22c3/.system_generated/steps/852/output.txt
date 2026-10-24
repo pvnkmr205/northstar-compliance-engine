@@ -1,0 +1,12 @@
+Command exited with code 0.
+
+Command output:
+Testing combined account linking rule:
+[case_18] Exp: account_5521 | Got: account_3610
+[case_20] Exp: account_5037 | Got: account_9335
+[case_23] Exp: account_410 | Got: account_9155
+[case_25] Exp: account_3136 | Got: account_5684
+[case_28] Exp: account_5482 | Got: account_7012
+[case_31] Exp: account_4857 | Got: account_3677
+
+Total Correct Accounts: 26/32

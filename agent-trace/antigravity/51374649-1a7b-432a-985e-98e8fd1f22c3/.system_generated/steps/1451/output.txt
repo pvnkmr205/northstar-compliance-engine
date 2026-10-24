@@ -1,0 +1,5 @@
+Command exited with code 0.
+
+Command output:
+Saved output_test.csv. Now auditing output_test.csv...
+Total Invariant Issues in output_test.csv: 0

@@ -1,0 +1,35 @@
+161:             content = _text(p)
+162:             for match in insert_pattern.finditer(content):
+163:                 res = match.group("res")
+164:                 sys = match.group("sys")
+165:                 try:
+166:                     payload = json.loads(match.group("payload"))
+167:                 except Exception:
+168:                     continue
+169:                 u_id = (
+170:                     payload.get("subject_reference")
+171:                     or payload.get("user_id")
+172:                     or payload.get("customer_reference")
+173:                 )
+174:                 em = payload.get("email") or payload.get("requester_email") or payload.get("customer_email")
+175:                 if em:
+176:                     em = em.lower()
+177:                 if u_id and "@" in u_id:
+178:                     em, u_id = u_id.lower(), None
+179:                 if em and not u_id:
+180:                     u_id = user_identities_map.get(em)
+181: 
+182:                 if sys == "security_service" or res.startswith("audit_record_"):
+183:                     v_state = "PRESENT"
+184:                 elif "status_code" in payload and payload["status_code"] == 404:
+185:                     v_state = "ABSENT"
+186:                 elif payload.get("profile") is None and sys == "account_service":
+187:                     v_state = "ABSENT"
+188:                 elif any(payload.get(k) for k in ("email", "phone", "full_name", "first_name")):
+189:                     v_state = "PRESENT"
+190:                 else:
+191:                     v_state = "ANONYMIZED"
+192: 
+193:                 indexed[(fid, res)] = (fid, cap, sys, res, v_state, u_id, em)
+194: 
+195:         # --------------------------------------------------------------------

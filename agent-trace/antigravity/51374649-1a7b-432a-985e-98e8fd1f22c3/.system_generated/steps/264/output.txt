@@ -1,0 +1,17 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-260
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-260.log
+Log output:
+<truncated 16 lines>
+', 'support_001', 'DELETE_RECORD', 'ABSENT', '', '')
+('VERIFICATION', 'account_service', 'account_007', 'VERIFY_RECORD_ABSENT', 'ABSENT', '', '')
+('VERIFICATION', 'support_platform', 'support_001', 'VERIFY_RECORD_ABSENT', 'ABSENT', '', '')
+('FINDING', 'export_service', 'export_001', 'REPORT_REMAINING_RECORD', 'PRESENT', 'evidence_59', 'evidence/records/customer_export_jobs_20260914.json')
+('REMEDIATION', 'export_service', 'export_001', 'DELETE_RECORD', 'ABSENT', '', '')
+('VERIFICATION', 'account_service', 'account_008', 'VERIFY_RECORD_ABSENT', 'ABSENT', '', '')
+('VERIFICATION', 'export_service', 'export_001', 'VERIFY_RECORD_ABSENT', 'ABSENT', '', '')
+('FINDING', 'backup_service', 'backup_4978', 'REPORT_RESTORE_RISK', 'ACTIVE', 'evidence_93', 'evidence/databases/customer_data_inventory_20260916.sql')
+('REMEDIATION', 'backup_service', 'backup_4978', 'BLOCK_RESTORE', 'BLOCKED', '', '')
+('VERIFICATION', 'account_service', 'account_3960', 'VERIFY_RECORD_ABSENT', 'ABSENT', '', '')
+
+Last progress: 0s ago

@@ -1,0 +1,16 @@
+Command exited with code 0.
+
+Command output:
+
+
+    Directory: C:\Users\Pavan\hackerrank-orchestrate-october26\src
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----        25-10-2026     02:14                __pycache__                                                          
+-a----        25-10-2026     01:49          21687 evidence_indexer.py                                                  
+-a----        25-10-2026     02:14          95247 pipeline.py                                                          
+-a----        24-10-2026     19:52              0 __init__.py                                                          
+
+

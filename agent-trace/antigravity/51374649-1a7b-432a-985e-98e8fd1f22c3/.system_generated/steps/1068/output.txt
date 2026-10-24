@@ -1,0 +1,4 @@
+Command exited with code 0.
+
+Command output:
+_load_sample_ground_truth in text: False

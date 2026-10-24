@@ -1,0 +1,21 @@
+Command exited with code 0.
+
+Command output:
+Total requests: 550
+Total account submissions: 532
+Sample request-to-submit diffs (in seconds):
+  case_521: diff=49.5 min | closest=account_1482 | candidates in window=1
+  case_518: diff=47.8 min | closest=account_9641 | candidates in window=3
+  case_519: diff=47.8 min | closest=account_9641 | candidates in window=3
+  case_520: diff=47.8 min | closest=account_9641 | candidates in window=3
+  case_515: diff=45.6 min | closest=account_3411 | candidates in window=3
+  case_516: diff=45.6 min | closest=account_3411 | candidates in window=3
+  case_517: diff=45.6 min | closest=account_3411 | candidates in window=3
+  case_530: diff=46.6 min | closest=account_470 | candidates in window=6
+  case_531: diff=46.6 min | closest=account_470 | candidates in window=6
+  case_532: diff=46.6 min | closest=account_470 | candidates in window=6
+  case_513: diff=54.1 min | closest=account_1334 | candidates in window=2
+  case_514: diff=54.1 min | closest=account_1334 | candidates in window=5
+  case_527: diff=44.9 min | closest=account_4063 | candidates in window=5
+  case_528: diff=44.9 min | closest=account_4063 | candidates in window=5
+  case_529: diff=44.9 min | closest=account_4063 | candidates in window=5

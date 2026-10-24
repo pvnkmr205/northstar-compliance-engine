@@ -1,0 +1,8 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-239
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-239.log
+Log output:
+Keys in structured events: {'decision', 'instance', 'severity', 'file', 'deletion_block', 'trace_id', 'event', 'took_ms', 'region', 'matched_value', 'message_text', 'correlation_key', 'http_status', 'scheduler_registered', 'shard', 'phone', 'result', 'available', 'duration_ms', 'subject_ref', 'email', 'detector', 'pod', 'service', 'direct_identifiers', 'resource_id', 'last_run', 'rows', 'enabled', 'policy', 'eligible', 'index', 'integrity_check', 'logger'}
+Events with resource_id: {'audit_record_read_completed', 'index_query_completed', 'message_read', 'message_pii_scan', 'export_download_check_completed', 'connector_heartbeat', 'restore_candidate_evaluated', 'analytics_identity_scan', 'profile_lookup_completed', 'analytics_profile_read', 'restore_authorization_completed', 'connector_config_loaded', 'attachment_pii_scan'}
+
+Last progress: 4s ago

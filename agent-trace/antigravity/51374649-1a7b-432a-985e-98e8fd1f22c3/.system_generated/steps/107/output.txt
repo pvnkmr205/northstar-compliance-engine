@@ -1,0 +1,24 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-103
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-103.log
+Log output:
+<truncated 120 lines>
+    matched_indexes.append(index)
+            for index in matched_indexes:
+                line = lines[index]
+                evidence_contexts.append("\n".join(context_lines))
+        for context in evidence_contexts:
+    # De-duplicate equivalent evidence reports and ensure every finding cites a
+    valid_evidence = {
+            "SELECT file_id FROM evidence_files WHERE file_id IS NOT NULL"
+        if not step.evidence_id or step.evidence_id not in valid_evidence:
+                step.operation, step.state, step.evidence_id,
+        unique[(step.operation, step.system_id, step.resource_id, step.evidence_id)] = (step, treatment)
+    account_evidence = evidence_for(primary_account, "account_service")
+    if account_evidence and not any(
+            "VERIFY_RECORD_ABSENT", "ABSENT", account_evidence,
+        evidence_id = evidence_for(resource_id, system_id)
+        if evidence_id:
+                "VERIFICATION", system_id, resource_id, operation, state, evidence_id
+
+Last progress: 3s ago

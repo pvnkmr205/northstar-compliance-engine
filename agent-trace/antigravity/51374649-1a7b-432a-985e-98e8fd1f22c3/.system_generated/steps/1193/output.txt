@@ -1,0 +1,12 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-1191
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-1191.log
+Log output:
+<truncated 51 lines>
+','security_service','security_audit_events','{"resource_id":"audit_record_8465","subject_refe
+[case_59] (user_57) in customer_data_read_replica_20260921.sql: INSERT INTO "customer_data_primary" VALUES('audit_record_962','security_service','security_audit_events','{"resource_id":"audit_record_962","subject_reference":
+[case_59] (user_57) in customer_data_read_replica_20260921.sql: INSERT INTO "customer_data_read_replica" VALUES('audit_record_962','security_service','security_audit_events','{"resource_id":"audit_record_962","subject_refere
+[case_60] (user_58) in customer_data_read_replica_20260921.sql: INSERT INTO "customer_data_primary" VALUES('audit_record_629','security_service','security_audit_events','{"resource_id":"audit_record_629","subject_reference":
+[case_60] (user_58) in customer_data_read_replica_20260921.sql: INSERT INTO "customer_data_read_replica" VALUES('audit_record_629','security_service','security_audit_events','{"resource_id":"audit_record_629","subject_refere
+
+Last progress: 1s ago

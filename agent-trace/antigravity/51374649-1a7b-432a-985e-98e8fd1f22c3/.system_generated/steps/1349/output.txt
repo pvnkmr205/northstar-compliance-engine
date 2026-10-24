@@ -1,0 +1,14 @@
+Command exited with code 1.
+
+Command output:
+At line:29 char:58
++                 clauses.append(\"LOWER(email) IN (\" + \",\".join(\"? ...
++                                                          ~
+Missing argument in parameter list.
+At line:32 char:53
++                 clauses.append(\"user_id IN (\" + \",\".join(\"?\" fo ...
++                                                     ~
+Missing argument in parameter list.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingArgument
+ 

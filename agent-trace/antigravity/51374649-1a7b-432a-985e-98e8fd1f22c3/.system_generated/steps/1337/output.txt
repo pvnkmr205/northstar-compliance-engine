@@ -1,0 +1,44 @@
+Command exited with code 0.
+
+Command output:
+p())
+            elif field_name == "phone":
+                for phone in (old_value, new_value):
+                    if phone and phone.strip():
+                        identity.phones.add(phone.strip())
+            elif field_name == "email":
+                for email in (old_value, new_value):
+                    if email and email.strip():
+                        normalized_email = email.strip().lower()
+                        identity.emails.add(normalized_email)
+                        if normalized_email not in visited_emails:
+                            queue.append(("email", normalized_email))
+
+    identity.email_hashes.update(
+        hashlib.sha256(email.strip().lower().encode()).hexdigest()
+        for email in identity.emails
+        if email.strip()
+    )
+
+    identifiers = (
+        identity.user_ids
+        | identity.emails
+        | identity.phones
+        | identity.names
+        | identity.email_hashes
+    )
+    for identifier in sorted(value for value in identifiers if value):
+        for resource_id, details in conn.execute(
+            "SELECT resource_id,details FROM system_activity "
+            "WHERE details LIKE ? OR resource_id = ?",
+            (f"%{identifier}%", identifier),
+        ):
+            mentioned = bool(
+                details
+                and re.search(
+                    rf"(?<![\w@.+-]){re.escape(identifier)}(?![\w@.+-])",
+                    str(details),
+                    re.IGNORECASE,
+                )
+            )
+   

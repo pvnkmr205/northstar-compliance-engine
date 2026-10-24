@@ -1,0 +1,76 @@
+Command exited with code 0.
+
+Command output:
+e.search(
+                    r"(?:rows|count)\s*[=:]\s*0|(?:result|status|state)\s*[=:]\s*['\"]?"
+                    r"(?:miss|not_found|absent|deleted|complete|redacted|anonymized|disabled|blocked)",
+                    lower_context,
+                ))
+                explicit_clean_field = bool(re.search(
+                    r"(?:enabled|restore_allowed|eligible|direct_identifiers)"
+                    r"['\"]?\s*[=:]\s*['\"]?(?:false|0|null|none)",
+                    lower_context,
+                ))
+                if resource_key.startswith("audit_record_"):
+                    observed_clean_verifications.append(AuditStep(
+                        "VERIFICATION", "security_service", resource_id,
+                        "VERIFY_RECORD_PRESENT", "PRESENT", file_id,
+                    ))
+                    continue
+                if resource_key.startswith("account_") and explicit_absent:
+                    observed_clean_verifications.append(AuditStep(
+                        "VERIFICATION", "account_service", resource_id,
+                        "VERIFY_RECORD_ABSENT", "ABSENT", file_id,
+                    ))
+                    continue
+                if resource_key.startswith("data_flow_"):
+                    flow_disabled = bool(re.search(
+                        r"(?:enabled|active|running)['\"]?\s*[=:]\s*['\"]?(?:false|0|stopped|disabled)",
+                        lower_context,
+                    )) or "stopped" in lower_context or "disabled" in lower_context
+                    if flow_disabled or explicit_clean_field:
+                        observed_clean_verifications.append(AuditStep(
+                            "VERIFICATION", "integration_service", resource_id,
+                            "VERIFY_FLOW_DISABLED", "DISABLED", file_id,
+                        ))
+                    elif any(word in lower_context for word in ("active", "enabled", "running", "sync", "import")):
+                        step = AuditStep(
+                            "FINDING", "integration_service", resource_id,
+                            "REPORT_ACTIVE_DATA_FLOW", "ACTIVE", file_id,
+                        )
+                        findings.append((step, None))
+                    continue
+                if resource_key.startswith("backup_"):
+                    restore_blocked = bool(re.search(
+                        r"(?:restore_allowed|eligible)['\"]?\s*[=:]\s*['\"]?(?:false|0|blocked)",
+                        lower_context,
+                    )) or bool(re.search(
+                        r"deletion_block['\"]?\s*[=:]\s*['\"]?(?:true|1|blocked)",
+                        lower_context,
+                    ))
+                    if restore_blocked or explicit_clean_field:
+                        observed_clean_verifications.append(AuditStep(
+                            "VERIFICATION", "backup_service", resource_id,
+                            "VERIFY_RESTORE_BLOCKED", "BLOCKED", file_id,
+                        ))
+                    elif any(word in lower_context for word in ("restore", "snapshot", "backup", "recover")):
+                        step = AuditStep(
+                            "FINDING", "backup_service", resource_id,
+                            "REPORT_RESTORE_RISK", "ACTIVE", file_id,
+                        )
+                        findings.append((step, None))
+                    continue
+
+                if explicit_absent:
+                    continue
+                direct_pii_present = any(
+                    token and str(token).casefold() in lower_context
+                    for token in (
+                        set(identity.emails) | set(identity.phones)
+                        | set(identity.names) | set(identity.email_hashes)
+                    )
+                )
+                if resource_key.startswith("analytics_") and (
+                    explicit_clean_field or "anonymized" in lower_context
+                    or '"direct_identifiers": false' in lower_context
+                )

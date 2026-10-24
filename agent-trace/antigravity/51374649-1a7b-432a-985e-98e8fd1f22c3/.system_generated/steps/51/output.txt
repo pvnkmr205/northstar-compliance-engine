@@ -1,0 +1,12 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-49
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-49.log
+Log output:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\Pavan\.conda\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 236: character maps to <undefined>
+
+Last progress: 3s ago

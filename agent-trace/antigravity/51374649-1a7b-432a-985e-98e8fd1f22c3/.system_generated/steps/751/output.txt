@@ -1,0 +1,15 @@
+Command exited with code 0.
+
+Command output:
+[case_12] Verif NOT strictly in SYSTEM_ORDER:
+  Actual: ['account_service', 'analytics_platform', 'security_service']
+  Sorted: ['account_service', 'security_service', 'analytics_platform']
+  Steps:  [('account_service', 'account_9797'), ('analytics_platform', 'analytics_9914'), ('security_service', 'audit_record_2945')]
+[case_13] Verif NOT strictly in SYSTEM_ORDER:
+  Actual: ['account_service', 'search_service', 'support_platform', 'security_service']
+  Sorted: ['account_service', 'search_service', 'security_service', 'support_platform']
+  Steps:  [('account_service', 'account_9335'), ('search_service', 'search_1308'), ('support_platform', 'support_4218'), ('security_service', 'audit_record_4816')]
+[case_23] Verif NOT strictly in SYSTEM_ORDER:
+  Actual: ['account_service', 'export_service', 'search_service', 'security_service']
+  Sorted: ['account_service', 'search_service', 'security_service', 'export_service']
+  Steps:  [('account_service', 'account_410'), ('export_service', 'export_7364'), ('search_service', 'search_898'), ('security_service', 'audit_record_4128')]

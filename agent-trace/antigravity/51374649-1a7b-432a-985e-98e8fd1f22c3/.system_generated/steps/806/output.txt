@@ -1,0 +1,9 @@
+Command exited with code 0.
+
+Command output:
+2026-09-15T11:58:08Z level=DEBUG service=integration_service instance=integration-1 pod=integration-95c3 region=eu-central-1 trace_id=tr-9750867 event=connector_config_read_started subject_key="lucia-torres@gmail.com" attempt=1
+2026-09-15T11:58:09Z level=DEBUG service=integration_service instance=integration-1 pod=integration-95c3 region=eu-central-1 trace_id=tr-9750867 event=connection_acquired pool=integration_service_primary wait_ms=19
+2026-09-15T11:58:11Z level=WARN service=integration_service instance=integration-1 pod=integration-95c3 region=eu-central-1 trace_id=tr-9750867 resource_id=data_flow_9846 event=connector_heartbeat enabled=true scheduler_registered=true last_run=success
+2026-09-15T11:59:31Z level=DEBUG service=security_service instance=security-3 pod=security-ecfc region=ap-south-1 trace_id=tr-4314388 event=audit_record_query_started subject_ref="user_15" attempt=1
+2026-09-15T11:59:36Z level=DEBUG service=security_service instance=security-3 pod=security-ecfc region=ap-south-1 trace_id=tr-4314388 event=cache_lookup result=miss cache=security_service_lookup_v2
+2026-09-15T11:59:37Z level=DEBUG service=security_service instance=security-3 pod=security-ecfc region=ap-south-1 trace_id=tr-4314388 resource_id=audit_record_1596 event=audit_record_read_completed integrity_check=passed rows=1

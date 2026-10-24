@@ -1,0 +1,44 @@
+Command exited with code 0.
+
+Command output:
+[case_11] Findings:
+  search_service | search_052 | REPORT_REMAINING_RECORD
+  analytics_platform | analytics_2034 | REPORT_EXPOSED_PII
+  support_platform | support_864 | REPORT_EXPOSED_PII
+  integration_service | data_flow_9522 | REPORT_ACTIVE_DATA_FLOW
+[case_13] Findings:
+  search_service | search_1308 | REPORT_REMAINING_RECORD
+  support_platform | support_4218 | REPORT_REMAINING_RECORD
+[case_16] Findings:
+  account_service | account_994 | REPORT_REMAINING_RECORD
+  search_service | search_1007 | REPORT_REMAINING_RECORD
+[case_18] Findings:
+  search_service | search_4013 | REPORT_REMAINING_RECORD
+  analytics_platform | analytics_037 | REPORT_EXPOSED_PII
+  support_platform | support_5569 | REPORT_EXPOSED_PII
+  integration_service | data_flow_4890 | REPORT_ACTIVE_DATA_FLOW
+[case_19] Findings:
+  search_service | search_6083 | REPORT_REMAINING_RECORD
+  support_platform | support_9553 | REPORT_EXPOSED_PII
+[case_20] Findings:
+  search_service | search_4262 | REPORT_REMAINING_RECORD
+  integration_service | data_flow_1770 | REPORT_ACTIVE_DATA_FLOW
+[case_22] Findings:
+  search_service | search_8911 | REPORT_REMAINING_RECORD
+  analytics_platform | analytics_4440 | REPORT_EXPOSED_PII
+[case_23] Findings:
+  export_service | export_7364 | REPORT_REMAINING_RECORD
+  search_service | search_898 | REPORT_REMAINING_RECORD
+[case_24] Findings:
+  account_service | account_5334 | REPORT_REMAINING_RECORD
+  search_service | search_5577 | REPORT_REMAINING_RECORD
+[case_29] Findings:
+  search_service | search_1993 | REPORT_REMAINING_RECORD
+  analytics_platform | analytics_5208 | REPORT_EXPOSED_PII
+  support_platform | support_5281 | REPORT_EXPOSED_PII
+  integration_service | data_flow_3827 | REPORT_ACTIVE_DATA_FLOW
+[case_30] Findings:
+  search_service | search_9359 | REPORT_REMAINING_RECORD
+  analytics_platform | analytics_3697 | REPORT_EXPOSED_PII
+  support_platform | support_6477 | REPORT_EXPOSED_PII
+  integration_service | data_flow_8524 | REPORT_ACTIVE_DATA_FLOW

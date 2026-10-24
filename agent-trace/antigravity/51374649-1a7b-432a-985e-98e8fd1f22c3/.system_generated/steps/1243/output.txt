@@ -1,0 +1,26 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-1241
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-1241.log
+Log output:
+<truncated 17 lines>
+ if u_id and "@" in u_id:
+178:                     em, u_id = u_id.lower(), None
+179:                 if em and not u_id:
+180:                     u_id = user_identities_map.get(em)
+181: 
+182:                 if sys == "security_service" or res.startswith("audit_record_"):
+183:                     v_state = "PRESENT"
+184:                 elif "status_code" in payload and payload["status_code"] == 404:
+185:                     v_state = "ABSENT"
+186:                 elif payload.get("profile") is None and sys == "account_service":
+187:                     v_state = "ABSENT"
+188:                 elif any(payload.get(k) for k in ("email", "phone", "full_name", "first_name")):
+189:                     v_state = "PRESENT"
+190:                 else:
+191:                     v_state = "ANONYMIZED"
+192: 
+193:                 indexed[(fid, res)] = (fid, cap, sys, res, v_state, u_id, em)
+194: 
+195:         # --------------------------------------------------------------------
+
+Last progress: 2s ago

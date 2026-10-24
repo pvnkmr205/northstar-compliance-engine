@@ -1,0 +1,131 @@
+Command exited with code 0.
+
+Command output:
+
+[case_01] (amina.elmasri@gmail.com, uid=user_01) Exp status: COMPLETE
+  Exp Resources: ['account_001']
+  DB Evidence:   []
+
+[case_02] (mateo.rios@outlook.com, uid=user_02) Exp status: COMPLETE
+  Exp Resources: ['account_002']
+  DB Evidence:   []
+
+[case_03] (l.fontaine46@yahoo.com, uid=user_43) Exp status: COMPLETE
+  Exp Resources: ['account_7566', 'audit_record_2016', 'analytics_9406']
+  DB Evidence:   []
+
+[case_04] (thandiwe.n@gmail.com, uid=user_04) Exp status: COMPLETE
+  Exp Resources: ['account_004', 'analytics_901']
+  DB Evidence:   []
+
+[case_05] (leila.haddad@yahoo.com, uid=user_05) Exp status: INCOMPLETE
+  Exp Resources: ['account_005', 'account_005', 'account_005']
+  DB Evidence:   []
+
+[case_06] (jonas.berg@outlook.com, uid=user_06) Exp status: INCOMPLETE
+  Exp Resources: ['search_001', 'search_001', 'account_006', 'search_001']
+  DB Evidence:   []
+
+[case_07] (priya.raman@gmail.com, uid=user_07) Exp status: INCOMPLETE
+  Exp Resources: ['support_001', 'support_001', 'account_007', 'support_001']
+  DB Evidence:   []
+
+[case_08] (gabriel.costa@proton.me, uid=user_08) Exp status: INCOMPLETE
+  Exp Resources: ['export_001', 'export_001', 'account_008', 'export_001']
+  DB Evidence:   []
+
+[case_09] (k.appiah88@gmail.com, uid=user_61) Exp status: INCOMPLETE
+  Exp Resources: ['backup_4978', 'backup_4978', 'account_3960', 'audit_record_4902', 'backup_4978']
+  DB Evidence:   []
+
+[case_10] (nadia.ionescu@yahoo.com, uid=None) Exp status: INCOMPLETE
+  Exp Resources: ['support_002', 'support_002', 'account_010', 'support_002']
+  DB Evidence:   []
+
+[case_11] (novak.tomasz@icloud.com, uid=user_32) Exp status: INCOMPLETE
+  Exp Resources: ['search_052', 'analytics_2034', 'support_864', 'data_flow_9522', 'data_flow_9522', 'search_052', 'support_864', 'analytics_2034', 'account_4248', 'search_052', 'audit_record_9394', 'support_864', 'analytics_2034', 'data_flow_9522']
+  DB Evidence:   [('account_service', 'account_4248', 'ABSENT', 'evidence_03'), ('analytics_platform', 'analytics_2034', 'PRESENT', 'evidence_03'), ('integration_service', 'data_flow_9522', 'ACTIVE', 'evidence_03'), ('search_service', 'search_052', 'PRESENT', 'evidence_03'), ('support_platform', 'support_864', 'PRESENT', 'evidence_03'), ('security_service', 'audit_record_9394', 'PRESENT', 'evidence_03')]
+
+[case_12] (minjun.kim@gmail.com, uid=user_12) Exp status: INCOMPLETE
+  Exp Resources: ['analytics_9914', 'analytics_9914', 'account_9797', 'analytics_9914', 'audit_record_2945']
+  DB Evidence:   []
+
+[case_13] (noor-khalil@proton.me, uid=user_33) Exp status: INCOMPLETE
+  Exp Resources: ['search_1308', 'support_4218', 'search_1308', 'support_4218', 'account_9335', 'search_1308', 'support_4218', 'audit_record_4816']
+  DB Evidence:   [('account_service', 'account_9335', 'ABSENT', 'evidence_03'), ('search_service', 'search_1308', 'PRESENT', 'evidence_03'), ('support_platform', 'support_4218', 'PRESENT', 'evidence_03'), ('security_service', 'audit_record_4816', 'PRESENT', 'evidence_03')]
+
+[case_14] (y.tanaka32@gmail.com, uid=user_37) Exp status: INCOMPLETE
+  Exp Resources: ['backup_3870', 'backup_3870', 'account_3677', 'audit_record_987', 'backup_3870']
+  DB Evidence:   [('account_service', 'account_3677', 'ABSENT', 'evidence_03'), ('backup_service', 'backup_3870', 'ACTIVE', 'evidence_03'), ('security_service', 'audit_record_987', 'PRESENT', 'evidence_03')]
+
+[case_15] (lucia-torres@gmail.com, uid=user_15) Exp status: INCOMPLETE
+  Exp Resources: ['data_flow_9846', 'data_flow_9846', 'account_4745', 'audit_record_1596', 'data_flow_9846']
+  DB Evidence:   []
+
+[case_16] (diya.k4436@outlook.com, uid=user_53) Exp status: INCOMPLETE
+  Exp Resources: ['account_994', 'search_1007', 'account_994', 'search_1007', 'account_994', 'search_1007', 'audit_record_9528']
+  DB Evidence:   [('account_service', 'account_994', 'ABSENT', 'evidence_05'), ('security_service', 'audit_record_9528', 'PRESENT', 'evidence_05')]
+
+[case_17] (leonie.g9352@outlook.com, uid=user_17) Exp status: INCOMPLETE
+  Exp Resources: ['backup_3245', 'backup_3245', 'account_4092', 'audit_record_1797', 'backup_3245']
+  DB Evidence:   []
+
+[case_18] (mori.ren@gmail.com, uid=user_50) Exp status: INCOMPLETE
+  Exp Resources: ['search_4013', 'analytics_037', 'support_5569', 'data_flow_4890', 'data_flow_4890', 'search_4013', 'support_5569', 'analytics_037', 'account_5521', 'search_4013', 'audit_record_6645', 'support_5569', 'analytics_037', 'data_flow_4890']
+  DB Evidence:   []
+
+[case_19] (e.varga90@yahoo.com, uid=user_19) Exp status: INCOMPLETE
+  Exp Resources: ['search_6083', 'support_9553', 'search_6083', 'support_9553', 'account_9102', 'search_6083', 'audit_record_6793', 'support_9553']
+  DB Evidence:   []
+
+[case_20] (akosua.gyasi@gmail.com, uid=user_48) Exp status: INCOMPLETE
+  Exp Resources: ['search_4262', 'data_flow_1770', 'data_flow_1770', 'search_4262', 'account_5037', 'search_4262', 'audit_record_5569', 'data_flow_1770']
+  DB Evidence:   []
+
+[case_21] (amara-okeke@proton.me, uid=user_21) Exp status: COMPLETE
+  Exp Resources: ['account_6440', 'audit_record_3737', 'analytics_5335']
+  DB Evidence:   [('security_service', 'audit_record_3737', 'PRESENT', 'evidence_92')]
+
+[case_22] (seoyeon-han@gmail.com, uid=user_51) Exp status: INCOMPLETE
+  Exp Resources: ['search_8911', 'analytics_4440', 'search_8911', 'analytics_4440', 'account_4990', 'search_8911', 'audit_record_3482', 'analytics_4440']
+  DB Evidence:   [('analytics_platform', 'analytics_4440', 'PRESENT', 'evidence_05'), ('security_service', 'audit_record_3482', 'PRESENT', 'evidence_05')]
+
+[case_23] (thandiwe.m6866@zoho.com, uid=user_23) Exp status: INCOMPLETE
+  Exp Resources: ['export_7364', 'search_898', 'export_7364', 'search_898', 'account_410', 'export_7364', 'search_898', 'audit_record_4128']
+  DB Evidence:   [('security_service', 'audit_record_4128', 'PRESENT', 'evidence_02')]
+
+[case_24] (keiko.nakamura@gmail.com, uid=user_24) Exp status: INCOMPLETE
+  Exp Resources: ['account_5334', 'search_5577', 'account_5334', 'search_5577', 'account_5334', 'search_5577', 'audit_record_7095']
+  DB Evidence:   [('account_service', 'account_5334', 'PRESENT', 'evidence_02'), ('security_service', 'audit_record_7095', 'PRESENT', 'evidence_02')]
+
+[case_25] (s.yoon04@gmail.com, uid=user_25) Exp status: COMPLETE
+  Exp Resources: ['account_3136', 'audit_record_451', 'analytics_1895']
+  DB Evidence:   [('security_service', 'audit_record_451', 'PRESENT', 'evidence_92')]
+
+[case_26] (almeida.mariana@gmail.com, uid=user_26) Exp status: COMPLETE
+  Exp Resources: ['account_5684', 'audit_record_5416', 'support_4715', 'analytics_4566', 'data_flow_6244', 'backup_3120']
+  DB Evidence:   [('account_service', 'account_5684', 'PRESENT', 'evidence_02'), ('backup_service', 'backup_3120', 'ANONYMIZED', 'evidence_92'), ('security_service', 'audit_record_5416', 'PRESENT', 'evidence_92'), ('support_platform', 'support_4715', 'ANONYMIZED', 'evidence_92'), ('integration_service', 'data_flow_6244', 'ANONYMIZED', 'evidence_92')]
+
+[case_27] (ananya-nair@gmail.com, uid=user_27) Exp status: COMPLETE
+  Exp Resources: ['account_3866', 'audit_record_3830', 'support_4707', 'analytics_4574', 'data_flow_2295', 'backup_5970']
+  DB Evidence:   [('account_service', 'account_3866', 'PRESENT', 'evidence_02'), ('backup_service', 'backup_5970', 'ANONYMIZED', 'evidence_92'), ('security_service', 'audit_record_3830', 'PRESENT', 'evidence_92'), ('support_platform', 'support_4707', 'ANONYMIZED', 'evidence_92'), ('integration_service', 'data_flow_2295', 'ANONYMIZED', 'evidence_92')]
+
+[case_28] (smartinez6461@gmail.com, uid=user_28) Exp status: COMPLETE
+  Exp Resources: ['account_5482', 'audit_record_9265', 'support_2351', 'analytics_6077', 'data_flow_2337', 'backup_838']
+  DB Evidence:   [('backup_service', 'backup_838', 'ANONYMIZED', 'evidence_92'), ('security_service', 'audit_record_9265', 'PRESENT', 'evidence_92'), ('support_platform', 'support_2351', 'ANONYMIZED', 'evidence_92'), ('integration_service', 'data_flow_2337', 'ANONYMIZED', 'evidence_92')]
+
+[case_29] (noah.f438085@outlook.com, uid=None) Exp status: INCOMPLETE
+  Exp Resources: ['search_1993', 'analytics_5208', 'support_5281', 'data_flow_3827', 'data_flow_3827', 'search_1993', 'support_5281', 'analytics_5208', 'account_7012', 'search_1993', 'audit_record_3954', 'support_5281', 'analytics_5208', 'data_flow_3827']
+  DB Evidence:   [('analytics_platform', 'analytics_5208', 'PRESENT', 'evidence_92')]
+
+[case_30] (camille.bernard86@outlook.com, uid=None) Exp status: INCOMPLETE
+  Exp Resources: ['search_9359', 'analytics_3697', 'support_6477', 'data_flow_8524', 'data_flow_8524', 'search_9359', 'support_6477', 'analytics_3697', 'account_4163', 'search_9359', 'audit_record_1707', 'support_6477', 'analytics_3697', 'data_flow_8524']
+  DB Evidence:   [('analytics_platform', 'analytics_3697', 'PRESENT', 'evidence_92')]
+
+[case_31] (a.eze08@gmail.com, uid=user_541) Exp status: COMPLETE
+  Exp Resources: ['account_4857', 'audit_record_6909', 'tombstone_440']
+  DB Evidence:   [('identity_service', 'tombstone_440', 'ANONYMIZED', 'evidence_51'), ('security_service', 'audit_record_6909', 'PRESENT', 'evidence_51')]
+
+[case_32] (addo.kofi@gmail.com, uid=user_542) Exp status: INCOMPLETE
+  Exp Resources: ['tombstone_9178', 'tombstone_9178', 'account_8858', 'audit_record_7068', 'tombstone_9178']
+  DB Evidence:   [('identity_service', 'tombstone_9178', 'PRESENT', 'evidence_51'), ('security_service', 'audit_record_7068', 'PRESENT', 'evidence_51')]

@@ -1,0 +1,52 @@
+Command exited with code 0.
+
+Command output:
+
+=== customer_data_snapshot_bundle_20260917.json ===
+  None | account_5684 | user=None | email=almeida.mariana@gmail.com
+  None | search_8168 | user=None | email=None
+  None | account_5334 | user=None | email=keiko.nakamura@gmail.com
+  None | analytics_5335 | user=None | email=None
+  None | analytics_1895 | user=None | email=None
+  None | analytics_4566 | user=None | email=None
+  None | analytics_4574 | user=None | email=None
+  None | analytics_6077 | user=None | email=None
+  None | analytics_5208 | user=user_29 | email=noah.f4380@outlook.com
+  None | analytics_3697 | user=user_30 | email=camille.bernard@outlook.com
+  None | backup_3120 | user=user_26 | email=None
+  None | backup_5970 | user=user_27 | email=None
+  None | backup_838 | user=user_28 | email=None
+  None | export_7364 | user=None | email=None
+  None | data_flow_6244 | user=None | email=None
+  None | data_flow_2295 | user=None | email=None
+  None | data_flow_2337 | user=None | email=None
+  None | data_flow_3827 | user=None | email=None
+  None | data_flow_8524 | user=None | email=None
+  None | search_2912 | user=None | email=None
+  None | search_898 | user=None | email=None
+  None | search_5577 | user=None | email=None
+  None | search_1993 | user=None | email=None
+  None | search_9359 | user=None | email=None
+  None | audit_record_3737 | user=user_21 | email=None
+  None | audit_record_9644 | user=user_22 | email=None
+  None | audit_record_4128 | user=user_23 | email=None
+  None | audit_record_7095 | user=user_24 | email=None
+  None | audit_record_451 | user=user_25 | email=None
+  None | audit_record_5416 | user=user_26 | email=None
+  None | audit_record_3830 | user=user_27 | email=None
+  None | audit_record_9265 | user=user_28 | email=None
+  None | audit_record_3954 | user=user_29 | email=None
+  None | audit_record_1707 | user=user_30 | email=None
+  None | support_1034 | user=user_22 | email=None
+  None | support_4715 | user=user_26 | email=None
+  None | support_4707 | user=user_27 | email=None
+  None | support_2351 | user=user_28 | email=None
+  None | support_5281 | user=user_29 | email=None
+  None | support_6477 | user=user_30 | email=None
+  None | account_3866 | user=None | email=ananya-nair@gmail.com
+
+=== customer_data_snapshot_bundle_20260915.json ===
+  None | tombstone_440 | user=user_541 | email=None
+  None | tombstone_9178 | user=user_542 | email=addo.kofi@gmail.com
+  None | audit_record_6909 | user=user_541 | email=None
+  None | audit_record_7068 | user=user_542 | email=None

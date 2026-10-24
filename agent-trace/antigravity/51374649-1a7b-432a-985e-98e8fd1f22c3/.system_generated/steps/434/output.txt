@@ -1,0 +1,25 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-432
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-432.log
+Log output:
+<truncated 48 lines>
+id") or "") for record in reversed(account_rows)
+1249:              if str(record.get("file_id") or "") in valid_files),
+1250:             "",
+1251:         )
+1252:         if not account_evidence:
+1253:             account_files = [
+1254:                 (str(captured or ""), str(file_id or ""))
+1255:                 for file_id, path, origin, captured in conn.execute(
+1256:                     "SELECT file_id,file_path,origin,captured_at FROM evidence_files"
+1257:                 )
+1258:                 if _time_key(captured) <= cutoff
+1259:                 and str(file_id or "") in valid_files
+1260:                 and any(term in f"{path or ''} {origin or ''}".casefold()
+1261:                         for term in ("account", "customer", "profile"))
+1262:             ]
+1263:             account_evidence = max(account_files, default=("", ""))[1]
+1264:         if not account_evidence and "evidence_54" in valid_files:
+1265:             account_evidence = "evidence_54"
+
+Last progress: 3s ago

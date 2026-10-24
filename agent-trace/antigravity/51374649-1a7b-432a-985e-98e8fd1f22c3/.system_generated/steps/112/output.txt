@@ -1,0 +1,8 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-110
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-110.log
+Log output:
+logs: ['application_trace_ap_northeast_20260730.log', 'application_trace_eu_north_20260302.log', 'cloud_runtime_export_af_south_20260930.log', 'cloud_runtime_export_us_west_20260608.log', 'notification_delivery_20260315.log', 'operations_stream_eu_central_20260705.log', 'operations_stream_me_central_20260203.log', 'resource_lookup_trace_20260218_083911.log', 'resource_lookup_trace_20260310_061801.log', 'resource_lookup_trace_20260414_054007.log']
+records: ['connector_configurations_20260812.json', 'customer_account_handover_20261001.txt', 'customer_analytics_report_20260907.json', 'customer_data_snapshot_bundle_20260131.json', 'customer_data_snapshot_bundle_20260223.json', 'customer_data_snapshot_bundle_20260322.json', 'customer_data_snapshot_bundle_20260416.json', 'customer_data_snapshot_bundle_20260511.json', 'customer_data_snapshot_bundle_20260605.json', 'customer_data_snapshot_bundle_20260630.json']
+
+Last progress: 5s ago

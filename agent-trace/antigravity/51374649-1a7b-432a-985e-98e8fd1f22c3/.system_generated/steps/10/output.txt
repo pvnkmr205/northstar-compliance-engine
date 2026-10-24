@@ -1,0 +1,10 @@
+Command exited with code 1.
+
+Command output:
+Get-ChildItem : Access is denied
+At line:1 char:87
++ ... CALAPPDATA; Get-ChildItem -Path "C:\Users\Pavan\hackerrank-orchestrat ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Get-ChildItem], UnauthorizedAccessException
+    + FullyQualifiedErrorId : System.UnauthorizedAccessException,Microsoft.PowerShell.Commands.GetChildItemCommand
+ 

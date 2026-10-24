@@ -1,0 +1,80 @@
+Command exited with code 0.
+
+Command output:
+:
+                    observed_clean_verifications.append(AuditStep(
+                        "VERIFICATION", "analytics_platform", resource_id,
+                        "VERIFY_RECORD_ANONYMIZED", "ANONYMIZED", file_id,
+                    ))
+                    continue
+                if resource_key.startswith("support_") and not direct_pii_present:
+                    observed_clean_verifications.append(AuditStep(
+                        "VERIFICATION", "support_platform", resource_id,
+                        "VERIFY_RECORD_REDACTED", "ANONYMIZED", file_id,
+                    ))
+                    continue
+                if resource_key.startswith("tombstone_") and not direct_pii_present:
+                    observed_clean_verifications.append(AuditStep(
+                        "VERIFICATION", "identity_service", resource_id,
+                        "VERIFY_RECORD_REDACTED", "ANONYMIZED", file_id,
+                    ))
+                    continue
+                if not any(word in lower_context for word in (
+                    "rows=1", '"rows": 1', "result=hit", "matched_value",
+                    "direct_identifier", "marker_found=false", "active",
+                    "present", "record", "resource_id", "support_", "export_",
+                )):
+                    continue
+
+                if resource_key.startswith("analytics_"):
+                    operation, treatment = "REPORT_EXPOSED_PII", "ANONYMIZE"
+                    system_id = "analytics_platform"
+                elif resource_key.startswith("support_"):
+                    is_attachment = any(
+                        word in lower_context
+                        for word in ("attachment", "identity document", "uploaded file")
+                    ) or bool(re.search(
+                        r"\b(?:identity document|attachment|uploaded file)\b",
+                        str(case_row.get("request_text", "")),
+                        re.IGNORECASE,
+                    )) or "marker_found=false" in lower_context
+                    operation = "REPORT_REMAINING_RECORD" if is_attachment else "REPORT_EXPOSED_PII"
+                    treatment = "DELETE" if is_attachment else "REDACT"
+                    system_id = "support_platform"
+                elif resource_key.startswith("export_"):
+                    operation, treatment = "REPORT_REMAINING_RECORD", "DELETE"
+                    system_id = "export_service"
+                elif resource_key.startswith("search_"):
+                    operation, treatment = "REPORT_REMAINING_RECORD", "DELETE"
+                    system_id = "search_service"
+                elif resource_key.startswith("tombstone_"):
+                    operation, treatment = "REPORT_EXPOSED_PII", "REDACT"
+                    system_id = "identity_service"
+                elif resource_key.startswith("audit_record_"):
+                    continue
+                else:
+                    operation, treatment = "REPORT_REMAINING_RECORD", "DELETE"
+                    system_id = "account_service"
+
+                findings.append((AuditStep(
+                    "FINDING", system_id, resource_id, operation, "PRESENT", file_id
+                ), treatment))
+
+    # De-duplicate equivalent evidence reports and ensure every finding cites a
+    # participant-visible file or activity identifier.
+    valid_evidence = {
+        str(row[0]) for row in conn.execute(
+            "SELECT file_id FROM evidence_files WHERE file_id IS NOT NULL"
+        )
+    } | {
+        str(row[0]) for row in conn.execute(
+            "SELECT activity_id FROM system_activity WHERE activity_id IS NOT NULL"
+        )
+    }
+    unique: Dict[Tuple[str, str, str, str], Tuple[AuditStep, Optional[str]]] = {}
+    for step, treatment in findings:
+        if not step.evidence_id or step.evidence_id not in valid_evidence:
+            continue
+        if not step.system_id or step.system_id == "unknown_system":
+            step = AuditStep(
+                step.phase, infer_system(""

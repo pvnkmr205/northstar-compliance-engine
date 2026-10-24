@@ -1,0 +1,18 @@
+Command exited with code 0.
+
+Command output:
+=== AUDIT RESULTS ===
+Total Cases Checked: 518
+Total Invariant Issues Found: 22
+
+First 10 Issues:
+ - [case_56] INCOMPLETE case has invalid phases: ['VERIFICATION']
+ - [case_58] INCOMPLETE case has invalid phases: ['VERIFICATION']
+ - [case_59] INCOMPLETE case has invalid phases: ['VERIFICATION']
+ - [case_60] INCOMPLETE case has invalid phases: ['VERIFICATION']
+ - [case_206] INCOMPLETE case has invalid phases: ['VERIFICATION']
+ - [case_253] INCOMPLETE case has invalid phases: ['VERIFICATION']
+ - [case_257] INCOMPLETE case has invalid phases: ['VERIFICATION']
+ - [case_260] INCOMPLETE case has invalid phases: ['VERIFICATION']
+ - [case_304] INCOMPLETE case has invalid phases: ['VERIFICATION']
+ - [case_309] INCOMPLETE case has invalid phases: ['VERIFICATION']

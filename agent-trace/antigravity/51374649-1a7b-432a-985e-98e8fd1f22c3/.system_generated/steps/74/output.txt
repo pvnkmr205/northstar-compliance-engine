@@ -1,0 +1,4 @@
+Command exited with code 0.
+
+Command output:
+Chars: 2290 Words: 220 Rough tokens (words * 1.3): 286.0

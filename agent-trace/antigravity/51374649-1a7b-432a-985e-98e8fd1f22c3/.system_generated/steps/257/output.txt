@@ -1,0 +1,16 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-253
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-253.log
+Log output:
+<truncated 21 lines>
+resource_export_20260320_072349.json dict keys: ['exported_at', 'region', 'service_exports', 'source']
+service_resource_export_20260429_083222.json dict keys: ['exported_at', 'region', 'service_exports', 'source']
+service_resource_export_20260514_114454.json dict keys: ['exported_at', 'region', 'service_exports', 'source']
+service_resource_export_20260603_083457.json dict keys: ['exported_at', 'region', 'service_exports', 'source']
+service_resource_export_20260628_062556.json dict keys: ['exported_at', 'region', 'service_exports', 'source']
+service_resource_export_20260718_104335.json dict keys: ['exported_at', 'region', 'service_exports', 'source']
+service_resource_export_20260807_074104.json dict keys: ['exported_at', 'region', 'service_exports', 'source']
+service_resource_export_20260901_053316.json dict keys: ['exported_at', 'region', 'service_exports', 'source']
+service_resource_export_20260915_114455.json dict keys: ['exported_at', 'region', 'service_exports', 'source']
+
+Last progress: 4s ago

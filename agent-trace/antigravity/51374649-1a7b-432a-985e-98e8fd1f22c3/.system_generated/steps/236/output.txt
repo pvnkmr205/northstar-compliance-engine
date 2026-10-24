@@ -1,0 +1,8 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-232
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-232.log
+Log output:
+Sample structured event: {'service': 'search_service', 'resource_id': 'search_9365', 'event': 'index_query_completed'}
+Sample structured event: {'service': 'account_service', 'resource_id': 'account_6633', 'event': 'profile_lookup_completed', 'rows': '1', 'http_status': '200'}
+
+Last progress: 3s ago

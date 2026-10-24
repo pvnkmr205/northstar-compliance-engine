@@ -1,0 +1,14 @@
+Command exited with code 0.
+
+Command output:
+class ResolvedIdentity:
+    primary_email: str
+    user_ids: Set[str] = field(default_factory=set)
+    emails: Set[str] = field(default_factory=set)
+    phones: Set[str] = field(default_factory=set)
+    names: Set[str] = field(default_factory=set)
+    email_hashes: Set[str] = field(default_factory=set)
+    linked_resources: Set[str] = field(default_factory=set)
+
+
+def _resolve_identity_without_evid

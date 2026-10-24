@@ -1,0 +1,30 @@
+Command exited with code 0.
+
+Command output:
+         if resource_id and resource_id.strip() and (mentioned or resource_id.strip() == identifier):
+                identity.linked_resources.add(resource_id.strip())
+
+    return identity
+
+
+# ============================================================================
+# 5. TEMPORAL STATE EVALUATOR & POLICY AUDITOR
+# ============================================================================
+
+import re
+
+
+_DELETION_TERMS = re.compile(
+    r"\b(?:delete|deletion|erase|erasure|erased|close|closed|closure|removal|"
+    r"eliminar|elimine|borrar|borrado|supprimer|effacer|suppression|"
+    r"l�schen|loeschen|entfernen|apagar|remover|remocao|exclus�o|"
+    r"personal[ -]data deletion|gdpr|right to be forgotten)\b",
+    re.IGNORECASE,
+)
+_NON_DELETE_ONLY = re.compile(
+    r"\b(?:order (?:status|update|tracking)|track (?:my )?order|"
+    r"login|sign[ -]?in|password|address|newsletter|marketing preferences|"
+    r"access (?:my )?account|account access|export my data)\b",
+    re.IGNORECASE,
+)
+_

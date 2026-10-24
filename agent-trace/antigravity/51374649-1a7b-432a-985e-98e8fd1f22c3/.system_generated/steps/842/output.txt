@@ -1,0 +1,12 @@
+Command exited with code 0.
+
+Command output:
+case_518 {'case_id': 'case_518', 'email': 'adwoa.boateng@gmail.com', 'requested_at': '2026-01-08T06:00:00Z', 'reported_status': 'COMPLETE', 'reported_at': '2026-01-09T06:00:00Z', 'audit_at': '2026-02-03T06:00:00Z', 'request_text': 'I would like to submit a request to delete this account and its personal data. Please complete the normal identity and data review for this request. Please let me know once the request has been reviewed.'}
+case_519 {'case_id': 'case_519', 'email': 's.dlamini52@gmail.com', 'requested_at': '2026-01-07T06:00:00Z', 'reported_status': 'PARTIALLY_COMPLETE', 'reported_at': '2026-01-09T06:00:00Z', 'audit_at': '2026-02-03T06:00:00Z', 'request_text': 'Please permanently delete the account associated with this email address. Please apply the request across the systems covered by your deletion policy. I would appreciate confirmation of the final outcome.'}
+case_520 {'case_id': 'case_520', 'email': 'suzuki.daichi90@gmail.com', 'requested_at': '2026-01-06T06:00:00Z', 'reported_status': 'NOT_STARTED', 'reported_at': '2026-01-09T06:00:00Z', 'audit_at': '2026-02-03T06:00:00Z', 'request_text': 'Please process a permanent account-deletion request for this email address. Please include information linked through current or earlier account identifiers. Please let me know once the request has been reviewed.'}
+Reported at: 2026-01-09T06:00:00Z
+activity_486 2026-02-09T02:34:56Z account_1204 SUCCESS Profile preference update processed account_1204.
+activity_490 2026-02-09T07:54:27Z account_9398 SUCCESS Deletion worker submitted primary profile account_9398 to account_service.
+activity_491 2026-02-09T08:14:12Z account_2961 SUCCESS Deletion worker submitted primary profile account_2961 to account_service.
+activity_498 2026-02-09T14:07:36Z account_6041 SUCCESS Profile preference update processed account_6041.
+activity_500 2026-02-09T17:11:48Z account_2891 SUCCESS Profile preference update processed account_2891.

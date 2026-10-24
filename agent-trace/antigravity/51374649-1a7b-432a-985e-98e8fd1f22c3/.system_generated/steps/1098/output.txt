@@ -1,0 +1,24 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-1096
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-1096.log
+Log output:
+<truncated 46 lines>
+put.csv` | One answer row for every request |
+| `chat_transcript` | Transcript showing how the system was developed or used |
+| AI interview | Explanation of the approach and evaluation |
+
+### Token Usage and Cost Analysis
+
+Your `code.zip` must include one token-usage file:
+
+```text
+evaluation/usage_report.md
+```
+
+The report must summarize the final full-dataset run that produced `output.csv`, including model providers and names, model calls, input and output tokens, total and average tokens per request, and estimated total and per-request cost. If multiple models are used, include both per-model and overall totals in the same file.
+
+Do not include API keys, credentials, or sensitive configuration values in the submission.
+
+These are the required deliverables. Participants are encouraged to improve retrieval, multimodal interpretation, identity and deletion-state reconstruction, remediation planning, deterministic verification, batching, caching, and token efficiency.
+
+Last progress: 1s ago

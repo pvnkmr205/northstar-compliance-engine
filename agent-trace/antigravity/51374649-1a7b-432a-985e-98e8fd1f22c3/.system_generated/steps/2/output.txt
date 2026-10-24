@@ -1,0 +1,677 @@
+Command exited with code 0.
+
+Command output:
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57      246247424 Antigravity.exe                                                      
+-a----        23-10-2026     02:57         719654 chrome_100_percent.pak                                               
+-a----        23-10-2026     02:57        1269017 chrome_200_percent.pak                                               
+-a----        23-10-2026     02:57        4741488 d3dcompiler_47.dll                                                   
+-a----        23-10-2026     02:57       25745408 dxcompiler.dll                                                       
+-a----        23-10-2026     02:57        1509760 dxil.dll                                                             
+-a----        23-10-2026     02:57        3113472 ffmpeg.dll                                                           
+-a----        23-10-2026     02:57       10876560 icudtl.dat                                                           
+-a----        23-10-2026     02:57           1096 LICENSE.electron.txt                                                 
+-a----        23-10-2026     02:57       20472830 LICENSES.chromium.html                                               
+-a----        23-10-2026     02:57       12435490 resources.pak                                                        
+-a----        23-10-2026     02:57         368768 snapshot_blob.bin                                                    
+-a----        23-10-2026     02:57         174287 Uninstall Antigravity.exe                                            
+-a----        23-10-2026     02:57         742200 v8_context_snapshot.bin                                              
+-a----        23-10-2026     02:57              6 version                                                              
+-a----        23-10-2026     02:57        5520384 vk_swiftshader.dll                                                   
+-a----        23-10-2026     02:57            106 vk_swiftshader_icd.json                                              
+-a----        23-10-2026     02:57         939008 vulkan-1.dll                                                         
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\locales
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57         636155 af.pak                                                               
+-a----        23-10-2026     02:57        1029450 am.pak                                                               
+-a----        23-10-2026     02:57        1130919 ar.pak                                                               
+-a----        23-10-2026     02:57        1178203 bg.pak                                                               
+-a----        23-10-2026     02:57        1513545 bn.pak                                                               
+-a----        23-10-2026     02:57         716908 ca.pak                                                               
+-a----        23-10-2026     02:57         743351 cs.pak                                                               
+-a----        23-10-2026     02:57         666471 da.pak                                                               
+-a----        23-10-2026     02:57         717862 de.pak                                                               
+-a----        23-10-2026     02:57        1295538 el.pak                                                               
+-a----        23-10-2026     02:57         580030 en-GB.pak                                                            
+-a----        23-10-2026     02:57         586582 en-US.pak                                                            
+-a----        23-10-2026     02:57         707627 es-419.pak                                                           
+-a----        23-10-2026     02:57         703941 es.pak                                                               
+-a----        23-10-2026     02:57         642216 et.pak                                                               
+-a----        23-10-2026     02:57        1063069 fa.pak                                                               
+-a----        23-10-2026     02:57         655113 fi.pak                                                               
+-a----        23-10-2026     02:57         741385 fil.pak                                                              
+-a----        23-10-2026     02:57         763461 fr.pak                                                               
+-a----        23-10-2026     02:57        1495625 gu.pak                                                               
+-a----        23-10-2026     02:57         928748 he.pak                                                               
+-a----        23-10-2026     02:57        1586602 hi.pak                                                               
+-a----        23-10-2026     02:57         715279 hr.pak                                                               
+-a----        23-10-2026     02:57         765640 hu.pak                                                               
+-a----        23-10-2026     02:57         635080 id.pak                                                               
+-a----        23-10-2026     02:57         693991 it.pak                                                               
+-a----        23-10-2026     02:57         842053 ja.pak                                                               
+-a----        23-10-2026     02:57        1720240 kn.pak                                                               
+-a----        23-10-2026     02:57         718705 ko.pak                                                               
+-a----        23-10-2026     02:57         777281 lt.pak                                                               
+-a----        23-10-2026     02:57         774733 lv.pak                                                               
+-a----        23-10-2026     02:57        1767850 ml.pak                                                               
+-a----        23-10-2026     02:57        1467313 mr.pak                                                               
+-a----        23-10-2026     02:57         668356 ms.pak                                                               
+-a----        23-10-2026     02:57         638121 nb.pak                                                               
+-a----        23-10-2026     02:57         664759 nl.pak                                                               
+-a----        23-10-2026     02:57         742064 pl.pak                                                               
+-a----        23-10-2026     02:57         697019 pt-BR.pak                                                            
+-a----        23-10-2026     02:57         701056 pt-PT.pak                                                            
+-a----        23-10-2026     02:57         728144 ro.pak                                                               
+-a----        23-10-2026     02:57        1200985 ru.pak                                                               
+-a----        23-10-2026     02:57         755481 sk.pak                                                               
+-a----        23-10-2026     02:57         722720 sl.pak                                                               
+-a----        23-10-2026     02:57        1112909 sr.pak                                                               
+-a----        23-10-2026     02:57         646543 sv.pak                                                               
+-a----        23-10-2026     02:57         685127 sw.pak                                                               
+-a----        23-10-2026     02:57        1758067 ta.pak                                                               
+-a----        23-10-2026     02:57        1629379 te.pak                                                               
+-a----        23-10-2026     02:57        1368866 th.pak                                                               
+-a----        23-10-2026     02:57         697394 tr.pak                                                               
+-a----        23-10-2026     02:57        1211563 uk.pak                                                               
+-a----        23-10-2026     02:57        1047994 ur.pak                                                               
+-a----        23-10-2026     02:57         830014 vi.pak                                                               
+-a----        23-10-2026     02:57         592081 zh-CN.pak                                                            
+-a----        23-10-2026     02:57         583887 zh-TW.pak                                                            
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57            144 app-update.yml                                                       
+-a----        23-10-2026     02:57        4387714 app.asar                                                             
+-a----        23-10-2026     02:57         110862 default_app.asar                                                     
+-a----        23-10-2026     02:57         107520 elevate.exe                                                          
+
+
+    Directory: 
+    C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtools-mcp
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57          11357 LICENSE                                                              
+-a----        23-10-2026     02:57           2354 package.json                                                         
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\build\src
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           8539 browser.js                                                           
+-a----        23-10-2026     02:57          11327 index.js                                                             
+-a----        23-10-2026     02:57          25161 McpContext.js                                                        
+-a----        23-10-2026     02:57          30492 McpPage.js                                                           
+-a----        23-10-2026     02:57          43716 McpResponse.js                                                       
+-a----        23-10-2026     02:57            470 SlimMcpResponse.js                                                   
+-a----        23-10-2026     02:57          13258 TextSnapshot.js                                                      
+-a----        23-10-2026     02:57          10143 ToolHandler.js                                                       
+-a----        23-10-2026     02:57            132 types.js                                                             
+-a----        23-10-2026     02:57            254 version.js                                                           
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\build\src\bin
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           1757 check-latest-version.js                                              
+-a----        23-10-2026     02:57           2812 chrome-devtools-mcp-main.js                                          
+-a----        23-10-2026     02:57            942 chrome-devtools-mcp.js                                               
+-a----        23-10-2026     02:57           8990 chrome-devtools.js                                                   
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\build\src\collectors
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           8245 PageCollector.js                                                     
+-a----        23-10-2026     02:57           5796 ServiceWorkerCollector.js                                            
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\build\src\config
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           4769 browser-options.js                                                   
+-a----        23-10-2026     02:57           2948 category-options.js                                                  
+-a----        23-10-2026     02:57          58258 cli-options.js                                                       
+-a----        23-10-2026     02:57          16879 mcp-options.js                                                       
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\build\src\daemon
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           7754 client.js                                                            
+-a----        23-10-2026     02:57           8630 daemon.js                                                            
+-a----        23-10-2026     02:57            132 types.js                                                             
+-a----        23-10-2026     02:57           4796 utils.js                                                             
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\build\src\devtools
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57          13188 DevtoolsUtils.js                                                     
+-a----        23-10-2026     02:57           1378 issueDescriptions.js                                                 
+-a----        23-10-2026     02:57           4331 McpHostBindingAdapter.js                                             
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\build\src\formatters
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57          11251 ConsoleFormatter.js                                                  
+-a----        23-10-2026     02:57           8114 HeapSnapshotFormatter.js                                             
+-a----        23-10-2026     02:57           7147 IssueFormatter.js                                                    
+-a----        23-10-2026     02:57           9243 NetworkFormatter.js                                                  
+-a----        23-10-2026     02:57           4458 SnapshotFormatter.js                                                 
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\build\src\processors
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57          11725 HeapSnapshotManager.js                                               
+-a----        23-10-2026     02:57           3168 PerformanceTrace.js                                                  
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\build\src\telemetry
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           6854 ClearcutLogger.js                                                    
+-a----        23-10-2026     02:57            750 errors.js                                                            
+-a----        23-10-2026     02:57           3591 flagUtils.js                                                         
+-a----        23-10-2026     02:57           2913 metricsRegistry.js                                                   
+-a----        23-10-2026     02:57           2569 persistence.js                                                       
+-a----        23-10-2026     02:57           5515 transformation.js                                                    
+-a----        23-10-2026     02:57           1751 types.js                                                             
+-a----        23-10-2026     02:57           2154 WatchdogClient.js                                                    
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\build\src\telemetry\watchdog
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           7153 ClearcutSender.js                                                    
+-a----        23-10-2026     02:57           4180 main.js                                                              
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\build\src\third_party
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57            266 bundled-packages.json                                                
+-a----        23-10-2026     02:57         600859 devtools-formatter-worker.js                                         
+-a----        23-10-2026     02:57         405393 devtools-heap-snapshot-worker.js                                     
+-a----        23-10-2026     02:57        7515665 index.js                                                             
+-a----        23-10-2026     02:57        3892874 lighthouse-devtools-mcp-bundle.js                                    
+-a----        23-10-2026     02:57         177121 THIRD_PARTY_NOTICES                                                  
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\build\src\third_party\issue-descriptions
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57            271 bounceTrackingMitigations.md                                         
+-a----        23-10-2026     02:57            175 clientHintMetaTagAllowListInvalidOrigin.md                           
+-a----        23-10-2026     02:57            189 clientHintMetaTagModifiedHTML.md                                     
+-a----        23-10-2026     02:57            306 CoepCoopSandboxedIframeCannotNavigateToCoopPage.md                   
+-a----        23-10-2026     02:57            671 CoepCorpNotSameOrigin.md                                             
+-a----        23-10-2026     02:57            964 CoepCorpNotSameOriginAfterDefaultedToSameOriginByCoep.md             
+-a----        23-10-2026     02:57            493 CoepCorpNotSameSite.md                                               
+-a----        23-10-2026     02:57            485 CoepFrameResourceNeedsCoepHeader.md                                  
+-a----        23-10-2026     02:57            425 CompatibilityModeQuirks.md                                           
+-a----        23-10-2026     02:57            957 connectionAllowlistEmbeddingRequirementNotSatisfied.md               
+-a----        23-10-2026     02:57            871 connectionAllowlistIFrameAttributeLoosensEmbeddingRequirement.md     
+-a----        23-10-2026     02:57            865 connectionAllowlistInvalidAllowConnectionAllowlistFrom.md            
+-a----        23-10-2026     02:57            470 connectionAllowlistInvalidAllowlistItemType.md                       
+-a----        23-10-2026     02:57            439 connectionAllowlistInvalidHeader.md                                  
+-a----        23-10-2026     02:57            336 connectionAllowlistInvalidUrlPattern.md                              
+-a----        23-10-2026     02:57            427 connectionAllowlistItemNotInnerList.md                               
+-a----        23-10-2026     02:57            362 connectionAllowlistMoreThanOneList.md                                
+-a----        23-10-2026     02:57            265 connectionAllowlistReportingEndpointNotToken.md                      
+-a----        23-10-2026     02:57            406 CookieAttributeValueExceedsMaxSize.md                                
+-a----        23-10-2026     02:57            510 cookieCrossSiteRedirectDowngrade.md                                  
+-a----        23-10-2026     02:57            184 cookieExcludeBlockedWithinRelatedWebsiteSet.md                       
+-a----        23-10-2026     02:57            530 cookieExcludeDomainNonAscii.md                                       
+-a----        23-10-2026     02:57            388 cookieExcludePortMismatch.md                                         
+-a----        23-10-2026     02:57            280 cookieExcludeSchemeMismatch.md                                       
+-a----        23-10-2026     02:57            388 cookieExcludeThirdPartyPhaseoutRead.md                               
+-a----        23-10-2026     02:57            388 cookieExcludeThirdPartyPhaseoutSet.md                                
+-a----        23-10-2026     02:57            544 cookieWarnDomainNonAscii.md                                          
+-a----        23-10-2026     02:57            378 cookieWarnMetadataGrantRead.md                                       
+-a----        23-10-2026     02:57            375 cookieWarnMetadataGrantSet.md                                        
+-a----        23-10-2026     02:57            401 cookieWarnThirdPartyPhaseoutRead.md                                  
+-a----        23-10-2026     02:57            400 cookieWarnThirdPartyPhaseoutSet.md                                   
+-a----        23-10-2026     02:57            537 corsAllowCredentialsRequired.md                                      
+-a----        23-10-2026     02:57            545 corsDisabledScheme.md                                                
+-a----        23-10-2026     02:57            631 corsDisallowedByMode.md                                              
+-a----        23-10-2026     02:57            518 corsHeaderDisallowedByPreflightResponse.md                           
+-a----        23-10-2026     02:57            644 corsInvalidHeaderValues.md                                           
+-a----        23-10-2026     02:57           1070 corsLocalNetworkAccessPermissionDenied.md                            
+-a----        23-10-2026     02:57            480 corsMethodDisallowedByPreflightResponse.md                           
+-a----        23-10-2026     02:57            335 corsNoCorsRedirectModeNotFollow.md                                   
+-a----        23-10-2026     02:57            649 corsOriginMismatch.md                                                
+-a----        23-10-2026     02:57            395 corsPreflightResponseInvalid.md                                      
+-a----        23-10-2026     02:57            379 corsRedirectContainsCredentials.md                                   
+-a----        23-10-2026     02:57            921 corsWildcardOriginNotAllowed.md                                      
+-a----        23-10-2026     02:57            613 cspEvalViolation.md                                                  
+-a----        23-10-2026     02:57            606 cspInlineViolation.md                                                
+-a----        23-10-2026     02:57            618 cspTrustedTypesPolicyViolation.md                                    
+-a----        23-10-2026     02:57            519 cspTrustedTypesSinkViolation.md                                      
+-a----        23-10-2026     02:57            968 cspURLViolation.md                                                   
+-a----        23-10-2026     02:57             45 deprecation.md                                                       
+-a----        23-10-2026     02:57            101 emailVerificationRequestAccountsEmptyList.md                         
+-a----        23-10-2026     02:57             92 emailVerificationRequestAccountsHttpNotFound.md                      
+-a----        23-10-2026     02:57             99 emailVerificationRequestAccountsInvalidContentType.md                
+-a----        23-10-2026     02:57             95 emailVerificationRequestAccountsInvalidResponse.md                   
+-a----        23-10-2026     02:57             82 emailVerificationRequestAccountsNoResponse.md                        
+-a----        23-10-2026     02:57             65 emailVerificationRequestDnsFetchFailed.md                            
+-a----        23-10-2026     02:57             70 emailVerificationRequestDnsInvalidRecord.md                          
+-a----        23-10-2026     02:57            109 emailVerificationRequestEmailVerificationWellKnownHttpNotFound.md    
+-a----        23-10-2026     02:57            116 emailVerificationRequestEmailVerificationWellKnownInvalidContentType.
+                                                  md                                                                   
+-a----        23-10-2026     02:57            112 emailVerificationRequestEmailVerificationWellKnownInvalidResponse.md 
+-a----        23-10-2026     02:57             99 emailVerificationRequestEmailVerificationWellKnownNoResponse.md      
+-a----        23-10-2026     02:57             73 emailVerificationRequestInvalidEmail.md                              
+-a----        23-10-2026     02:57             88 emailVerificationRequestJwksHttpNotFound.md                          
+-a----        23-10-2026     02:57             91 emailVerificationRequestJwksInvalidResponse.md                       
+-a----        23-10-2026     02:57             71 emailVerificationRequestKeyBindingSigningFailed.md                   
+-a----        23-10-2026     02:57             79 emailVerificationRequestRpOriginIsOpaque.md                          
+-a----        23-10-2026     02:57             89 emailVerificationRequestTokenHttpNotFound.md                         
+-a----        23-10-2026     02:57             91 emailVerificationRequestTokenInvalidContentType.md                   
+-a----        23-10-2026     02:57             84 emailVerificationRequestTokenInvalidResponse.md                      
+-a----        23-10-2026     02:57             90 emailVerificationRequestTokenInvalidSdJwt.md                         
+-a----        23-10-2026     02:57             91 emailVerificationRequestTokenMalformedSdJwt.md                       
+-a----        23-10-2026     02:57             90 emailVerificationRequestTokenNoResponse.md                           
+-a----        23-10-2026     02:57             86 emailVerificationRequestTokenVerificationKbInvalidAudience.md        
+-a----        23-10-2026     02:57             87 emailVerificationRequestTokenVerificationKbInvalidIssuedAt.md        
+-a----        23-10-2026     02:57             83 emailVerificationRequestTokenVerificationKbInvalidNonce.md           
+-a----        23-10-2026     02:57             85 emailVerificationRequestTokenVerificationKbInvalidSdHash.md          
+-a----        23-10-2026     02:57             83 emailVerificationRequestTokenVerificationKbInvalidTyp.md             
+-a----        23-10-2026     02:57             86 emailVerificationRequestTokenVerificationKbMissingAud.md             
+-a----        23-10-2026     02:57             90 emailVerificationRequestTokenVerificationKbMissingCnf.md             
+-a----        23-10-2026     02:57             87 emailVerificationRequestTokenVerificationKbMissingIat.md             
+-a----        23-10-2026     02:57             83 emailVerificationRequestTokenVerificationKbMissingNonce.md           
+-a----        23-10-2026     02:57             85 emailVerificationRequestTokenVerificationKbMissingSdHash.md          
+-a----        23-10-2026     02:57             90 emailVerificationRequestTokenVerificationKbSignatureFailed.md        
+-a----        23-10-2026     02:57             78 emailVerificationRequestTokenVerificationSdJwtInvalidEmail.md        
+-a----        23-10-2026     02:57             87 emailVerificationRequestTokenVerificationSdJwtInvalidEmailVerified.md
+-a----        23-10-2026     02:57             77 emailVerificationRequestTokenVerificationSdJwtInvalidHolderKey.md    
+-a----        23-10-2026     02:57             82 emailVerificationRequestTokenVerificationSdJwtInvalidIssuedAt.md     
+-a----        23-10-2026     02:57             79 emailVerificationRequestTokenVerificationSdJwtInvalidIssuer.md       
+-a----        23-10-2026     02:57             76 emailVerificationRequestTokenVerificationSdJwtJwksMissingKeys.md     
+-a----        23-10-2026     02:57             85 emailVerificationRequestTokenVerificationSdJwtMissingCnf.md          
+-a----        23-10-2026     02:57             78 emailVerificationRequestTokenVerificationSdJwtMissingEmail.md        
+-a----        23-10-2026     02:57             82 emailVerificationRequestTokenVerificationSdJwtMissingIat.md          
+-a----        23-10-2026     02:57             79 emailVerificationRequestTokenVerificationSdJwtMissingIss.md          
+-a----        23-10-2026     02:57             85 emailVerificationRequestTokenVerificationSdJwtSignatureFailed.md     
+-a----        23-10-2026     02:57             97 emailVerificationRequestTokenVerificationSdJwtUnsupportedHeaderAlg.md
+-a----        23-10-2026     02:57             67 emailVerificationRequestUserLoggedOut.md                             
+-a----        23-10-2026     02:57            105 emailVerificationRequestWellKnownAccountsEndpointCrossOrigin.md      
+-a----        23-10-2026     02:57             90 emailVerificationRequestWellKnownHttpNotFound.md                     
+-a----        23-10-2026     02:57             92 emailVerificationRequestWellKnownInvalidContentType.md               
+-a----        23-10-2026     02:57             85 emailVerificationRequestWellKnownInvalidResponse.md                  
+-a----        23-10-2026     02:57            105 emailVerificationRequestWellKnownIssuanceEndpointCrossOrigin.md      
+-a----        23-10-2026     02:57             79 emailVerificationRequestWellKnownListEmpty.md                        
+-a----        23-10-2026     02:57             97 emailVerificationRequestWellKnownMissingAccountsEndpoint.md          
+-a----        23-10-2026     02:57             97 emailVerificationRequestWellKnownMissingIssuanceEndpoint.md          
+-a----        23-10-2026     02:57            100 emailVerificationRequestWellKnownNoResponse.md                       
+-a----        23-10-2026     02:57            107 emailVerificationRequestWellKnownUnsupportedSigningAlgorithm.md      
+-a----        23-10-2026     02:57            104 federatedAuthRequestAccountsBlockedByConnectionAllowlist.md          
+-a----        23-10-2026     02:57             59 federatedAuthRequestAccountsHttpNotFound.md                          
+-a----        23-10-2026     02:57             40 federatedAuthRequestAccountsInvalidResponse.md                       
+-a----        23-10-2026     02:57             74 federatedAuthRequestAccountsNoResponse.md                            
+-a----        23-10-2026     02:57             36 federatedAuthRequestApprovalDeclined.md                              
+-a----        23-10-2026     02:57             31 federatedAuthRequestCanceled.md                                      
+-a----        23-10-2026     02:57            119 federatedAuthRequestConfigBlockedByConnectionAllowlist.md            
+-a----        23-10-2026     02:57             62 federatedAuthRequestErrorFetchingSignin.md                           
+-a----        23-10-2026     02:57             27 federatedAuthRequestErrorIdToken.md                                  
+-a----        23-10-2026     02:57             96 federatedAuthRequestIdTokenBlockedByConnectionAllowlist.md           
+-a----        23-10-2026     02:57             54 federatedAuthRequestIdTokenHttpNotFound.md                           
+-a----        23-10-2026     02:57             40 federatedAuthRequestIdTokenInvalidRequest.md                         
+-a----        23-10-2026     02:57             32 federatedAuthRequestIdTokenInvalidResponse.md                        
+-a----        23-10-2026     02:57             66 federatedAuthRequestIdTokenNoResponse.md                             
+-a----        23-10-2026     02:57             43 federatedAuthRequestInvalidSigninResponse.md                         
+-a----        23-10-2026     02:57             65 federatedAuthRequestManifestHttpNotFound.md                          
+-a----        23-10-2026     02:57             55 federatedAuthRequestManifestInvalidResponse.md                       
+-a----        23-10-2026     02:57             89 federatedAuthRequestManifestNoResponse.md                            
+-a----        23-10-2026     02:57             76 federatedAuthRequestTooManyRequests.md                               
+-a----        23-10-2026     02:57            106 federatedAuthRequestWellKnownBlockedByConnectionAllowlist.md         
+-a----        23-10-2026     02:57             63 federatedAuthUserInfoRequestInvalidAccountsResponse.md               
+-a----        23-10-2026     02:57             76 federatedAuthUserInfoRequestInvalidConfigOrWellKnown.md              
+-a----        23-10-2026     02:57             99 federatedAuthUserInfoRequestNoAccountSharingPermission.md            
+-a----        23-10-2026     02:57             54 federatedAuthUserInfoRequestNoApiPermission.md                       
+-a----        23-10-2026     02:57             70 federatedAuthUserInfoRequestNoReturningUserFromFetchedAccounts.md    
+-a----        23-10-2026     02:57             41 federatedAuthUserInfoRequestNotIframe.md                             
+-a----        23-10-2026     02:57             78 federatedAuthUserInfoRequestNotPotentiallyTrustworthy.md             
+-a----        23-10-2026     02:57             61 federatedAuthUserInfoRequestNotSameOrigin.md                         
+-a----        23-10-2026     02:57             73 federatedAuthUserInfoRequestNotSignedInWithIdp.md                    
+-a----        23-10-2026     02:57            410 fetchingPartitionedBlobURL.md                                        
+-a----        23-10-2026     02:57            167 genericBackUINavigationWouldSkipAd.md                                
+-a----        23-10-2026     02:57            337 genericFormAriaLabelledByToNonExistingIdError.md                     
+-a----        23-10-2026     02:57            218 genericFormAutocompleteAttributeEmptyError.md                        
+-a----        23-10-2026     02:57            265 genericFormDuplicateIdForInputError.md                               
+-a----        23-10-2026     02:57            381 genericFormEmptyIdAndNameAttributesForInputError.md                  
+-a----        23-10-2026     02:57            329 genericFormInputAssignedAutocompleteValueToIdOrNameAttributeError.md 
+-a----        23-10-2026     02:57            242 genericFormInputHasWrongButWellIntendedAutocompleteValueError.md     
+-a----        23-10-2026     02:57            358 genericFormInputWithNoLabelError.md                                  
+-a----        23-10-2026     02:57            326 genericFormLabelForMatchesNonExistingIdError.md                      
+-a----        23-10-2026     02:57            305 genericFormLabelForNameError.md                                      
+-a----        23-10-2026     02:57            225 genericFormLabelHasNeitherForNorNestedInputError.md                  
+-a----        23-10-2026     02:57            361 genericFormModelContextMissingToolDescription.md                     
+-a----        23-10-2026     02:57            322 genericFormModelContextMissingToolName.md                            
+-a----        23-10-2026     02:57            295 genericFormModelContextParameterMissingName.md                       
+-a----        23-10-2026     02:57            378 genericFormModelContextParameterMissingTitleAndDescription.md        
+-a----        23-10-2026     02:57            325 genericFormModelContextRequiredParameterMissingName.md               
+-a----        23-10-2026     02:57            404 genericNavigationEntryMarkedSkippable.md                             
+-a----        23-10-2026     02:57            129 genericResponseWasBlockedByORB.md                                    
+-a----        23-10-2026     02:57            841 heavyAd.md                                                           
+-a----        23-10-2026     02:57            590 lazyLoadImageZeroSize.md                                             
+-a----        23-10-2026     02:57            776 LowTextContrast.md                                                   
+-a----        23-10-2026     02:57            429 mixedContent.md                                                      
+-a----        23-10-2026     02:57            499 navigatingPartitionedBlobURL.md                                      
+-a----        23-10-2026     02:57            389 permissionElementActivationDisabled.md                               
+-a----        23-10-2026     02:57            447 permissionElementActivationDisabledWithOccluder.md                   
+-a----        23-10-2026     02:57            500 permissionElementActivationDisabledWithOccluderParent.md             
+-a----        23-10-2026     02:57            278 permissionElementCspFrameAncestorsMissing.md                         
+-a----        23-10-2026     02:57            170 permissionElementFencedFrameDisallowed.md                            
+-a----        23-10-2026     02:57            164 permissionElementFontSizeTooLarge.md                                 
+-a----        23-10-2026     02:57            162 permissionElementFontSizeTooSmall.md                                 
+-a----        23-10-2026     02:57            146 permissionElementGeolocationDeprecated.md                            
+-a----        23-10-2026     02:57            185 permissionElementInsetBoxShadowUnsupported.md                        
+-a----        23-10-2026     02:57            233 permissionElementInvalidDisplayStyle.md                              
+-a----        23-10-2026     02:57            253 permissionElementInvalidSizeValue.md                                 
+-a----        23-10-2026     02:57            219 permissionElementInvalidType.md                                      
+-a----        23-10-2026     02:57            285 permissionElementInvalidTypeActivation.md                            
+-a----        23-10-2026     02:57            218 permissionElementLowContrast.md                                      
+-a----        23-10-2026     02:57            220 permissionElementNonOpaqueColor.md                                   
+-a----        23-10-2026     02:57            268 permissionElementPaddingBottomUnsupported.md                         
+-a----        23-10-2026     02:57            266 permissionElementPaddingRightUnsupported.md                          
+-a----        23-10-2026     02:57            265 permissionElementPermissionsPolicyBlocked.md                         
+-a----        23-10-2026     02:57            199 permissionElementRegistrationFailed.md                               
+-a----        23-10-2026     02:57            373 permissionElementRequestInProgress.md                                
+-a----        23-10-2026     02:57            230 permissionElementSecurityChecksFailed.md                             
+-a----        23-10-2026     02:57            296 permissionElementTypeNotSupported.md                                 
+-a----        23-10-2026     02:57            395 permissionElementUntrustedEvent.md                                   
+-a----        23-10-2026     02:57            181 placeholderDescriptionForInvisibleIssues.md                          
+-a----        23-10-2026     02:57            100 propertyRuleInvalidNameIssue.md                                      
+-a----        23-10-2026     02:57            157 propertyRuleIssue.md                                                 
+-a----        23-10-2026     02:57            557 SameSiteNoneInsecureErrorRead.md                                     
+-a----        23-10-2026     02:57            612 SameSiteNoneInsecureErrorSet.md                                      
+-a----        23-10-2026     02:57            593 SameSiteNoneInsecureWarnRead.md                                      
+-a----        23-10-2026     02:57            648 SameSiteNoneInsecureWarnSet.md                                       
+-a----        23-10-2026     02:57            698 SameSiteUnspecifiedLaxAllowUnsafeRead.md                             
+-a----        23-10-2026     02:57            757 SameSiteUnspecifiedLaxAllowUnsafeSet.md                              
+-a----        23-10-2026     02:57            587 selectElementAccessibilityDisallowedOptGroupChild.md                 
+-a----        23-10-2026     02:57            605 selectElementAccessibilityDisallowedSelectChild.md                   
+-a----        23-10-2026     02:57            272 selectElementAccessibilityInteractiveContentAttributesSelectDescendan
+                                                  t.md                                                                 
+-a----        23-10-2026     02:57            410 selectElementAccessibilityInteractiveContentLegendChild.md           
+-a----        23-10-2026     02:57            299 selectElementAccessibilityInteractiveContentOptionChild.md           
+-a----        23-10-2026     02:57            471 selectElementAccessibilityNonPhrasingContentOptionChild.md           
+-a----        23-10-2026     02:57            913 selectivePermissionsIntervention.md                                  
+-a----        23-10-2026     02:57            636 sharedArrayBuffer.md                                                 
+-a----        23-10-2026     02:57            103 sharedDictionaryUseErrorCrossOriginNoCorsRequest.md                  
+-a----        23-10-2026     02:57             97 sharedDictionaryUseErrorDictionaryLoadFailure.md                     
+-a----        23-10-2026     02:57            156 sharedDictionaryUseErrorMatchingDictionaryNotUsed.md                 
+-a----        23-10-2026     02:57            104 sharedDictionaryUseErrorUnexpectedContentDictionaryHeader.md         
+-a----        23-10-2026     02:57             93 sharedDictionaryWriteErrorCossOriginNoCorsRequest.md                 
+-a----        23-10-2026     02:57             49 sharedDictionaryWriteErrorDisallowedBySettings.md                    
+-a----        23-10-2026     02:57            126 sharedDictionaryWriteErrorExpiredResponse.md                         
+-a----        23-10-2026     02:57            119 sharedDictionaryWriteErrorFeatureDisabled.md                         
+-a----        23-10-2026     02:57             63 sharedDictionaryWriteErrorInsufficientResources.md                   
+-a----        23-10-2026     02:57             84 sharedDictionaryWriteErrorInvalidMatchField.md                       
+-a----        23-10-2026     02:57             82 sharedDictionaryWriteErrorInvalidStructuredHeader.md                 
+-a----        23-10-2026     02:57             93 sharedDictionaryWriteErrorInvalidTTLField.md                         
+-a----        23-10-2026     02:57            141 sharedDictionaryWriteErrorNavigationRequest.md                       
+-a----        23-10-2026     02:57             76 sharedDictionaryWriteErrorNoMatchField.md                            
+-a----        23-10-2026     02:57             85 sharedDictionaryWriteErrorNonIntegerTTLField.md                      
+-a----        23-10-2026     02:57             88 sharedDictionaryWriteErrorNonListMatchDestField.md                   
+-a----        23-10-2026     02:57            115 sharedDictionaryWriteErrorNonSecureContext.md                        
+-a----        23-10-2026     02:57             82 sharedDictionaryWriteErrorNonStringIdField.md                        
+-a----        23-10-2026     02:57             98 sharedDictionaryWriteErrorNonStringInMatchDestList.md                
+-a----        23-10-2026     02:57             85 sharedDictionaryWriteErrorNonStringMatchField.md                     
+-a----        23-10-2026     02:57             83 sharedDictionaryWriteErrorNonTokenTypeField.md                       
+-a----        23-10-2026     02:57             49 sharedDictionaryWriteErrorRequestAborted.md                          
+-a----        23-10-2026     02:57             49 sharedDictionaryWriteErrorShuttingDown.md                            
+-a----        23-10-2026     02:57            134 sharedDictionaryWriteErrorTooLongIdField.md                          
+-a----        23-10-2026     02:57            131 sharedDictionaryWriteErrorUnsupportedType.md                         
+-a----        23-10-2026     02:57            661 sriInvalidSignatureHeader.md                                         
+-a----        23-10-2026     02:57            762 sriInvalidSignatureInputHeader.md                                    
+-a----        23-10-2026     02:57            464 sriMissingSignatureHeader.md                                         
+-a----        23-10-2026     02:57            477 sriMissingSignatureInputHeader.md                                    
+-a----        23-10-2026     02:57            421 sriSignatureHeaderValueIsIncorrectLength.md                          
+-a----        23-10-2026     02:57            651 sriSignatureHeaderValueIsNotByteSequence.md                          
+-a----        23-10-2026     02:57            685 sriSignatureHeaderValueIsParameterized.md                            
+-a----        23-10-2026     02:57            279 sriSignatureInputHeaderInvalidComponentName.md                       
+-a----        23-10-2026     02:57            524 sriSignatureInputHeaderInvalidComponentType.md                       
+-a----        23-10-2026     02:57            230 sriSignatureInputHeaderInvalidDerivedComponentParameter.md           
+-a----        23-10-2026     02:57            285 sriSignatureInputHeaderInvalidHeaderComponentParameter.md            
+-a----        23-10-2026     02:57            339 sriSignatureInputHeaderInvalidParameter.md                           
+-a----        23-10-2026     02:57            505 sriSignatureInputHeaderKeyIdLength.md                                
+-a----        23-10-2026     02:57            343 sriSignatureInputHeaderMissingLabel.md                               
+-a----        23-10-2026     02:57            381 sriSignatureInputHeaderMissingRequiredParameters.md                  
+-a----        23-10-2026     02:57            352 sriSignatureInputHeaderValueMissingComponents.md                     
+-a----        23-10-2026     02:57            431 sriSignatureInputHeaderValueNotInnerList.md                          
+-a----        23-10-2026     02:57            434 sriValidationFailedIntegrityMismatch.md                              
+-a----        23-10-2026     02:57            260 sriValidationFailedInvalidLength.md                                  
+-a----        23-10-2026     02:57            295 sriValidationFailedSignatureExpired.md                               
+-a----        23-10-2026     02:57            386 sriValidationFailedSignatureMismatch.md                              
+-a----        23-10-2026     02:57            268 stylesheetLateImport.md                                              
+-a----        23-10-2026     02:57             76 stylesheetRequestFailed.md                                           
+-a----        23-10-2026     02:57            230 summaryElementAccessibilityInteractiveContentSummaryDescendant.md    
+-a----        23-10-2026     02:57            608 unencodedDigestIncorrectDigestLength.md                              
+-a----        23-10-2026     02:57            693 unencodedDigestIncorrectDigestType.md                                
+-a----        23-10-2026     02:57            551 unencodedDigestMalformedDictionary.md                                
+-a----        23-10-2026     02:57            580 unencodedDigestUnknownAlgorithm.md                                   
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\build\src\tools
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           1228 categories.js                                                        
+-a----        23-10-2026     02:57           3742 console.js                                                           
+-a----        23-10-2026     02:57           3293 emulation.js                                                         
+-a----        23-10-2026     02:57           3474 extensions.js                                                        
+-a----        23-10-2026     02:57          23274 input.js                                                             
+-a----        23-10-2026     02:57           4806 lighthouse.js                                                        
+-a----        23-10-2026     02:57          18322 memory.js                                                            
+-a----        23-10-2026     02:57           4714 network.js                                                           
+-a----        23-10-2026     02:57          14542 pages.js                                                             
+-a----        23-10-2026     02:57           9399 performance.js                                                       
+-a----        23-10-2026     02:57           5052 pwa.js                                                               
+-a----        23-10-2026     02:57           5177 screencast.js                                                        
+-a----        23-10-2026     02:57          11945 screenshot.js                                                        
+-a----        23-10-2026     02:57          10587 script.js                                                            
+-a----        23-10-2026     02:57           2381 snapshot.js                                                          
+-a----        23-10-2026     02:57           3278 thirdPartyDeveloper.js                                               
+-a----        23-10-2026     02:57           2982 ToolDefinition.js                                                    
+-a----        23-10-2026     02:57           2100 tools.js                                                             
+-a----        23-10-2026     02:57           2303 webmcp.js                                                            
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\build\src\tools\slim
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           3266 tools.js                                                             
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\build\src\utils
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           3496 bytes.js                                                             
+-a----        23-10-2026     02:57           2443 check-for-updates.js                                                 
+-a----        23-10-2026     02:57           1969 files.js                                                             
+-a----        23-10-2026     02:57            349 id.js                                                                
+-a----        23-10-2026     02:57           4280 keyboard.js                                                          
+-a----        23-10-2026     02:57           1601 logger.js                                                            
+-a----        23-10-2026     02:57           1598 pagination.js                                                        
+-a----        23-10-2026     02:57            464 polyfill.js                                                          
+-a----        23-10-2026     02:57           3974 url.js                                                               
+-a----        23-10-2026     02:57          12360 WaitForHelper.js                                                     
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\skills\a11y-debugging
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           5888 SKILL.md                                                             
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\skills\a11y-debugging\references
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           2788 a11y-snippets.md                                                     
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\skills\chrome-devtools
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           4148 SKILL.md                                                             
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\skills\chrome-devtools-cli
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57          11293 SKILL.md                                                             
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\skills\chrome-devtools-cli\references
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57            879 installation.md                                                      
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\skills\cookie-debugging
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           9995 SKILL.md                                                             
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\skills\debug-optimize-lcp
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           6608 SKILL.md                                                             
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\skills\debug-optimize-lcp\references
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           1326 elements-and-size.md                                                 
+-a----        23-10-2026     02:57           2525 lcp-breakdown.md                                                     
+-a----        23-10-2026     02:57           2436 lcp-snippets.md                                                      
+-a----        23-10-2026     02:57           2154 optimization-strategies.md                                           
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\skills\memory-leak-debugging
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           4348 SKILL.md                                                             
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\skills\memory-leak-debugging\references
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           1813 common-leaks.md                                                      
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\app.asar.unpacked\node_modules\chrome-devtoo
+    ls-mcp\skills\troubleshooting
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57           7031 SKILL.md                                                             
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity\resources\bin
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        23-10-2026     02:57      177882624 language_server.exe                                                  
+-a----        23-10-2026     02:57       13388800 webm_encoder.exe                                                     
+
+

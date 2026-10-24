@@ -1,0 +1,16 @@
+Command exited with code 0.
+
+Command output:
+r(details),
+                    re.IGNORECASE,
+                )
+            )
+            if resource_id and resource_id.strip() and (mentioned or resource_id.strip() == identifier):
+                identity.linked_resources.add(resource_id.strip())
+
+    return identity
+
+
+# ============================================================================
+# 5. TEMPORAL STATE EVALUATOR & POLICY AUDITOR
+

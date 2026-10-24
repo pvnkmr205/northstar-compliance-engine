@@ -1,0 +1,7 @@
+Command exited with code 0.
+
+Command output:
+[case_12] Step 4 mismatch: exp=(VERIFICATION, analytics_platform, analytics_9914) vs sorted=(VERIFICATION, security_service, audit_record_2945)
+[case_13] Step 7 mismatch: exp=(VERIFICATION, support_platform, support_4218) vs sorted=(VERIFICATION, security_service, audit_record_4816)
+[case_23] Step 6 mismatch: exp=(VERIFICATION, export_service, export_7364) vs sorted=(VERIFICATION, search_service, search_898)
+Total sort mismatches: 3/32

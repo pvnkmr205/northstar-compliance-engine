@@ -1,0 +1,36 @@
+
+=== case_253: mathis.l2398@zoho.com (rep_status=PARTIALLY_COMPLETE) ===
+  2026-05-26T08:04:33Z | activity_2065 | DELETE_RECORD | account_9763 | SUCCESS | Deletion worker submitted primary profile account_9763 to account_service.
+  2026-05-26T08:54:52Z | activity_2066 | DELETE_RECORD | account_1057 | PARTIAL | Deletion worker submitted primary profile account_1057 to account_service.
+  2026-05-26T09:03:54Z | activity_2067 | DELETE_RECORD | account_9179 | SUCCESS | Deletion worker submitted primary profile account_9179 to account_service.
+  2026-05-26T09:14:38Z | activity_2069 | DELETE_RECORD | account_8384 | SUCCESS | Deletion worker submitted primary profile account_8384 to account_service.
+  2026-05-26T09:43:25Z | activity_2071 | REDACT_RECORD | support_8370 | FAILED | Deletion worker received the final result for support_8370 from support_platform.
+  2026-05-26T10:13:56Z | activity_2072 | DELETE_RECORD | account_6073 | PARTIAL | Deletion worker submitted primary profile account_6073 to account_service.
+
+=== case_304: walker.charlotte@gmail.com (rep_status=PARTIALLY_COMPLETE) ===
+  2026-05-10T04:50:06Z | activity_1819 | DELETE_RECORD | account_7907 | PARTIAL | Deletion worker submitted primary profile account_7907 to account_service.
+  2026-05-10T05:10:22Z | activity_1820 | DELETE_RECORD | account_4771 | PARTIAL | Deletion worker submitted primary profile account_4771 to account_service.
+
+=== case_309: t.oladipo62@yahoo.com (rep_status=PARTIALLY_COMPLETE) ===
+  2026-05-04T04:46:11Z | activity_1714 | DELETE_RECORD | account_4319 | PARTIAL | Deletion worker submitted primary profile account_4319 to account_service.
+  2026-05-04T04:57:26Z | activity_1715 | DELETE_RECORD | account_8647 | SUCCESS | Deletion worker submitted primary profile account_8647 to account_service.
+  2026-05-04T05:06:27Z | activity_1716 | DELETE_RECORD | account_1235 | FAILED | Deletion worker submitted primary profile account_1235 to account_service.
+  2026-05-04T05:45:01Z | activity_1720 | DELETE_RECORD | account_9091 | SUCCESS | Deletion worker submitted primary profile account_9091 to account_service.
+  2026-05-04T05:56:44Z | activity_1723 | DELETE_RECORD | account_6996 | SUCCESS | Deletion worker submitted primary profile account_6996 to account_service.
+
+=== case_506: ayanda.molefe@gmail.com (rep_status=PARTIALLY_COMPLETE) ===
+  2026-01-26T04:59:48Z | activity_290 | DELETE_RECORD | account_1096 | PARTIAL | Deletion worker submitted primary profile account_1096 to account_service.
+  2026-01-26T05:49:03Z | activity_292 | DELETE_RECORD | account_6161 | PARTIAL | Deletion worker submitted primary profile account_6161 to account_service.
+  2026-01-26T05:58:06Z | activity_294 | DELETE_RECORD | account_5423 | FAILED | Deletion worker submitted primary profile account_5423 to account_service.
+  2026-01-26T06:09:49Z | activity_295 | DELETE_RECORD | account_3772 | SUCCESS | Deletion worker submitted primary profile account_3772 to account_service.
+  2026-01-26T06:44:40Z | activity_296 | REDACT_RECORD | support_8538 | FAILED | Deletion worker received the final result for support_8538 from support_platform.
+
+=== case_517: yetunde.a3014@zoho.com (rep_status=PARTIALLY_COMPLETE) ===
+  2026-01-12T04:52:28Z | activity_77 | DELETE_RECORD | account_3407 | PARTIAL | Deletion worker submitted primary profile account_3407 to account_service.
+  2026-01-12T05:03:12Z | activity_78 | DELETE_RECORD | account_141 | SUCCESS | Deletion worker submitted primary profile account_141 to account_service.
+  2026-01-12T05:14:26Z | activity_79 | DELETE_RECORD | account_3411 | FAILED | Deletion worker submitted primary profile account_3411 to account_service.
+
+=== case_519: s.dlamini52@gmail.com (rep_status=PARTIALLY_COMPLETE) ===
+  2026-01-09T04:50:16Z | activity_45 | DELETE_RECORD | account_4979 | FAILED | Deletion worker submitted primary profile account_4979 to account_service.
+  2026-01-09T05:01:59Z | activity_46 | DELETE_RECORD | account_1506 | PARTIAL | Deletion worker submitted primary profile account_1506 to account_service.
+  2026-01-09T05:12:14Z | activity_47 | DELETE_RECORD | account_9641 | SUCCESS | Deletion worker submitted primary profile account_9641 to account_service.

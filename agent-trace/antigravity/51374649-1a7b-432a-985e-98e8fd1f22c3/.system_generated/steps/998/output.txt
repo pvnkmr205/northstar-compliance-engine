@@ -1,0 +1,7 @@
+Command exited with code 1.
+
+Command output:
+  File "<string>", line 1
+    import sqlite3; conn = sqlite3.connect('cache/northstar.db'); print(conn.execute('SELECT * FROM evidence_records WHERE resource_id = " data_flow_373\').fetchall())
+                                                                                     ^
+SyntaxError: unterminated string literal (detected at line 1)

@@ -1,0 +1,103 @@
+Command exited with code 0.
+
+Command output:
+# Ghost Data Still Exists
+
+Northstar Shop (an imaginary company) lost **$2.4 million** after one supposedly deleted customer came back as a ghost in its systems. Every internal dashboard showed the deletion request as **�?oComplete.�??** Weeks later, the same customer tried to create a new account. The platform refused: **�?oThis email is already registered.�??**
+
+What looked like a simple signup bug exposed a much larger failure. The investigation uncovered personal data across secondary databases, support attachments, search indexes, analytics exports, logs, archives, and backups. A synchronization job had even recreated information that the primary account service had successfully deleted.
+
+Northstar Shop now needs an AI-powered deletion audit agent that can prove whether a user's personal data is truly gone before another failure causes financial and reputational damage.
+
+For deletion requests, the agent must investigate the supplied records, determine the user's current and historical identifiers, reconstruct what happened across systems, and decide whether the deletion is actually complete.
+
+When data remains, the agent must produce the ordered remediation steps required to remove, redact, or anonymize it. When deletion has already been completed, the agent must produce the checks that prove it. The agent must also preserve records that the supplied policy requires the organization to retain.
+
+Some systems preserve an account tombstone so permitted records can continue to reference the same internal `user_id`. In these records, the stable user reference may remain, but direct identifiers such as name, email, phone, and email hash must be removed.
+
+## What You Need to Build
+
+For each request, build a system that determines:
+
+- whether the deletion is `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE` because the person did not request deletion;
+- which records or identifiers still expose the user;
+- which active processes can recreate deleted data;
+- the ordered remediation steps required to complete the request.
+
+A deletion is complete only when:
+
+- every relevant copy has received the treatment required by `deletion_rules.csv`;
+- no active sync, import, or restore path can recreate the data;
+- retained records contain only the identifiers permitted by the rules; and
+- records that must be retained remain available.
+
+## Files Provided
+
+All participant-facing files are inside `dataset/`.
+
+| File | Contents |
+| --- | --- |
+| `deletion_requests.csv` | Requests that must be audited |
+| `sample_deletion_requests.csv` | Sample requests |
+| `sample_output.csv` | Correct answers for the sample requests |
+| `user_identities.csv` | Current user identities |
+| `user_audit_log.csv` | Historical identity changes |
+| `system_activity.csv` | Deletion, sync, export, backup, restore, indexing, and related operational activity |
+| `deletion_rules.csv` | Required treatment for each data category |
+| `evidence_files.csv` | Manifest of the supplied evidence files |
+| `output.csv` | Blank submission template |
+
+Evidence may be stored as PDFs, images, logs, JSON, or SQLite-compatible SQL snapshot exports under `dataset/evidence/`.
+
+## Input
+
+Each row in `deletion_requests.csv` is one case:
+
+```text
+case_id,email,requested_at,reported_status,reported_at,audit_at,request_text
+```
+
+`reported_status` may be `COMPLETE`, `PARTIALLY_COMPLETE`, or `NOT_STARTED`. It is a claim from the existing deletion workflow, not proof of the true state.
+
+## Required Output
+
+Produce exactly one row in `output.csv` for every case in `deletion_requests.csv`:
+
+```text
+case_id,deletion_status,steps_json
+```
+
+| Column | Meaning |
+| --- | --- |
+| `case_id` | Case being audited |
+| `deletion_status` | `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE` |
+| `steps_json` | Ordered JSON array of findings, remediation actions, and verification checks |
+
+The final file must contain exactly 518 data rows, sorted by `case_id`.
+
+Each object in `steps_json` must contain:
+
+```json
+{
+  "step_no": 1,
+  "phase": "FINDING",
+  "system_id": "account_service",
+  "resource_id": "account_005",
+  "operation": "REPORT_REMAINING_RECORD",
+  "state": "PRESENT",
+  "evidence_id": "evidence_01"
+}
+```
+
+`phase` must be `FINDING`, `REMEDIATION`, or `VERIFICATION`. Step numbers start at `1` and increase consecutively. Array order is significant.
+
+For `COMPLETE`, include only verification steps proving the current state. For `INCOMPLETE`, include findings, the complete remediation plan, and the checks that must pass afterward. For `NOT_APPLICABLE`, use an empty JSON array (`[]`) because no deletion or deletion verification is authorized.
+
+A non-deletion row therefore has this form:
+
+```csv
+case_000,NOT_APPLICABLE,[]
+```
+
+The grader parses `steps_json` as JSON. JSON object-key order and whitespace are ignored; array order is not.
+

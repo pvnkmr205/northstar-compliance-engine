@@ -1,0 +1,13 @@
+id: 6bf611c7-e6df-453e-bd59-4cbd1906c003
+cwd: c:\Users\Pavan\Desktop\sapiensu-director-changes
+git_root: C:\Users\Pavan\Desktop\sapiensu-director-changes
+repository: pvnkmr205/sapiensu-director-changes
+host_type: github
+branch: main
+client_name: vscode-agent-host
+name: "Act as the High-Efficiency Developer Assistant for low-level utility, data pipeline, and I/O tasks for our HackerRank Orchestrate AI Agent project.\r\n\r\nPROJECT LAYOUT & ROLES:\r\n- Claude (Lead Architect) is designing high-level agent architecture, Pydantic schemas (schema.py), and main orchestration logic (main.py).\r\n- Gemini (API) handles real-time classification at runtime.\r\n- YOU (Copilot) own fast utility implementation, CSV input/output handling, local BM25 keyword retrieval, and unit tests...."
+user_named: false
+summary_count: 0
+fork_count: 0
+created_at: 2026-10-13T18:02:23.116Z
+updated_at: 2026-10-13T18:02:25.023Z

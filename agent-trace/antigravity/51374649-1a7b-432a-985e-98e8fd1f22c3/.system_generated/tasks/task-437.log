@@ -1,0 +1,65 @@
+1266:         verifications = [AuditStep(
+1267:             "VERIFICATION", "account_service", account_id,
+1268:             "VERIFY_RECORD_ABSENT", "ABSENT", account_evidence,
+1269:         )] if account_evidence else []
+1270: 
+1271:         account_file = account_evidence
+1272:         trace_scoped = False
+1273:         if account_file:
+1274:             metadata = conn.execute(
+1275:                 "SELECT file_path,origin FROM evidence_files WHERE file_id=?",
+1276:                 (account_file,),
+1277:             ).fetchone()
+1278:             trace_scoped = bool(metadata and "log" in
+1279:                                 f"{metadata[0] or ''} {metadata[1] or ''}".casefold())
+1280:         for (system, resource), record in sorted(
+1281:             eligible.items(),
+1282:             key=lambda item: (SYSTEM_ORDER.get(item[0][0], 99), item[0][1]),
+1283:         ):
+1284:             if system == "account_service" or resource == account_id:
+1285:                 continue
+1286:             if trace_scoped and record["file_id"] != account_file:
+1287:                 continue
+1288:             operation, state = state_map[record["state"]]
+1289:             verifications.append(AuditStep(
+1290:                 "VERIFICATION", system, resource, operation, state,
+1291:                 record["file_id"],
+1292:             ))
+1293:         return "COMPLETE", verifications
+1294: 
+1295:     return status, steps
+1296: 
+1297: 
+1298: # ============================================================================
+1299: # 6. MAIN HACKATHON BATCH RUNNER & SAMPLE VALIDATOR
+1300: # ============================================================================
+1301: 
+1302: def validate_samples(conn: sqlite3.Connection, dataset_dir: Path = Path("dataset")) -> float:
+1303:     with (dataset_dir / "sample_deletion_requests.csv").open("r", encoding="utf-8-sig", newline="") as source:
+1304:         cases = list(csv.DictReader(source))
+1305:     with (dataset_dir / "sample_output.csv").open("r", encoding="utf-8-sig", newline="") as source:
+1306:         expected_rows = {row["case_id"]: row for row in csv.DictReader(source)}
+1307:     matched_status = matched_steps = 0
+1308:     for case in cases:
+1309:         identity = resolve_identity(case["email"], conn)
+1310:         status, steps = audit_case(case, identity, conn)
+1311:         actual_steps = build_steps_json(status, steps)
+1312:         expected = expected_rows.get(case["case_id"])
+1313:         if expected:
+1314:             matched_status += status == expected["deletion_status"]
+1315:             try:
+1316:                 matched_steps += json.loads(actual_steps) == json.loads(expected["steps_json"])
+1317:             except (json.JSONDecodeError, TypeError):
+1318:                 pass
+1319:     status_accuracy = matched_status / max(1, len(expected_rows))
+1320:     steps_accuracy = matched_steps / max(1, len(expected_rows))
+1321:     print(f"Sample validation: status accuracy={status_accuracy:.2%}; exact steps={steps_accuracy:.2%} ({len(expected_rows)} cases)")
+1322:     return (status_accuracy + steps_accuracy) / 2
+1323: 
+1324: 
+1325: def run_pipeline(dataset_dir: Path = Path("dataset"), output_csv: Path = Path("output.csv")) -> None:
+1326:     conn = init_database(dataset_dir)
+1327:     try:
+1328:         validate_samples(conn, dataset_dir)
+1329:         with (dataset_dir / "deletion_requests.csv").open("r", encoding="utf-8-sig", newline="") as source:
+1330:             cases = sorted(csv.DictReader(source), key=lambda row: row["case_id"])

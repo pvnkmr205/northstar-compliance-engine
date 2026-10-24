@@ -1,0 +1,5 @@
+Command exited with code 0.
+
+Command output:
+case_18 mori.ren@gmail.com
+case_20 akosua.gyasi@gmail.com

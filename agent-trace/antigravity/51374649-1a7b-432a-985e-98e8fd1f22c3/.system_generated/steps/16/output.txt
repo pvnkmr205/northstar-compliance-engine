@@ -1,0 +1,21 @@
+Command exited with code 0.
+
+Command output:
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----        24-10-2026     19:49                context_bridge                                                       
+
+
+    Directory: C:\Users\Pavan\.gemini\antigravity\scratch
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----        24-10-2026     19:49                context_bridge                                                       
+
+

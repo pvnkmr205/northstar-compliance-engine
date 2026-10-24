@@ -1,0 +1,5 @@
+Command exited with code 0.
+
+Command output:
+2026-09-15T11:53:53Z level=DEBUG service=security_service instance=security-1 pod=security-0ccc region=ap-south-1 trace_id=tr-6639210 resource_id=audit_record_1797 event=audit_record_read_completed integrity_check=passed rows=1 correlation_key="user_17"
+2026-09-15T11:54:41Z level=ERROR service=backup_service instance=backup-1 pod=backup-de79 region=eu-west-1 trace_id=tr-8210651 resource_id=backup_3245 event=restore_candidate_evaluated eligible=true deletion_block=false

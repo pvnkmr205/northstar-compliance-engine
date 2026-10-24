@@ -1,0 +1,8 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-572
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-572.log
+Log output:
+account_2373 submission: ('2026-08-19T11:03:36Z', 'Deletion worker submitted primary profile account_2373 to account_service.')
+deletion_request: case_103 mandla.m4548@outlook.com 2026-08-16T12:00:00Z 2026-08-19T12:00:00Z
+
+Last progress: 0s ago

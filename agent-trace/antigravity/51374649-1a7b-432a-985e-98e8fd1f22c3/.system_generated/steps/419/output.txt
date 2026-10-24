@@ -1,0 +1,21 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-417
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-417.log
+Log output:
+<truncated 4 lines>
+dentity, conn)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavan\hackerrank-orchestrate-october26\src\pipeline.py", line 1108, in audit_case
+    status, steps = _audit_case_without_evidence_records(case_row, identity, conn)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavan\hackerrank-orchestrate-october26\src\pipeline.py", line 1780, in _audit_case_without_evidence_records
+    content = _extract_evidence_text(file_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavan\hackerrank-orchestrate-october26\src\pipeline.py", line 1450, in _extract_evidence_text
+    with fitz.open(path) as document:
+         ^^^^^^^^^^^^^^^
+  File "C:\Users\Pavan\.conda\Lib\site-packages\pymupdf\__init__.py", line 3006, in __init__
+    raise FileNotFoundError(f"no such file: '{filename}'")
+pymupdf.FileNotFoundError: no such file: 'dataset\evidence\documents\account_history_report_20260718.pdf'
+
+Last progress: 0s ago

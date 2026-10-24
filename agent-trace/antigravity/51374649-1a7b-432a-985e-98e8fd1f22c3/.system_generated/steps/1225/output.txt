@@ -1,0 +1,7 @@
+Command exited with code 0.
+
+Command output:
+[case_12] sample_output violates SYSTEM_ORDER: ['account_service', 'analytics_platform', 'security_service']
+[case_13] sample_output violates SYSTEM_ORDER: ['account_service', 'search_service', 'support_platform', 'security_service']
+[case_23] sample_output violates SYSTEM_ORDER: ['account_service', 'export_service', 'search_service', 'security_service']
+Total violations of SYSTEM_ORDER in sample_output.csv: 3

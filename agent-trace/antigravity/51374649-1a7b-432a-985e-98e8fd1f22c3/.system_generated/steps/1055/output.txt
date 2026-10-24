@@ -1,0 +1,21 @@
+Command exited with code 0.
+
+Command output:
+Matches found: 2
+--- MATCH ---
+platform': 6,
+    'integration_service': 7,
+    'backup_service': 8,
+    'export_service': 9
+}
+
+def canonical_sort_and_number(steps):
+    findings = [s for s in steps if s.get('phase') == 'FINDING']
+    remediations = [s for s in steps if s.get('phase') == 'REMEDIATION']
+    verifications = [s for s
+--- MATCH ---
+se") if isinstance(s, dict) else "") == "FINDING" for s in _canonicalize_audit_steps) else status), canonical_sort_and_number(status, _canonicalize_audit_steps)(steps)
+
+
+# ============================================================================
+# 6. MAIN HACKATHON BATCH RUNNER & SAMPLE VALIDATOR

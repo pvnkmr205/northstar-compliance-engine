@@ -1,0 +1,50 @@
+Command exited with code 0.
+
+Command output:
+= ? ORDER BY event_time,activity_id",
+        (case_row.get("audit_at", ""),),
+    ).fetchall()
+    activity_fields = (
+        "activity_id", "event_time", "event_type", "source_system",
+        "target_system", "resource_id", "reported_result", "details",
+    )
+    relevant_activity = [
+        dict(zip(activity_fields, row))
+        for row in activity_rows
+        if _strict_activity_matches(dict(zip(activity_fields, row)), identity)
+    ]
+    disabled = {
+        (event.get("resource_id") or "", event.get("source_system") or "")
+        for event in relevant_activity
+        if event.get("event_type") == "DISABLE_FLOW"
+    }
+    blocked = {
+        event.get("resource_id") or ""
+        for event in relevant_activity
+        if event.get("event_type") == "BLOCK_RESTORE"
+    }
+    findings: List[Tuple[AuditStep, Optional[str]]] = []
+    for event in relevant_activity:
+        event_type = event.get("event_type")
+        resource_id = str(event.get("resource_id") or "")
+        system_id = str(event.get("source_system") or "")
+        if not system_id or system_id == "unknown_system":
+            system_id = infer_system("", resource_id, {})
+        activity_id = str(event.get("activity_id") or "")
+        if not activity_id:
+            continue
+        event_time = _time_key(event.get("event_time"))
+        if (
+            event_type in {"SYNC_RECORD", "INDEX_RECORD", "UPDATE_RECORD", "EXPORT_DATA"}
+            and requested < event_time
+            and event.get("reported_result") == "SUCCESS"
+            and (resource_id, system_id) not in disabled
+        ):
+            findings.append((AuditStep(
+                "FINDING", system_id, resource_id, "REPORT_ACTIVE_DATA_FLOW",
+                "ACTIVE", activity_id,
+            ), None))
+        elif event_type in {"BACKUP_SNAPSHOT", "RESTORE_BACKUP"} and resource_id not in blocked:
+            findings.append((AuditStep(
+                "FINDING", system_id, resource_id, "REPORT_RESTORE_RISK",
+                

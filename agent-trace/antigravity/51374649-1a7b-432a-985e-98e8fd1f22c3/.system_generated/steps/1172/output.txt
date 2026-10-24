@@ -1,0 +1,9 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-1170
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-1170.log
+Log output:
+[customer_data_read_replica_20260921.sql]
+   INSERT INTO "customer_data_primary" VALUES('audit_record_8465','security_service','security_audit_events','{"resource_id":"audit_record_8465
+   INSERT INTO "customer_data_read_replica" VALUES('audit_record_8465','security_service','security_audit_events','{"resource_id":"audit_record
+
+Last progress: 2s ago

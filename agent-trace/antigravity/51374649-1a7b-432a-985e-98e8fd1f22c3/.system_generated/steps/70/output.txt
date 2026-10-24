@@ -1,0 +1,7 @@
+Command exited with code 1.
+
+Command output:
+  File "<string>", line 2
+    digest = '''# Deletion Audit Schema Digest
+             ^
+SyntaxError: unterminated triple-quoted string literal (detected at line 43)

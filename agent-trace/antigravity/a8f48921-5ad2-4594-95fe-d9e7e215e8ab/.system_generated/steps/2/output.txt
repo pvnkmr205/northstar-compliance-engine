@@ -1,0 +1,32 @@
+Command exited with code 0.
+
+Command output:
+
+
+    Directory: C:\Users\Pavan\AppData\Local\Programs\antigravity
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----        24-10-2026     18:40                locales                                                              
+d-----        24-10-2026     18:40                resources                                                            
+-a----        23-10-2026     02:57      246247424 Antigravity.exe                                                      
+-a----        23-10-2026     02:57         719654 chrome_100_percent.pak                                               
+-a----        23-10-2026     02:57        1269017 chrome_200_percent.pak                                               
+-a----        23-10-2026     02:57        4741488 d3dcompiler_47.dll                                                   
+-a----        23-10-2026     02:57       25745408 dxcompiler.dll                                                       
+-a----        23-10-2026     02:57        1509760 dxil.dll                                                             
+-a----        23-10-2026     02:57        3113472 ffmpeg.dll                                                           
+-a----        23-10-2026     02:57       10876560 icudtl.dat                                                           
+-a----        23-10-2026     02:57           1096 LICENSE.electron.txt                                                 
+-a----        23-10-2026     02:57       20472830 LICENSES.chromium.html                                               
+-a----        23-10-2026     02:57       12435490 resources.pak                                                        
+-a----        23-10-2026     02:57         368768 snapshot_blob.bin                                                    
+-a----        23-10-2026     02:57         174287 Uninstall Antigravity.exe                                            
+-a----        23-10-2026     02:57         742200 v8_context_snapshot.bin                                              
+-a----        23-10-2026     02:57              6 version                                                              
+-a----        23-10-2026     02:57        5520384 vk_swiftshader.dll                                                   
+-a----        23-10-2026     02:57            106 vk_swiftshader_icd.json                                              
+-a----        23-10-2026     02:57         939008 vulkan-1.dll                                                         
+
+

@@ -1,0 +1,7 @@
+Command exited with code 1.
+
+Command output:
+  File "<string>", line 9
+    print(f'=== STEP {idx} ({obj.get(" type\)})
+                                     ^
+SyntaxError: unterminated string literal (detected at line 9)

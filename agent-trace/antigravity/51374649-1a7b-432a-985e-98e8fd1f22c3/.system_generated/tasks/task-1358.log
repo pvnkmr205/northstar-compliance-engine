@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\Pavan\hackerrank-orchestrate-october26\diff_all_cases.py", line 17, in <module>
+    identity = resolve_identity(c["email"], conn)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavan\hackerrank-orchestrate-october26\src\pipeline.py", line 792, in resolve_identity
+    identity.evidence_resources.append(record)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ResolvedIdentity' object has no attribute 'evidence_resources'. Did you mean: 'linked_resources'?

@@ -1,0 +1,73 @@
+Command exited with code 0.
+
+Command output:
+71: 
+72: def _canonicalize_audit_steps(steps: List[AuditStep]) -> List[AuditStep]:
+73:     phase_rank = {"FINDING": 0, "REMEDIATION": 1, "VERIFICATION": 2}
+74:     return sorted(
+75:         steps,
+76:         key=lambda step: (
+77:             phase_rank[step.phase],
+78:             SYSTEM_ORDER.get(step.system_id, 99),
+79:             step.resource_id,
+80:         ),
+81:     )
+82: 
+83: # Exact table order from problem_statement.md: (phase, operation) -> (op_rank, required_state)
+84: ALLOWED_OPERATIONS: Dict[Tuple[str, str], Tuple[int, str]] = {
+85:     # FINDING phase
+86:     ("FINDING", "REPORT_REMAINING_RECORD"): (0, "PRESENT"),
+87:     ("FINDING", "REPORT_EXPOSED_PII"): (1, "PRESENT"),
+88:     ("FINDING", "REPORT_ACTIVE_DATA_FLOW"): (2, "ACTIVE"),
+89:     ("FINDING", "REPORT_RESTORE_RISK"): (3, "ACTIVE"),
+90:     # REMEDIATION phase
+91:     ("REMEDIATION", "DELETE_RECORD"): (0, "ABSENT"),
+92:     ("REMEDIATION", "ANONYMIZE_RECORD"): (1, "ANONYMIZED"),
+93:     ("REMEDIATION", "DISABLE_FLOW"): (2, "DISABLED"),
+94:     ("REMEDIATION", "BLOCK_RESTORE"): (3, "BLOCKED"),
+95:     # VERIFICATION phase
+96:     ("VERIFICATION", "VERIFY_RECORD_ABSENT"): (0, "ABSENT"),
+97:     ("VERIFICATION", "VERIFY_RECORD_PRESENT"): (1, "PRESENT"),
+98:     ("VERIFICATION", "VERIFY_RECORD_ANONYMIZED"): (2, "ANONYMIZED"),
+99:     ("VERIFICATION", "VERIFY_RECORD_REDACTED"): (3, "ANONYMIZED"),
+100:     ("VERIFICATION", "VERIFY_FLOW_DISABLED"): (4, "DISABLED"),
+101:     ("VERIFICATION", "VERIFY_RESTORE_BLOCKED"): (5, "BLOCKED"),
+102:     ("VERIFICATION", "VERIFY_TOMBSTONE_CREATED"): (6, "PRESENT"),
+103: }
+104: 
+105: # Deterministic mapping from a Finding + Policy treatment to (Remediation Op, Verification Op)
+106: REMEDIATION_MAP: Dict[Tuple[str, Optional[str]], Tuple[str, str]] = {
+107:     ("REPORT_ACTIVE_DATA_FLOW", None): ("DISABLE_FLOW", "VERIFY_FLOW_DISABLED"),
+108:     ("REPORT_RESTORE_RISK", None): ("BLOCK_RESTORE", "VERIFY_RESTORE_BLOCKED"),
+109:     ("REPORT_REMAINING_RECORD", "DELETE"): ("DELETE_RECORD", "VERIFY_RECORD_ABSENT"),
+110:     ("REPORT_EXPOSED_PII", "REDACT"): ("ANONYMIZE_RECORD", "VERIFY_RECORD_ANONYMIZED"),
+111:     ("REPORT_EXPOSED_PII", "ANONYMIZE"): ("ANONYMIZE_RECORD", "VERIFY_RECORD_ANONYMIZED"),
+112:     ("REPORT_EXPOSED_PII", None): ("ANONYMIZE_RECORD", "VERIFY_RECORD_ANONYMIZED"),
+113: }
+114: 
+115: 
+116: @dataclass(frozen=True)
+117: class AuditStep:
+118:     """Represents an unnumbered audit step prior to canonical sorting."""
+119:     phase: str
+120:     system_id: str
+121:     resource_id: str
+122:     operation: str
+123:     state: Optional[str] = None
+124:     evidence_id: str = ""
+125: 
+126:     def validated_state(self) -> str:
+127:         key = (self.phase, self.operation)
+128:         if key not in ALLOWED_OPERATIONS:
+129:             raise ValueError(f"Invalid (phase, operation) pair: {key}")
+130:         _, expected_state = ALLOWED_OPERATIONS[key]
+131:         if self.state is not None and self.state != expected_state:
+132:             raise ValueError(
+133:                 f"State mismatch for {key}: got '{self.state}', expected '{expected_state}'"
+134:             )
+135:         return expected_state
+136: 
+137:     def sort_key(self) -> Tuple[int, int, str, str]:
+138:         """
+139:         Enforces strict canonical ordering:
+140:         1. Phase rank (FINDING -> REMEDIATION -> VERIFICATION)

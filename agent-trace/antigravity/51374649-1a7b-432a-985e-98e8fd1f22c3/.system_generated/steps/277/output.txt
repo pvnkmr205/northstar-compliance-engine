@@ -1,0 +1,5 @@
+Command exited with code 0.
+
+Command output:
+Metadata loaded for files: 94
+JSON log events with resource_id: 81

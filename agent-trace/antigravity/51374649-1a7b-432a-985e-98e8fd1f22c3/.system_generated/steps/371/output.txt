@@ -1,0 +1,18 @@
+Command exited with code 1.
+
+Command output:
+At line:5 char:38
++ KV_REGEX = re.compile(r'(\w+)=(?:\"([^\"]*)\"|(\S+))')
++                                      ~
+Missing type name after '['.
+At line:5 char:47
++ KV_REGEX = re.compile(r'(\w+)=(?:\"([^\"]*)\"|(\S+))')
++                                               ~~~~~
+Expressions are only allowed as the first element of a pipeline.
+At line:54 char:63
++ ...  traces:', traces_found, 'Traces with identifiers:', correlated_rows)
++                                                       ~~~~~~~~~~~~~~~~~~~
+The string is missing the terminator: '.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+ 

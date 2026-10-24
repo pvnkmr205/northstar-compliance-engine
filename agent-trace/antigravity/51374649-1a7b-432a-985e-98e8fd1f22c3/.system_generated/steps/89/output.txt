@@ -1,0 +1,4 @@
+Command exited with code 0.
+
+Command output:
+src: ['pipeline.py', '__init__.py', '__pycache__']

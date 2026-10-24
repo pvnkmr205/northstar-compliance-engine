@@ -1,0 +1,13 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-303
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-303.log
+Log output:
+Indexed 1486 raw entries (0.171s)
+Total evidence_records in DB: 1167
+  account_7566: ('evidence_94', '2026-09-26T10:38:56Z', 'account_service', 'account_7566', 'ABSENT', None, None)
+  audit_record_2016: ('evidence_94', '2026-09-26T10:38:56Z', 'security_service', 'audit_record_2016', 'PRESENT', 'user_43', None)
+  analytics_9406: ('evidence_94', '2026-09-26T10:38:56Z', 'analytics_platform', 'analytics_9406', 'ANONYMIZED', None, None)
+  analytics_901: ('evidence_56', '2026-09-07T09:45:00Z', 'analytics_platform', 'analytics_901', 'ANONYMIZED', None, None)
+  export_001: ('evidence_59', '2026-09-14T15:40:00Z', 'export_service', 'export_001', 'ANONYMIZED', None, 'gabriel.costa@proton.me')
+
+Last progress: 0s ago

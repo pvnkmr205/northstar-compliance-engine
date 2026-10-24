@@ -1,0 +1,8 @@
+Command exited with code 0.
+
+Command output:
+CASE 5:
+[{"evidence_id":"evidence_54","operation":"REPORT_REMAINING_RECORD","phase":"FINDING","resource_id":"account_005","state":"PRESENT","step_no":1,"system_id":"account_service"},{"evidence_id":"","operation":"DELETE_RECORD","phase":"REMEDIATION","resource_id":"account_005","state":"ABSENT","step_no":2,"system_id":"account_service"},{"evidence_id":"","operation":"VERIFY_RECORD_ABSENT","phase":"VERIFICATION","resource_id":"account_005","state":"ABSENT","step_no":3,"system_id":"account_service"}]
+
+CASE 9:
+[{"step_no":1,"phase":"FINDING","system_id":"backup_service","resource_id":"backup_4978","operation":"REPORT_RESTORE_RISK","state":"ACTIVE","evidence_id":"evidence_93"},{"step_no":2,"phase":"REMEDIATION","system_id":"backup_service","resource_id":"backup_4978","operation":"BLOCK_RESTORE","state":"BLOCKED","evidence_id":""},{"step_no":3,"phase":"VERIFICATION","system_id":"account_service","resource_id":"account_3960","operation":"VERIFY_RECORD_ABSENT","state":"ABSENT","evidence_id":""},{"step_no":4,"phase":"VERIFICATION","system_id":"security_service","resource_id":"audit_record_4902","operation":"VERIFY_RECORD_PRESENT","state":"PRESENT","evidence_id":""},{"step_no":5,"phase":"VERIFICATION","system_id":"backup_service","resource_id":"backup_4978","operation":"VERIFY_RESTORE_BLOCKED","state":"BLOCKED","evidence_id":""}]

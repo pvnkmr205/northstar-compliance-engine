@@ -1,0 +1,7 @@
+Command exited with code 1.
+
+Command output:
+  File "<string>", line 1
+    import csv, json; expected = {r['case_id']: r for r in csv.DictReader(open('dataset/sample_output.csv', encoding='utf-8-sig'))}; [print(f'{cid}: {r[" deletion_status\]}
+                                                                                                                                                        ^
+SyntaxError: unterminated string literal (detected at line 1)

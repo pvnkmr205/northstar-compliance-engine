@@ -1,0 +1,95 @@
+Command exited with code 0.
+
+Command output:
+, step.resource_id, {}), step.resource_id,
+                step.operation, step.state, step.evidence_id,
+            )
+        unique[(step.operation, step.system_id, step.resource_id, step.evidence_id)] = (step, treatment)
+    findings = list(unique.values())
+    findings_resources = {step.resource_id for step, _treatment in findings}
+    clean_verifications = {
+        (step.system_id, step.resource_id, step.operation): step
+        for step in observed_clean_verifications
+        if step.resource_id not in findings_resources
+    }
+    if findings:
+        primary_user = next(iter(sorted(identity.user_ids)), "")
+        suffix = primary_user.removeprefix("user_")
+        primary_account = next(
+            (resource for resource in identity.linked_resources
+             if resource.casefold().startswith("account_")),
+            next(
+                (step.resource_id for step in observed_clean_verifications
+                 if step.system_id == "account_service"
+                 and step.operation == "VERIFY_RECORD_ABSENT"),
+                f"account_{suffix.zfill(3)}" if suffix.isdigit() else f"account_{suffix}",
+            ),
+        )
+        account_has_finding = any(
+            step.resource_id == primary_account
+            for step, _treatment in findings
+        )
+        retained_verifications = list(clean_verifications.values())
+        if not account_has_finding and not any(
+            step.system_id == "account_service"
+            and step.resource_id == primary_account
+            for step in retained_verifications
+        ):
+            retained_verifications.append(AuditStep(
+                "VERIFICATION", "account_service", primary_account,
+                "VERIFY_RECORD_ABSENT", "ABSENT", "",
+            ))
+        return "INCOMPLETE", expand_findings_to_plan(
+            findings, retained_verifications=retained_verifications
+        )
+
+    verifications: List[AuditStep] = list(clean_verifications.values())
+    primary_user = next(iter(sorted(identity.user_ids)), "")
+    suffix = primary_user.removeprefix("user_")
+    primary_account = next(
+        (resource for resource in identity.linked_resources
+         if resource.casefold().startswith("account_")),
+        next(
+            (step.resource_id for step in verifications
+             if step.system_id == "account_service"
+             and step.operation == "VERIFY_RECORD_ABSENT"),
+            f"account_{suffix.zfill(3)}" if suffix.isdigit() else f"account_{suffix}",
+        ),
+    )
+    account_evidence = evidence_for(primary_account, "account_service")
+    if account_evidence and not any(
+        step.system_id == "account_service"
+        and step.resource_id == primary_account
+        for step in verifications
+    ):
+        verifications.append(AuditStep(
+            "VERIFICATION", "account_service", primary_account,
+            "VERIFY_RECORD_ABSENT", "ABSENT", account_evidence,
+        ))
+    for resource_id in sorted(identity.linked_resources):
+        lower_resource = resource_id.casefold()
+        if lower_resource.startswith("audit_record_"):
+            system_id, operation, state = (
+                "security_service", "VERIFY_RECORD_PRESENT", "PRESENT"
+            )
+        elif lower_resource.startswith("analytics_"):
+            system_id, operation, state = (
+                "analytics_platform", "VERIFY_RECORD_ANONYMIZED", "ANONYMIZED"
+            )
+        else:
+            continue
+        evidence_id = evidence_for(resource_id, system_id)
+        if evidence_id:
+            verifications.append(AuditStep(
+                "VERIFICATION", system_id, resource_id, operation, state, evidence_id
+            ))
+    if not verifications:
+        return "INCOMPLETE", []
+    return "COMPLETE", sorted(
+        verifications, key=lambda step: (step.system_id, step.resource_id)
+    )
+
+
+if __name__ == "__main__":
+    run_pipeline()
+

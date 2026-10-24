@@ -1,0 +1,79 @@
+Command exited with code 0.
+
+Command output:
+t[AuditStep] = []
+    for file_id, file_path, _origin, _captured in manifest:
+        if Path(file_path).suffix.casefold() == ".sql":
+            continue
+        content = _extract_evidence_text(file_path)
+        if not content:
+            continue
+        evidence_contexts: List[str] = []
+        if Path(file_path).suffix.casefold() == ".json":
+            try:
+                parsed = json.loads(content)
+            except json.JSONDecodeError:
+                parsed = None
+
+            def visit_json(value: Any) -> None:
+                if isinstance(value, dict):
+                    normalized_values = {
+                        str(item).strip().casefold()
+                        for item in value.values()
+                        if isinstance(item, (str, int, float))
+                    }
+                    if normalized_values & subject_tokens:
+                        evidence_contexts.append(json.dumps(value, ensure_ascii=False))
+                    else:
+                        for child in value.values():
+                            visit_json(child)
+                elif isinstance(value, list):
+                    for child in value:
+                        visit_json(child)
+
+            if parsed is not None:
+                visit_json(parsed)
+
+        if not evidence_contexts:
+            lines = content.splitlines()
+            matched_indexes = []
+            for index, line in enumerate(lines):
+                folded = line.casefold()
+                if any(
+                    token in folded
+                    and re.search(
+                        rf"(?<![\w@.+-]){re.escape(token)}(?![\w@.+-])",
+                        line,
+                        re.IGNORECASE,
+                    )
+                    for token in subject_tokens
+                ):
+                    matched_indexes.append(index)
+
+            for index in matched_indexes:
+                line = lines[index]
+                trace_match = re.search(
+                    r"\b(?:trace_id|correlation_id|requestId|request_id)=?['\"]?"
+                    r"([A-Za-z0-9-]+)",
+                    line,
+                    re.IGNORECASE,
+                )
+                context_lines = [line]
+                if trace_match:
+                    trace_id = trace_match.group(1)
+                    context_lines = [
+                        candidate for candidate in lines
+                        if trace_id in candidate
+                    ]
+                elif Path(file_path).suffix.casefold() == ".pdf":
+                    context_lines = lines
+                evidence_contexts.append("\n".join(context_lines))
+
+        for context in evidence_contexts:
+            resource_ids = sorted(set(resource_pattern.findall(context)))
+            if not resource_ids:
+                continue
+            lower_context = context.casefold()
+            for resource_id in resource_ids:
+                resource_key = resource_id.casefold()
+                explicit_absent = bool(r

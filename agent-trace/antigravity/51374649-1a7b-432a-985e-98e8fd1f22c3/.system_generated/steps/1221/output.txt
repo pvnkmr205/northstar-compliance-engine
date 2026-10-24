@@ -1,0 +1,22 @@
+Command exited with code 1.
+
+Command output:
+At line:22 char:82
++ ... e_id']}] sample_output violates SYSTEM_ORDER: {[s['system_id'] for s  ...
++                                                       ~~~~~~~~~~~
+Unexpected token ''system_id'' in expression or statement.
+At line:22 char:94
++ ... _id']}] sample_output violates SYSTEM_ORDER: {[s['system_id'] for s i ...
++                                                                  ~
+Missing ] at end of attribute or type literal.
+At line:22 char:95
++ ... ]}] sample_output violates SYSTEM_ORDER: {[s['system_id'] for s in ve ...
++                                                               ~~~
+Unexpected token 'for' in expression or statement.
+At line:22 char:98
++ ... ]}] sample_output violates SYSTEM_ORDER: {[s['system_id'] for s in ve ...
++                                                                  ~
+Missing opening '(' after keyword 'for'.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : UnexpectedToken
+ 

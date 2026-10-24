@@ -1,0 +1,9 @@
+Command exited with code 0.
+
+Command output:
+
+Path                                             
+----                                             
+C:\Users\Pavan\AppData\Local\Programs\antigravity
+
+

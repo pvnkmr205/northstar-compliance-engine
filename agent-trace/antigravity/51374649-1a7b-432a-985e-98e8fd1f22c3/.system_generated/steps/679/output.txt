@@ -1,0 +1,20 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-677
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-677.log
+Log output:
+<truncated 120 lines>
+_RECORD_ABSENT | ABSENT | ev=
+  6. [VERIFICATION] export_service | export_7364 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  7. [VERIFICATION] search_service | search_898 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  8. [VERIFICATION] security_service | audit_record_4128 | VERIFY_RECORD_PRESENT | PRESENT | ev=
+
+=== case_24 (keiko.nakamura@gmail.com) -> INCOMPLETE ===
+  1. [FINDING] account_service | account_5334 | REPORT_REMAINING_RECORD | PRESENT | ev=evidence_92
+  2. [FINDING] search_service | search_5577 | REPORT_REMAINING_RECORD | PRESENT | ev=evidence_92
+  3. [REMEDIATION] account_service | account_5334 | DELETE_RECORD | ABSENT | ev=
+  4. [REMEDIATION] search_service | search_5577 | DELETE_RECORD | ABSENT | ev=
+  5. [VERIFICATION] account_service | account_5334 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  6. [VERIFICATION] search_service | search_5577 | VERIFY_RECORD_ABSENT | ABSENT | ev=
+  7. [VERIFICATION] security_service | audit_record_7095 | VERIFY_RECORD_PRESENT | PRESENT | ev=
+
+Last progress: 0s ago

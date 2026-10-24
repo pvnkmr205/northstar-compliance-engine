@@ -1,0 +1,136 @@
+4. Cross-Case `EvidenceVault` Cache & Batched Intent Classification hooks.
+from dataclasses import dataclass, field
+@dataclass(frozen=True)
+class AuditStep:
+    evidence_id: str = ""
+    def validated_state(self) -> str:
+    def sort_key(self) -> Tuple[int, int, str, str]:
+def build_steps_json(deletion_status: str, raw_steps: List[AuditStep]) -> str:
+            if not step.evidence_id:
+            ev_id = step.evidence_id
+                if not step.evidence_id:
+                ev_id = step.evidence_id
+                # Proposed remediation & future verification steps use empty evidence_id
+            evidence_id=ev_id,
+            "evidence_id": s.evidence_id,
+def expand_findings_to_plan(
+                evidence_id="",
+                evidence_id="",
+                    evidence_id="",
+@dataclass
+class ModelPricing:
+@dataclass
+class ModelStats:
+class UsageTracker:
+    def __init__(self, total_cases: int = 518) -> None:
+    def register_model(
+    def record_call(
+    def track_llm_call(
+    def export_markdown(self, output_path: Path = Path("evaluation/usage_report.md")) -> str:
+- **Architecture**: Hybrid Neuro-Symbolic Pipeline with `EvidenceVault` Cross-Case Caching & Batched Intent Classification
+1. **Zero-Token Structured Parsing**: All CSVs (`user_identities.csv`, `user_audit_log.csv`, `system_activity.csv`, `deletion_rules.csv`, `evidence_files.csv`), JSON files, plain-text logs, and SQLite `.sql` snapshot exports were parsed deterministically in SQLite/Python without LLM calls.
+2. **`EvidenceVault` Fingerprinting**: Unstructured PDFs and images in `dataset/evidence/` were hashed and extracted once in batches rather than re-queried per `case_id`.
+# 3. SQLITE INGESTION & ZERO-TOKEN LOCAL INDEXING
+def init_database(
+    """Load participant-facing CSV data and SQL evidence into a local database."""
+        "evidence_files": ("file_id", "file_path", "origin", "captured_at"),
+        evidence_dir = dataset_dir / "evidence"
+        for sql_path in sorted(evidence_dir.rglob("*.sql")):
+        indexes = (
+            "CREATE INDEX IF NOT EXISTS idx_user_identities_user_id "
+            "CREATE INDEX IF NOT EXISTS idx_user_identities_email "
+            "CREATE INDEX IF NOT EXISTS idx_user_identities_phone "
+            "CREATE INDEX IF NOT EXISTS idx_user_audit_log_user_id "
+            "CREATE INDEX IF NOT EXISTS idx_user_audit_log_field_old "
+            "CREATE INDEX IF NOT EXISTS idx_user_audit_log_field_new "
+            "CREATE INDEX IF NOT EXISTS idx_system_activity_source_resource_time "
+            "CREATE INDEX IF NOT EXISTS idx_system_activity_target_resource_time "
+            "CREATE INDEX IF NOT EXISTS idx_deletion_requests_case_id "
+        for index_sql in indexes:
+            conn.execute(index_sql)
+@dataclass
+class ResolvedIdentity:
+def resolve_identity(
+def is_deletion_request(request_text: str) -> bool:
+def _time_key(value: Any) -> str:
+def _row_values(row: Dict[str, Any]) -> str:
+def _contains_identity(row: Dict[str, Any], identity: ResolvedIdentity) -> bool:
+def _tables(conn: sqlite3.Connection) -> List[Tuple[str, List[str]]]:
+def audit_case(
+        if kind in {"SYNC_RECORD", "INDEX_RECORD", "UPDATE_RECORD", "EXPORT_DATA"} and requested < event_time and event.get("reported_result") == "SUCCESS" and (resource, system) not in disabled:
+            "SELECT file_id,file_path,origin,captured_at FROM evidence_files"
+    def infer_system(record: Dict[str, Any], table_name: str, resource_id: str) -> str:
+    def snapshot_evidence(table_name: str) -> str:
+        if table in {"user_identities", "user_audit_log", "system_activity", "deletion_rules", "evidence_files", "deletion_requests"}:
+        evidence_id = manifest_entry[0] if manifest_entry else snapshot_evidence(table)
+        if not evidence_id:
+                    findings.append((AuditStep("FINDING", system, resource, "REPORT_EXPOSED_PII", "PRESENT", evidence_id), "REDACT"))
+                findings.append((AuditStep("FINDING", system, resource, "REPORT_EXPOSED_PII", "PRESENT", evidence_id), "ANONYMIZE"))
+                findings.append((AuditStep("FINDING", system, resource, "REPORT_REMAINING_RECORD", "PRESENT", evidence_id), "DELETE"))
+    valid_evidence_ids = {
+            "SELECT file_id FROM evidence_files WHERE file_id IS NOT NULL"
+    valid_evidence_ids.update(
+        if finding.evidence_id and finding.evidence_id in valid_evidence_ids
+                finding.evidence_id,
+        unique[(finding.operation, finding.system_id, finding.resource_id, finding.evidence_id)] = (finding, treatment)
+            "SELECT file_id,file_path,origin,captured_at FROM evidence_files"
+    def evidence_for(resource_id: str) -> str:
+        evidence_id = evidence_for(resource_id)
+        if evidence_id:
+                    "VERIFY_RECORD_ABSENT", "ABSENT", evidence_id,
+            evidence_id = evidence_for(resource_id)
+            if evidence_id:
+                        "VERIFY_RECORD_PRESENT", "PRESENT", evidence_id,
+            evidence_id = evidence_for(resource_id)
+            if evidence_id:
+                        "VERIFY_RECORD_ANONYMIZED", "ANONYMIZED", evidence_id,
+def validate_samples(conn: sqlite3.Connection, dataset_dir: Path = Path("dataset")) -> float:
+def run_pipeline(dataset_dir: Path = Path("dataset"), output_csv: Path = Path("output.csv")) -> None:
+def _strict_row_matches_subject(
+            def matches_nested(item: Any) -> bool:
+def _strict_activity_matches(
+_EVIDENCE_TEXT_CACHE: Dict[str, str] = {}
+def _extract_evidence_text(file_path: str) -> str:
+    """Read participant evidence text, including text embedded in PDF documents."""
+    if file_path in _EVIDENCE_TEXT_CACHE:
+        return _EVIDENCE_TEXT_CACHE[file_path]
+                    _EVIDENCE_TEXT_CACHE[file_path] = result
+                    _EVIDENCE_TEXT_CACHE[file_path] = result
+            _EVIDENCE_TEXT_CACHE[file_path] = result
+def is_deletion_request(request_text: str) -> bool:
+def audit_case(
+            "SELECT file_id,file_path,origin,captured_at FROM evidence_files"
+    def infer_system(table_name: str, resource_id: str, row: Dict[str, Any]) -> str:
+    def evidence_for(resource_id: str, system_id: str, table_name: str = "") -> str:
+            "search_service": ("search", "index"),
+            event_type in {"SYNC_RECORD", "INDEX_RECORD", "UPDATE_RECORD", "EXPORT_DATA"}
+            evidence_id = _file_id
+                        "REPORT_RESTORE_RISK", "ACTIVE", evidence_id,
+                        "PRESENT", evidence_id,
+                    "PRESENT", evidence_id,
+                    "PRESENT", evidence_id,
+    # Inspect in-cutoff text, JSON, log, and PDF evidence that is explicitly tied
+        content = _extract_evidence_text(file_path)
+        evidence_contexts: List[str] = []
+            def visit_json(value: Any) -> None:
+                        evidence_contexts.append(json.dumps(value, ensure_ascii=False))
+        if not evidence_contexts:
+            matched_indexes = []
+            for index, line in enumerate(lines):
+                    matched_indexes.append(index)
+            for index in matched_indexes:
+                line = lines[index]
+                evidence_contexts.append("\n".join(context_lines))
+        for context in evidence_contexts:
+    # De-duplicate equivalent evidence reports and ensure every finding cites a
+    valid_evidence = {
+            "SELECT file_id FROM evidence_files WHERE file_id IS NOT NULL"
+        if not step.evidence_id or step.evidence_id not in valid_evidence:
+                step.operation, step.state, step.evidence_id,
+        unique[(step.operation, step.system_id, step.resource_id, step.evidence_id)] = (step, treatment)
+    account_evidence = evidence_for(primary_account, "account_service")
+    if account_evidence and not any(
+            "VERIFY_RECORD_ABSENT", "ABSENT", account_evidence,
+        evidence_id = evidence_for(resource_id, system_id)
+        if evidence_id:
+                "VERIFICATION", system_id, resource_id, operation, state, evidence_id

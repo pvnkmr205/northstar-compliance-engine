@@ -1,0 +1,16 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-710
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-710.log
+Log output:
+<truncated 75 lines>
+0917.json', 'service_resource_export_20260915_114455.json']
+case_31 | VERIFICATION | account_service | account_4857 | ev=evidence_51 -> files: []
+case_31 | VERIFICATION | security_service | audit_record_6909 | ev=evidence_51 -> files: ['customer_data_snapshot_bundle_20260915.json']
+case_31 | VERIFICATION | identity_service | tombstone_440 | ev=evidence_51 -> files: ['customer_data_snapshot_bundle_20260915.json']
+case_32 | FINDING | identity_service | tombstone_9178 | ev=evidence_51 -> files: ['customer_data_snapshot_bundle_20260915.json']
+case_32 | REMEDIATION | identity_service | tombstone_9178 | ev= -> files: ['customer_data_snapshot_bundle_20260915.json']
+case_32 | VERIFICATION | account_service | account_8858 | ev= -> files: []
+case_32 | VERIFICATION | security_service | audit_record_7068 | ev= -> files: ['customer_data_snapshot_bundle_20260915.json']
+case_32 | VERIFICATION | identity_service | tombstone_9178 | ev= -> files: ['customer_data_snapshot_bundle_20260915.json']
+
+Last progress: 1s ago

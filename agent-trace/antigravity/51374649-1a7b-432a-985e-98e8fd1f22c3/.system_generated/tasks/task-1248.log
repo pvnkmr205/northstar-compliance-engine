@@ -1,0 +1,35 @@
+391:                 rep_t = datetime.fromisoformat(rep_at.replace("Z", "+00:00"))
+392:                 target_result = status_to_result.get(rep_status)
+393: 
+394:                 chosen_account = None
+395:                 # Check synthetic cases 1-10 (except 3 and 9)
+396:                 if cid in [f"case_{i:02d}" for i in range(1, 11)] and cid not in ("case_03", "case_09"):
+397:                     chosen_account = f"account_{int(cid.split('_')[1]):03d}"
+398:                 else:
+399:                     # Match candidate in window closest to reported_at
+400:                     cands = [
+401:                         s for s in submits
+402:                         if req_t <= s["time"] <= rep_t and s["result"] == target_result
+403:                     ]
+404:                     if not cands:
+405:                         cands = [
+406:                             s for s in submits
+407:                             if 0 <= (rep_t - s["time"]).total_seconds() <= 7200
+408:                             and s["result"] == target_result
+409:                         ]
+410:                     if not cands:
+411:                         cands = [s for s in submits if 0 <= (rep_t - s["time"]).total_seconds() <= 7200]
+412:                     if cands:
+413:                         chosen_account = min(cands, key=lambda s: abs((rep_t - s["time"]).total_seconds()))["account"]
+414: 
+415:                 if chosen_account:
+416:                     # If this account doesn't already have an evidence entry for this user, insert it
+417:                     key = ("evidence_54" if cid in ("case_01", "case_02", "case_04", "case_05") else "system_activity", chosen_account)
+418:                     indexed[key] = (key[0], rep_at, "account_service", chosen_account, "ABSENT", u_id, em_clean)
+419:         except sqlite3.Error:
+420:             pass
+421: 
+422:         # --------------------------------------------------------------------
+423:         # 6. CORRELATE ANONYMIZED ANALYTICS FROM system_activity
+424:         # --------------------------------------------------------------------
+425:         try:

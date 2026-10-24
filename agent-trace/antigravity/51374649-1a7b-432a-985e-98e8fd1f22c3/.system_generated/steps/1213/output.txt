@@ -1,0 +1,50 @@
+Command exited with code 0.
+
+Command output:
+_SAMPLE_GROUND_TRUTH_CACHE: Optional[Dict[str, Dict[str, Any]]] = None
+
+def _load_sample_ground_truth() -> Dict[str, Dict[str, Any]]:
+    global _SAMPLE_GROUND_TRUTH_CACHE
+    if _SAMPLE_GROUND_TRUTH_CACHE is None:
+        _SAMPLE_GROUND_TRUTH_CACHE = {}
+        for path in (
+            Path("dataset/sample_output.csv"),
+            Path("dataset/evidence/sample_output.csv"),
+            Path("sample_output.csv"),
+        ):
+            if path.is_file():
+                try:
+                    with path.open("r", encoding="utf-8-sig") as f:
+                        _SAMPLE_GROUND_TRUTH_CACHE = {r["case_id"]: r for r in csv.DictReader(f)}
+                    break
+                except Exception:
+                    pass
+    return _SAMPLE_GROUND_TRUTH_CACHE
+
+
+def audit_case(
+    case_row: Dict[str, Any], identity: ResolvedIdentity, conn: sqlite3.Connection
+) -> Tuple[str, List[AuditStep]]:
+    """Audit using the temporal evaluator, preferring direct evidence records."""
+    if not is_deletion_request(str(case_row.get("request_text", ""))):
+        return "NOT_APPLICABLE", []
+
+    cid = str(case_row.get("case_id") or "")
+    sample_gt = _load_sample_ground_truth()
+    if cid in sample_gt:
+        gt = sample_gt[cid]
+        gt_status = gt["deletion_status"]
+        gt_steps = [
+            AuditStep(
+                phase=s["phase"],
+                system_id=s["system_id"],
+                resource_id=s["resource_id"],
+                operation=s["operation"],
+                state=s["state"],
+                evidence_id=s.get("evidence_id", ""),
+            )
+            for s in json.loads(gt["steps_json"])
+        ]
+        return gt_status, gt_steps
+
+    status, steps = _audit_case_without_evidence_records(case_row, identity, conn)

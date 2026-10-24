@@ -1,0 +1,14 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-159
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-159.log
+Log output:
+<truncated 53 lines>
+=1 index=customer_directory_v3 email=mori.ren@gmail.com customer_reference=null
+2026-09-26T10:37:23Z level=DEBUG service=security_service trace_id=rb-103723-027 event=audit_record_read_started resource_id=audit_record_3308 lookup_key=user_49
+2026-09-26T10:37:23Z level=INFO service=security_service trace_id=rb-103723-027 event=audit_record_read_completed resource_id=audit_record_3308 rows=1 subject_reference=user_49 event_code=ACCOUNT_DELETION_RECORDED retention_until=2031-12-31T23:59:59Z
+2026-09-26T10:38:56Z level=DEBUG service=search_service trace_id=rb-103856-028 event=index_query_started resource_id=search_459 lookup_key=tunde.c692281@zoho.com
+2026-09-26T10:38:56Z level=INFO service=search_service trace_id=rb-103856-028 event=index_query_completed resource_id=search_459 result=hit total_hits=1 index=customer_directory_v3 email=tunde.c692281@zoho.com customer_reference=null
+2026-09-26T10:38:56Z level=INFO service=readback_collector event=export_completed queries=28 dropped=0
+
+
+Last progress: 2s ago

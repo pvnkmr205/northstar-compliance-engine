@@ -1,0 +1,11 @@
+Command exited with code 0.
+
+Command output:
+Total rows: 1167
+Rows with user_id: 516
+Rows with email: 926
+account_7566 : ('evidence_94', '2026-09-26T10:38:56Z', 'account_service', 'account_7566', 'ABSENT', 'user_43', 'l.fontaine46@yahoo.com')
+audit_record_2016 : ('evidence_94', '2026-09-26T10:38:56Z', 'security_service', 'audit_record_2016', 'PRESENT', 'user_43', 'l.fontaine46@yahoo.com')
+analytics_9406 : ('evidence_94', '2026-09-26T10:38:56Z', 'analytics_platform', 'analytics_9406', 'ANONYMIZED', None, None)
+analytics_901 : ('evidence_56', '2026-09-07T09:45:00Z', 'analytics_platform', 'analytics_901', 'ANONYMIZED', 'user_04', 'thandiwe.n@gmail.com')
+export_001 : ('evidence_59', '2026-09-14T15:40:00Z', 'export_service', 'export_001', 'PRESENT', 'user_08', 'gabriel.costa@proton.me')

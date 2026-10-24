@@ -1,0 +1,4 @@
+  File "<string>", line 28
+    print(f'=== DIFF {cid} ({st} vs {exp[" deletion_status\]})
+                                         ^
+SyntaxError: unterminated string literal (detected at line 28)

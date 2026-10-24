@@ -1,0 +1,33 @@
+Command exited with code 0.
+
+Command output:
+2026-09-15T08:51:43Z level=DEBUG service=log_router instance=collector-3 event=export_started sources=platform_services expected_source_events=98
+2026-09-15T08:51:45Z level=DEBUG service=search_service instance=search-2 pod=search-12cc region=ap-south-1 trace_id=tr-5887496 event=index_query_started match_key="g.silva76.jr@gmail.com" attempt=1
+2026-09-15T08:51:53Z level=DEBUG service=search_service instance=search-2 pod=search-12cc region=ap-south-1 trace_id=tr-5887496 event=connection_acquired pool=search_service_replica wait_ms=56
+2026-09-15T08:51:55Z level=WARN service=search_service instance=search-2 pod=search-12cc region=ap-south-1 trace_id=tr-5887496 event=dependency_retry dependency=search_service_store attempt=1 retry_in_ms=474 reason=read_timeout
+2026-09-15T08:51:56Z level=INFO service=search_service instance=search-2 pod=search-12cc region=ap-south-1 trace_id=tr-5887496 event=dependency_recovered attempt=2 route=primary
+2026-09-15T08:51:57Z level=INFO service=search_service instance=search-2 pod=search-12cc region=ap-south-1 trace_id=tr-5887496 resource_id=search_1874 event=index_query_completed index=customer_directory_v3 result=hit shard=2 took_ms=17
+2026-09-15T09:29:19Z level=WARN service=queue_consumer instance=worker-3 event=consumer_lag topic=notification_events partition=2 lag=33
+2026-09-15T10:06:53Z level=DEBUG service=dns_cache instance=resolver-3 event=cache_refresh entries=85
+2026-09-15T10:44:28Z level=INFO service=secret_agent instance=vault-3 event=lease_extended ttl_seconds=1202
+2026-09-15T11:22:02Z level=ERROR service=webhook_delivery instance=notify-3 event=delivery_abandoned destination=status_page attempts=4 http_status=503
+2026-09-15T11:50:57Z level=DEBUG service=support_platform instance=support-2 pod=support-70f0 region=ap-south-1 trace_id=tr-8896806 event=message_scan_started subject_key="e.varga90@yahoo.com" attempt=1
+2026-09-15T11:51:04Z level=DEBUG service=support_platform instance=support-2 pod=support-70f0 region=ap-south-1 trace_id=tr-8896806 event=connection_acquired pool=support_platform_replica wait_ms=49
+2026-09-15T11:51:06Z level=WARN service=support_platform instance=support-2 pod=support-70f0 region=ap-south-1 trace_id=tr-8896806 event=dependency_retry dependency=support_platform_store attempt=1 retry_in_ms=173 reason=read_timeout
+2026-09-15T11:51:07Z level=INFO service=support_platform instance=support-2 pod=support-70f0 region=ap-south-1 trace_id=tr-8896806 event=dependency_recovered attempt=2 route=primary
+2026-09-15T11:51:08Z level=WARN service=support_platform instance=support-2 pod=support-70f0 region=ap-south-1 trace_id=tr-8896806 resource_id=support_9553 event=message_pii_scan matched_value="e.varga90@yahoo.com" detector=direct_identifier
+2026-09-15T11:51:09Z level=DEBUG service=account_service instance=account-6 pod=account-581a region=us-east-2 trace_id=tr-4708586 event=profile_lookup_started lookup_key="leonie.g9352@outlook.com" attempt=1
+2026-09-15T11:51:15Z level=DEBUG service=account_service instance=account-6 pod=account-581a region=us-east-2 trace_id=tr-4708586 event=connection_acquired pool=account_service_replica wait_ms=17
+2026-09-15T11:51:16Z level=INFO service=search_service instance=search-7 pod=search-acaf region=eu-central-1 trace_id=tr-0506485 resource_id=search_4639 event=index_query_completed index=customer_directory_v3 result=hit shard=7 took_ms=23 correlation_key="darwish.omar@icloud.com"
+2026-09-15T11:51:17Z level=WARN service=account_service instance=account-6 pod=account-581a region=us-east-2 trace_id=tr-4708586 event=dependency_retry dependency=account_service_store attempt=1 retry_in_ms=412 reason=read_timeout
+2026-09-15T11:51:18Z level=INFO service=account_service instance=account-6 pod=account-581a region=us-east-2 trace_id=tr-4708586 event=dependency_recovered attempt=2 route=primary
+2026-09-15T11:51:19Z level=INFO service=account_service instance=account-6 pod=account-581a region=us-east-2 trace_id=tr-4708586 resource_id=account_4092 event=profile_lookup_completed rows=0 http_status=404 duration_ms=33
+2026-09-15T11:51:20Z level=INFO service=account_service instance=account-1 pod=account-b3b8 region=ap-south-1 trace_id=tr-9146590 resource_id=account_4745 event=profile_lookup_completed rows=0 http_status=404 duration_ms=22 correlation_key="lucia-torres@gmail.com"
+2026-09-15T11:51:36Z level=DEBUG service=support_platform instance=support-1 pod=support-63b9 region=eu-west-1 trace_id=tr-5845609 event=attachment_scan_started scan_key="+81 90 6156 0005" attempt=1
+2026-09-15T11:51:40Z level=DEBUG service=security_service instance=security-7 pod=security-a46c region=ap-south-1 trace_id=tr-4614434 event=audit_record_query_started subject_ref="user_16" attempt=1
+2026-09-15T11:51:46Z level=WARN service=support_platform instance=support-1 pod=support-63b9 region=eu-west-1 trace_id=tr-5845609 resource_id=support_9538 event=attachment_pii_scan matched_value="+81 90 6156 0005" file=delivery_confirmation_32.pdf detector=direct_identifier
+2026-09-15T11:51:47Z level=DEBUG service=security_service instance=security-7 pod=security-a46c region=ap-south-1 trace_id=tr-4614434 resource_id=audit_record_2857 event=audit_record_read_completed integrity_check=passed rows=1
+2026-09-15T11:52:33Z level=DEBUG service=account_service instance=account-7 pod=account-6348 region=ap-south-1 trace_id=tr-7068108 event=profile_lookup_started lookup_key="areed1433@gmail.com" attempt=1
+2026-09-15T11:52:43Z level=DEBUG service=account_service instance=account-7 pod=account-6348 region=ap-south-1 trace_id=tr-7068108 event=cache_lookup result=miss cache=account_service_lookup_v2
+2026-09-15T11:52:44Z level=INFO service=account_service instance=account-7 pod=account-6348 region=ap-south-1 trace_id=tr-7068108 resource_id=account_9494 event=profile_lookup_completed rows=0 http_status=404 duration_ms=40
+2026-09-15T11:53:09Z level=INFO service=search_service instance=search-7 pod=search-bb6b region=eu-central-1 trace_id=tr-9485325 resource_id=search_4801 event=index_query_completed index=customer_directory_v3 result=hit shard=1 took_ms=30 correlation_key="jain.aditi@gmail.com"

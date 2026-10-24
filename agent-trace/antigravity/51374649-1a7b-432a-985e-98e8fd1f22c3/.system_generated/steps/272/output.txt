@@ -1,0 +1,4 @@
+Command exited with code 0.
+
+Command output:
+[{'recorded_at': '2026-08-12T09:00:00Z', 'system': 'account_service', 'resource_id': 'account_1084', 'record_type': 'USER_PROFILE', 'result': 'NOT_FOUND', 'subject_reference': 'mateo.alvarez@gmail.com'}, {'recorded_at': '2026-08-12T09:00:00Z', 'system': 'account_service', 'resource_id': 'account_1417', 'record_type': 'USER_PROFILE', 'result': 'NOT_FOUND', 'subject_reference': 'o.morgan56@gmail.com'}, {'recorded_at': '2026-08-12T09:00:00Z', 'system': 'account_service', 'resource_id': 'account_2434', 'record_type': 'USER_PROFILE', 'result': 'NOT_FOUND', 'subject_reference': 'molefe.thabo@icloud.com'}]

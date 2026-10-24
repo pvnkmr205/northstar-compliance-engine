@@ -1,0 +1,14 @@
+{
+  "socketPath": "\\\\.\\pipe\\mcp-5a4b111d-ad5b-47f6-b4ef-c851735dc3ac.sock",
+  "scheme": "pipe",
+  "headers": {
+    "Authorization": "Nonce e914385a-0aa4-4d24-a7aa-c94befabbeff"
+  },
+  "pid": 14256,
+  "ideName": "Visual Studio Code",
+  "timestamp": 1792850703315,
+  "workspaceFolders": [
+    "c:\\Users\\Pavan\\hackerrank-orchestrate-october26"
+  ],
+  "isTrusted": true
+}

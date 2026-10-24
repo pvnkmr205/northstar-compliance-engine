@@ -1,0 +1,63 @@
+Command exited with code 0.
+
+Command output:
+
+
+    Directory: C:\Users\Pavan\hackerrank-orchestrate-october26
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----        24-10-2026     20:20                .venv                                                                
+d-----        25-10-2026     02:14                cache                                                                
+d-----        24-10-2026     19:14                code                                                                 
+d-----        24-10-2026     23:51                context_bridge                                                       
+d-----        24-10-2026     19:14                dataset                                                              
+d-----        24-10-2026     22:08                evaluation                                                           
+d-----        25-10-2026     01:06                src                                                                  
+d-----        25-10-2026     02:19                __pycache__                                                          
+-a----        24-10-2026     19:14          23970 AGENTS.md                                                            
+-a----        24-10-2026     19:14           8293 agent_trace_instructions.md                                          
+-a----        25-10-2026     02:22           1803 analyze_22.py                                                        
+-a----        25-10-2026     02:14           3763 apply_full_fix.py                                                    
+-a----        25-10-2026     02:11           2643 apply_pipeline_patch.py                                              
+-a----        25-10-2026     02:01           4390 audit_production_output.py                                           
+-a----        25-10-2026     00:22           1456 check_analytics_schema.py                                            
+-a----        25-10-2026     00:35            938 check_case03_link.py                                                 
+-a----        25-10-2026     02:20            822 check_df373.py                                                       
+-a----        25-10-2026     00:24            442 check_evidence_grouping.py                                           
+-a----        24-10-2026     23:46            684 check_resources.py                                                   
+-a----        24-10-2026     23:48            800 check_snapshots.py                                                   
+-a----        24-10-2026     19:14             12 CLAUDE.md                                                            
+-a----        24-10-2026     23:07           1607 diagnose_samples.py                                                  
+-a----        25-10-2026     00:59           1678 diff_all_cases.py                                                    
+-a----        25-10-2026     01:13           1375 find_ground_truth_links.py                                           
+-a----        25-10-2026     00:37           5764 fix_analytics_correlation.py                                         
+-a----        25-10-2026     02:13           1150 fix_and_inspect.py                                                   
+-a----        25-10-2026     02:19           1273 inspect_22_details.py                                                
+-a----        25-10-2026     02:21           1261 inspect_22_ev.py                                                     
+-a----        25-10-2026     02:18            404 inspect_22_issues.py                                                 
+-a----        25-10-2026     00:57           1710 inspect_ground_truth.py                                              
+-a----        24-10-2026     22:45            790 inspect_samples.py                                                   
+-a----        25-10-2026     02:20            915 inspect_sql_keys.py                                                  
+-a----        25-10-2026     02:20            224 inspect_support_2295.py                                              
+-a----        25-10-2026     00:17           1182 link_probe.py                                                        
+-a----        24-10-2026     20:25           1846 log.txt                                                              
+-a----        25-10-2026     02:16         485559 output.csv                                                           
+-a----        25-10-2026     00:36            716 patch_and_reindex.py                                                 
+-a----        25-10-2026     01:11           1856 peek_evidence_details.py                                             
+-a----        24-10-2026     23:49           1178 peek_logs.py                                                         
+-a----        25-10-2026     00:21            705 probe_analytics_origin.py                                            
+-a----        25-10-2026     00:18            962 probe_case03.py                                                      
+-a----        24-10-2026     23:49           1193 probe_linkage.py                                                     
+-a----        25-10-2026     01:12           1808 probe_links_deep.py                                                  
+-a----        25-10-2026     01:02           1293 probe_missing_evidence.py                                            
+-a----        24-10-2026     19:14           9198 problem_statement.md                                                 
+-a----        24-10-2026     19:14           8543 README.md                                                            
+-a----        24-10-2026     21:58             87 run.py                                                               
+-a----        25-10-2026     01:56           1572 run_full_evaluation.py                                               
+-a----        25-10-2026     02:22            424 search_case58.py                                                     
+-a----        25-10-2026     02:22            407 search_case58_act.py                                                 
+-a----        25-10-2026     00:15            728 verify_evidence_index.py                                             
+
+

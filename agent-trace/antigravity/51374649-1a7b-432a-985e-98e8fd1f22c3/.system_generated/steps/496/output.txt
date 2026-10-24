@@ -1,0 +1,9 @@
+Command exited with code 0.
+
+Command output:
+INSERT INTO "customer_data_primary" VALUES('analytics_1738','analytics_platform','customer_analytics_reports','{"resource_id":"analytics_1738","user_id":"user_52","email":"bcarvalho6517@gmail.com","phone":"+55 41 90257-9346","email_hash":"da5e264130abacd259906dd79426f5ad182ed9e69c49fa2dd67166b655f64
+INSERT INTO "customer_data_primary" VALUES('analytics_2572','analytics_platform','customer_analytics_reports','{"resource_id":"analytics_2572","user_id":null,"email":null,"phone":null,"email_hash":null,"reporting_window":"last_90_days","metrics":{"sessions_30d":18,"products_viewed_30d":34,"orders_co
+INSERT INTO "customer_data_primary" VALUES('analytics_4440','analytics_platform','customer_analytics_reports','{"resource_id":"analytics_4440","user_id":"user_51","email":"seoyeon-han@gmail.com","phone":"+82 10 8943 9310","email_hash":"bbd5522cc42afd8c0bacf9b557d5e0e057c24e7b113936bd98c541e92583a0e7
+INSERT INTO "customer_data_primary" VALUES('analytics_5715','analytics_platform','customer_analytics_reports','{"resource_id":"analytics_5715","user_id":"user_60","email":"emeka.ogunleye@gmail.com","phone":"+234 803 456 1656","email_hash":"6f658ec137c18a8c0122d2d4bb7f7460653a7cb95dac492aba9f30437df4
+INSERT INTO "customer_data_primary" VALUES('analytics_8858','analytics_platform','customer_analytics_reports','{"resource_id":"analytics_8858","user_id":null,"email":null,"phone":null,"email_hash":null,"reporting_window":"last_90_days","metrics":{"sessions_30d":4,"products_viewed_30d":27,"orders_com
+INSERT INTO "customer_data_primary" VALUES('analytics_9069','analytics_platform','customer_analytics_reports','{"resource_id":"analytics_9069","user_id":null,"email":null,"phone":null,"email_hash":null,"reporting_window":"last_90_days","metrics":{"sessions_30d":17,"products_viewed_30d":21,"orders_co

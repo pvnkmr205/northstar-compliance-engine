@@ -1,0 +1,21 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-54
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-54.log
+Log output:
+<truncated 9 lines>
+struct what happened across systems, and decide whether the deletion is actually complete.
+
+When data remains, the agent must produce the ordered remediation steps required to remove, redact, or anonymize it. When deletion has already been completed, the agent must produce the checks that prove it. The agent must also preserve records that the supplied policy requires the organization to retain.
+
+Some systems preserve an account tombstone so permitted records can continue to reference the same internal `user_id`. In these records, the stable user reference may remain, but direct identifiers such as name, email, phone, and email hash must be removed.
+
+## What You Need to Build
+
+For each request, build a system that determines:
+
+- whether the deletion is `COMPLETE`, `INCOMPLETE`, or `NOT_APPLICABLE` because the person did not request deletion;
+- which records or identifiers still expose the user;
+- which active processes can recreate deleted data;
+- the ordered remediation
+
+Last progress: 2s ago

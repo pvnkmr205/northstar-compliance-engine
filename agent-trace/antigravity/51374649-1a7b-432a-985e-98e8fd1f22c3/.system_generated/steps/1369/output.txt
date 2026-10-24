@@ -1,0 +1,7 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-1367
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-1367.log
+Log output:
+Added evidence_resources to ResolvedIdentity!
+
+Last progress: 3s ago

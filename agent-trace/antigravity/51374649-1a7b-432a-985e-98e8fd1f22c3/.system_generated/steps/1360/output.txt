@@ -1,0 +1,14 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-1358
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-1358.log
+Log output:
+Traceback (most recent call last):
+  File "C:\Users\Pavan\hackerrank-orchestrate-october26\diff_all_cases.py", line 17, in <module>
+    identity = resolve_identity(c["email"], conn)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pavan\hackerrank-orchestrate-october26\src\pipeline.py", line 792, in resolve_identity
+    identity.evidence_resources.append(record)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ResolvedIdentity' object has no attribute 'evidence_resources'. Did you mean: 'linked_resources'?
+
+Last progress: 2s ago

@@ -1,0 +1,47 @@
+Command exited with code 0.
+
+Command output:
+def _resolve_identity_without_evidence(
+    case_email: str,
+    conn: sqlite3.Connection,
+) -> ResolvedIdentity:
+    """Resolve current and historical identifiers with a breadth-first search."""
+    primary_email = case_email.strip().lower()
+    identity = ResolvedIdentity(primary_email=primary_email)
+    if primary_email:
+        identity.emails.add(primary_email)
+
+    queue: List[Tuple[str, str]] = []
+    if primary_email:
+        queue.append(("email", primary_email))
+    visited_emails: Set[str] = set()
+    visited_user_ids: Set[str] = set()
+    cursor = 0
+
+    while cursor < len(queue):
+        node_type, value = queue[cursor]
+        cursor += 1
+
+        if node_type == "email":
+            if value in visited_emails:
+                continue
+            visited_emails.add(value)
+
+            current_rows = conn.execute(
+                "SELECT user_id FROM user_identities WHERE LOWER(email) = ?",
+                (value,),
+            )
+            audit_rows = conn.execute(
+                """
+                SELECT user_id
+                FROM user_audit_log
+                WHERE field_name = ?
+                  AND (LOWER(old_value) = ? OR LOWER(new_value) = ?)
+                """,
+                ("email", value, value),
+            )
+            for row in current_rows.fetchall() + audit_rows.fetchall():
+                user_id = row[0]
+                if user_id and user_id not in visited_user_ids:
+                    queue.append(("user_id", user_id))
+          

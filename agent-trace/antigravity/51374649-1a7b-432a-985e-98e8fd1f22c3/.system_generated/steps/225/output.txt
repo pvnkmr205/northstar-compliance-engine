@@ -1,0 +1,4 @@
+Command exited with code 0.
+
+Command output:
+Unique basenames count: 94 Total rows: 94

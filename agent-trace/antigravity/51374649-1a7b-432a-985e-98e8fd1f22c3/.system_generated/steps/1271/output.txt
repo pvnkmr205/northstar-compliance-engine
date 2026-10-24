@@ -1,0 +1,91 @@
+Command exited with code 0.
+
+Command output:
+
+[case_56] elena.romero88@outlook.com | uid=None | rep_status=NOT_STARTED
+  output status: INCOMPLETE
+  evidence_records: [('evidence_05', 'integration_service', 'data_flow_373', 'ACTIVE')]
+
+[case_58] fournier.manon@icloud.com | uid=user_56 | rep_status=NOT_STARTED
+  output status: INCOMPLETE
+  evidence_records: [('evidence_05', 'security_service', 'audit_record_8465', 'PRESENT')]
+
+[case_59] lars-nielsen@proton.me | uid=user_57 | rep_status=COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('evidence_05', 'security_service', 'audit_record_962', 'PRESENT')]
+
+[case_60] anowak4031@fastmail.com | uid=user_58 | rep_status=COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('evidence_05', 'security_service', 'audit_record_629', 'PRESENT'), ('evidence_54', 'account_service', 'account_5661', 'ABSENT')]
+
+[case_206] ama.agyeman84@gmail.com | uid=None | rep_status=COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('evidence_54', 'account_service', 'account_4522', 'ABSENT')]
+
+[case_253] mathis.l2398@zoho.com | uid=user_251 | rep_status=PARTIALLY_COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('evidence_24', 'security_service', 'audit_record_2927', 'PRESENT'), ('system_activity', 'account_service', 'account_6073', 'PRESENT')]
+
+[case_257] yetunde-nwosu@gmail.com | uid=user_255 | rep_status=COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('evidence_24', 'security_service', 'audit_record_7193', 'PRESENT')]
+
+[case_260] daichi.takahashi@outlook.com | uid=user_258 | rep_status=NOT_STARTED
+  output status: INCOMPLETE
+  evidence_records: [('evidence_24', 'security_service', 'audit_record_1876', 'PRESENT'), ('system_activity', 'account_service', 'account_7811', 'PRESENT')]
+
+[case_304] walker.charlotte@gmail.com | uid=user_302 | rep_status=PARTIALLY_COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('evidence_29', 'security_service', 'audit_record_4759', 'PRESENT'), ('system_activity', 'account_service', 'account_4771', 'PRESENT')]
+
+[case_309] t.oladipo62@yahoo.com | uid=user_307 | rep_status=PARTIALLY_COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('evidence_29', 'security_service', 'audit_record_1945', 'PRESENT'), ('system_activity', 'account_service', 'account_4319', 'PRESENT')]
+
+[case_403] haruka.w248@outlook.com | uid=user_401 | rep_status=COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('evidence_38', 'security_service', 'audit_record_4733', 'PRESENT'), ('evidence_54', 'account_service', 'account_1246', 'ABSENT')]
+
+[case_408] abennett9843@fastmail.com | uid=user_406 | rep_status=COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('evidence_38', 'security_service', 'audit_record_4216', 'PRESENT')]
+
+[case_409] leonie.d7762@zoho.com | uid=user_407 | rep_status=COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('evidence_38', 'security_service', 'audit_record_2559', 'PRESENT'), ('evidence_54', 'account_service', 'account_7174', 'ABSENT')]
+
+[case_411] e.petrescu00@gmail.com | uid=user_409 | rep_status=COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('evidence_38', 'security_service', 'audit_record_4330', 'PRESENT')]
+
+[case_412] haddad.omar@gmail.com | uid=user_410 | rep_status=COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('evidence_38', 'security_service', 'audit_record_5637', 'PRESENT'), ('evidence_54', 'account_service', 'account_3492', 'ABSENT')]
+
+[case_503] sami-nasser@proton.me | uid=user_501 | rep_status=COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('evidence_47', 'security_service', 'audit_record_5454', 'PRESENT'), ('evidence_47', 'support_platform', 'support_2295', 'PRESENT'), ('evidence_54', 'account_service', 'account_5394', 'ABSENT')]
+
+[case_506] ayanda.molefe@gmail.com | uid=user_504 | rep_status=PARTIALLY_COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('evidence_47', 'security_service', 'audit_record_1361', 'PRESENT')]
+
+[case_512] hannah.carter@outlook.com | uid=user_510 | rep_status=COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('evidence_47', 'security_service', 'audit_record_4219', 'PRESENT'), ('evidence_54', 'account_service', 'account_5281', 'ABSENT')]
+
+[case_517] yetunde.a3014@zoho.com | uid=user_515 | rep_status=PARTIALLY_COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('system_activity', 'account_service', 'account_3407', 'PRESENT')]
+
+[case_519] s.dlamini52@gmail.com | uid=user_517 | rep_status=PARTIALLY_COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('system_activity', 'account_service', 'account_1506', 'PRESENT')]
+
+[case_521] yuna-lee@gmail.com | uid=user_519 | rep_status=COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('evidence_54', 'account_service', 'account_1482', 'ABSENT')]
+
+[case_525] o.walker6695@yahoo.com | uid=None | rep_status=COMPLETE
+  output status: INCOMPLETE
+  evidence_records: [('evidence_49', 'account_service', 'account_4974', 'PRESENT'), ('evidence_62', 'account_service', 'account_4974', 'PRESENT')]

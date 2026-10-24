@@ -1,0 +1,4 @@
+Command exited with code 0.
+
+Command output:
+Total sort mismatches with alphabetical system_id: 0/32

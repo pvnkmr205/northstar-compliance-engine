@@ -1,0 +1,23 @@
+Task: 51374649-1a7b-432a-985e-98e8fd1f22c3/task-437
+Status: DONE
+Log: file:///C:/Users/Pavan/.gemini/antigravity/brain/51374649-1a7b-432a-985e-98e8fd1f22c3/.system_generated/tasks/task-437.log
+Log output:
+<truncated 49 lines>
+1315:             try:
+1316:                 matched_steps += json.loads(actual_steps) == json.loads(expected["steps_json"])
+1317:             except (json.JSONDecodeError, TypeError):
+1318:                 pass
+1319:     status_accuracy = matched_status / max(1, len(expected_rows))
+1320:     steps_accuracy = matched_steps / max(1, len(expected_rows))
+1321:     print(f"Sample validation: status accuracy={status_accuracy:.2%}; exact steps={steps_accuracy:.2%} ({len(expected_rows)} cases)")
+1322:     return (status_accuracy + steps_accuracy) / 2
+1323: 
+1324: 
+1325: def run_pipeline(dataset_dir: Path = Path("dataset"), output_csv: Path = Path("output.csv")) -> None:
+1326:     conn = init_database(dataset_dir)
+1327:     try:
+1328:         validate_samples(conn, dataset_dir)
+1329:         with (dataset_dir / "deletion_requests.csv").open("r", encoding="utf-8-sig", newline="") as source:
+1330:             cases = sorted(csv.DictReader(source), key=lambda row: row["case_id"])
+
+Last progress: 3s ago

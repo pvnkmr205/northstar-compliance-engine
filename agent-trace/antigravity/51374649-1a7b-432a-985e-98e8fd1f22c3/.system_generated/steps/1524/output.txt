@@ -1,0 +1,7 @@
+Command exited with code 0.
+
+Command output:
+Total lines: 519
+Header: case_id,deletion_status,steps_json
+First line: case_33,COMPLETE,"[{""step_no"":1,""phase"":""VERIFICATION"",""system_id"":""account_service"",""res
+Last line: case_550,INCOMPLETE,"[{""step_no"":1,""phase"":""FINDING"",""system_id"":""account_service"",""resou

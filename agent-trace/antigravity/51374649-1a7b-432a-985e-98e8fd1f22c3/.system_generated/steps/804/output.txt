@@ -1,0 +1,6 @@
+Command exited with code 0.
+
+Command output:
+2026-09-15T11:51:20Z level=INFO service=account_service instance=account-1 pod=account-b3b8 region=ap-south-1 trace_id=tr-9146590 resource_id=account_4745 event=profile_lookup_completed rows=0 http_status=404 duration_ms=22 correlation_key="lucia-torres@gmail.com"
+2026-09-15T11:58:11Z level=WARN service=integration_service instance=integration-1 pod=integration-95c3 region=eu-central-1 trace_id=tr-9750867 resource_id=data_flow_9846 event=connector_heartbeat enabled=true scheduler_registered=true last_run=success
+2026-09-15T11:59:37Z level=DEBUG service=security_service instance=security-3 pod=security-ecfc region=ap-south-1 trace_id=tr-4314388 resource_id=audit_record_1596 event=audit_record_read_completed integrity_check=passed rows=1

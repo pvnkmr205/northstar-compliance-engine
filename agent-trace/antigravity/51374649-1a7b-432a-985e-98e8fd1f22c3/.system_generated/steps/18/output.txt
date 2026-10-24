@@ -1,0 +1,60 @@
+Command exited with code 1.
+
+Command output:
+Get-ChildItem : Access to the path 'C:\Users\Pavan\.gemini\antigravity\annotations' is denied.
+At line:1 char:87
++ ... CALAPPDATA; Get-ChildItem -Path "C:\Users\Pavan\.gemini\antigravity"  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\Users\Pavan\...ity\annotations:String) [Get-ChildItem], Unauthoriz 
+   edAccessException
+    + FullyQualifiedErrorId : DirUnauthorizedAccessError,Microsoft.PowerShell.Commands.GetChildItemCommand
+ 
+Get-ChildItem : Access to the path 'C:\Users\Pavan\.gemini\antigravity\bin' is denied.
+At line:1 char:87
++ ... CALAPPDATA; Get-ChildItem -Path "C:\Users\Pavan\.gemini\antigravity"  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\Users\Pavan\.gemini\antigravity\bin:String) [Get-ChildItem], Unaut 
+   horizedAccessException
+    + FullyQualifiedErrorId : DirUnauthorizedAccessError,Microsoft.PowerShell.Commands.GetChildItemCommand
+ 
+Get-ChildItem : Access to the path 'C:\Users\Pavan\.gemini\antigravity\brain\a8f48921-5ad2-4594-95fe-d9e7e215e8ab' is 
+denied.
+At line:1 char:87
++ ... CALAPPDATA; Get-ChildItem -Path "C:\Users\Pavan\.gemini\antigravity"  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\Users\Pavan\...fe-d9e7e215e8ab:String) [Get-ChildItem], Unauthoriz 
+   edAccessException
+    + FullyQualifiedErrorId : DirUnauthorizedAccessError,Microsoft.PowerShell.Commands.GetChildItemCommand
+ 
+Get-ChildItem : Access to the path 'C:\Users\Pavan\.gemini\antigravity\brain\tempmediaStorage' is denied.
+At line:1 char:87
++ ... CALAPPDATA; Get-ChildItem -Path "C:\Users\Pavan\.gemini\antigravity"  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\Users\Pavan\...empmediaStorage:String) [Get-ChildItem], Unauthoriz 
+   edAccessException
+    + FullyQualifiedErrorId : DirUnauthorizedAccessError,Microsoft.PowerShell.Commands.GetChildItemCommand
+ 
+Get-ChildItem : Access to the path 'C:\Users\Pavan\.gemini\antigravity\conversations' is denied.
+At line:1 char:87
++ ... CALAPPDATA; Get-ChildItem -Path "C:\Users\Pavan\.gemini\antigravity"  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\Users\Pavan\...y\conversations:String) [Get-ChildItem], Unauthoriz 
+   edAccessException
+    + FullyQualifiedErrorId : DirUnauthorizedAccessError,Microsoft.PowerShell.Commands.GetChildItemCommand
+ 
+Get-ChildItem : Access to the path 'C:\Users\Pavan\.gemini\antigravity\crashes' is denied.
+At line:1 char:87
++ ... CALAPPDATA; Get-ChildItem -Path "C:\Users\Pavan\.gemini\antigravity"  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\Users\Pavan\...gravity\crashes:String) [Get-ChildItem], Unauthoriz 
+   edAccessException
+    + FullyQualifiedErrorId : DirUnauthorizedAccessError,Microsoft.PowerShell.Commands.GetChildItemCommand
+ 
+Get-ChildItem : Access to the path 'C:\Users\Pavan\.gemini\antigravity\presence' is denied.
+At line:1 char:87
++ ... CALAPPDATA; Get-ChildItem -Path "C:\Users\Pavan\.gemini\antigravity"  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\Users\Pavan\...ravity\presence:String) [Get-ChildItem], Unauthoriz 
+   edAccessException
+    + FullyQualifiedErrorId : DirUnauthorizedAccessError,Microsoft.PowerShell.Commands.GetChildItemCommand
+ 

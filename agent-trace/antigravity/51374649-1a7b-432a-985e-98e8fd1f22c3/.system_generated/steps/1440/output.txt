@@ -1,0 +1,18 @@
+Command exited with code 0.
+
+Command output:
+=== AUDIT RESULTS ===
+Total Cases Checked: 518
+Total Invariant Issues Found: 117
+
+First 10 Issues:
+ - [case_34] Verification system ordering violation: ['account_service', 'support_platform', 'security_service']
+ - [case_36] Verification system ordering violation: ['account_service', 'export_service', 'security_service']
+ - [case_44] Verification system ordering violation: ['account_service', 'support_platform', 'security_service', 'support_platform', 'integration_service', 'backup_service']
+ - [case_51] Verification system ordering violation: ['account_service', 'support_platform', 'security_service', 'support_platform', 'integration_service', 'backup_service']
+ - [case_57] Verification system ordering violation: ['account_service', 'support_platform', 'security_service']
+ - [case_62] Verification system ordering violation: ['account_service', 'support_platform', 'security_service', 'analytics_platform', 'integration_service']
+ - [case_68] Verification system ordering violation: ['search_service', 'account_service']
+ - [case_77] Verification system ordering violation: ['account_service', 'support_platform', 'security_service', 'support_platform', 'integration_service', 'backup_service']
+ - [case_81] Verification system ordering violation: ['account_service', 'support_platform', 'security_service', 'support_platform', 'integration_service', 'backup_service']
+ - [case_82] Verification system ordering violation: ['account_service', 'support_platform', 'security_service', 'support_platform', 'integration_service', 'backup_service']

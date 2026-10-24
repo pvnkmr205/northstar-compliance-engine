@@ -1,0 +1,6 @@
+Command exited with code 0.
+
+Command output:
+audit_production_output.py issues.append(f"[{cid}] COMPLETE case has invalid phases: {seen_phase_order}")
+audit_production_output.py issues.append(f"[{cid}] INCOMPLETE case has invalid phases: {seen_phase_order}")
+audit_production_output.py print(f"Total Invariant Issues Found: {len(issues)}")

@@ -1,0 +1,7 @@
+Command exited with code 0.
+
+Command output:
+case_11 novak.tomasz@icloud.com I would like the account associated with this address to be erased. Please handle any copies that fall within the scope of the deletion request. Please contact me if you need information to verify the request.
+case_12 minjun.kim@gmail.com I changed the email on this account before deleting it. Please check that nothing tied to the old address was left behind, even in systems that do not display the email.
+case_18 mori.ren@gmail.com I am asking you to remove my account and the personal information linked to it. Please review any identifiers connected to this account as part of the request. Please let me know once the request has been reviewed.
+case_22 seoyeon-han@gmail.com Please erase the account linked to this email address. Please apply the correct treatment to records covered by the request. Please send a confirmation after the process finishes.

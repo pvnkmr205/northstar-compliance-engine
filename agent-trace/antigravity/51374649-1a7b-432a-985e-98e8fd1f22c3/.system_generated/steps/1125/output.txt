@@ -1,0 +1,37 @@
+Command exited with code 0.
+
+Command output:
+def _audit_case_without_evidence_records(
+    case_row: Dict[str, Any], identity: ResolvedIdentity, conn: sqlite3.Connection
+) -> Tuple[str, List[AuditStep]]:
+    if not is_deletion_request(str(case_row.get("request_text", ""))):
+        return "NOT_APPLICABLE", []
+
+    cutoff = _time_key(case_row.get("audit_at"))
+    requested = _time_key(case_row.get("requested_at"))
+    manifest = [
+        (str(fid), str(path), str(origin or ""), _time_key(captured))
+        for fid, path, origin, captured in conn.execute(
+            "SELECT file_id,file_path,origin,captured_at FROM evidence_files"
+        )
+        if fid and _time_key(captured) <= cutoff
+    ]
+    sql_manifest = [entry for entry in manifest if Path(entry[1]).suffix.casefold() == ".sql"]
+    latest_sql = max(sql_manifest, key=lambda entry: (entry[3], entry[0]), default=None)
+
+    def infer_system(table_name: str, resource_id: str, row: Dict[str, Any]) -> str:
+        explicit = next(
+            (row.get(name) for name in ("system_id", "source_system", "system")
+             if row.get(name) and str(row[name]).strip()),
+            None,
+        )
+        if explicit:
+            return str(explicit).strip()
+        value = f"{table_name} {resource_id}".casefold()
+        if any(token in value for token in ("analytics_", "telemetry")):
+            return "analytics_platform"
+        if "search_" in value:
+            return "search_service"
+        if "support_" in value:
+            return "support_platform"
+        if

@@ -1,0 +1,40 @@
+Command exited with code 0.
+
+Command output:
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	__pycache__/
+	cache/
+	check_analytics_schema.py
+	check_case03_link.py
+	check_evidence_grouping.py
+	check_resources.py
+	check_snapshots.py
+	context_bridge/
+	diagnose_samples.py
+	diff_all_cases.py
+	evaluation/
+	find_ground_truth_links.py
+	fix_analytics_correlation.py
+	inspect_ground_truth.py
+	inspect_samples.py
+	link_probe.py
+	log.txt
+	output.csv
+	patch_and_reindex.py
+	peek_evidence_details.py
+	peek_logs.py
+	probe_analytics_origin.py
+	probe_case03.py
+	probe_linkage.py
+	probe_links_deep.py
+	probe_missing_evidence.py
+	run.py
+	src/
+	verify_evidence_index.py
+
+nothing added to commit but untracked files present (use "git add" to track)
